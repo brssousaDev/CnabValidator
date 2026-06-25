@@ -1,0 +1,1514 @@
+seq-show: true
+rules:
+   column:
+      key-length:
+        -
+          begin-column: 37
+          end-column: 38
+key-map:
+  00: header
+  10: detail_pacdados
+  15: detail_fabricante
+  20: detail_comprador
+  27: detail_dadoscompl
+  50: detail_rdme
+  55: detail_vendpf
+  70: detail_cronlib
+  53: detail_infoserv
+  75: detail_observ
+  99: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence: 1
+    - fields:
+        -
+           description: Indicador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Sequencia
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador do Produto
+           begin: 30
+           end: 31
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 32
+           end: 34
+           type: numerico
+        -
+           description: Tipo de Registro
+           begin: 35
+           end: 36
+           type: numerico
+        -
+           description: Subtipo de Registro
+           begin: 37
+           end: 38
+           type: numerico
+        -
+           description: Indicador de Final de Registro
+           begin: 39
+           end: 39
+           type: alfanumerico
+  detail_pacdados:
+    - metadata:
+       occurrence: *
+    - fields:
+        -
+           description: Indicador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Sequência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Produto
+           begin: 30
+           end: 31
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 32
+           end: 34
+           type: numerico
+        -
+           description: Tipo de Registro
+           begin: 35
+           end: 36
+           type: numerico
+        -
+           description: Subtipo de Registro
+           begin: 37
+           end: 38
+           type: numerico
+        -
+           description: Ano da Proposta
+           begin: 39
+           end: 42
+           type: numerico
+        -
+           description: Filler
+           begin: 43
+           end: 43
+           type: alfanumerico
+        -
+           description: Número da Proposta
+           begin: 44
+           end: 51
+           type: alfanumerico
+        -
+           description: Indicador de Tipo de Operação (Inclusão / Reenvio)
+           begin: 52
+           end: 52
+           type: alfanumerico
+        -
+           description: Condição Operacional
+           begin: 53
+           end: 56
+           type: numerico
+        -
+           description: Código Programa FINAME
+           begin: 57
+           end: 59
+           type: numerico
+        -
+           description: Código do Subprograma FINAME
+           begin: 60
+           end: 62
+           type: numerico
+        -
+           description: Ano do Documento de Aprovação da FINAME
+           begin: 63
+           end: 66
+           type: numerico
+        -
+           description: Nº do Doc. De Aprovação da FINAME
+           begin: 67
+           end: 70
+           type: numerico
+        -
+           description: Número do Consórcio de Agentes
+           begin: 71
+           end: 74
+           type: numerico
+        -
+           description: Indicador do Tipo da Empresa Financiada
+           begin: 75
+           end: 75
+           type: alfanumerico
+        -
+           description: Código do Município da Instalação do Equipamento
+           begin: 76
+           end: 82
+           type: numerico
+        -
+           description: Código da Sistemática de Operação
+           begin: 83
+           end: 83
+           type: alfanumerico
+        -
+           description: Valor Financiamento FINAME Moeda Corrente
+           begin: 84
+           end: 104
+           type: numerico
+        -
+           description: Valor Financiamento Financiada Moeda Corrente
+           begin: 105
+           end: 125
+           type: numerico
+        -
+           description: Valor Financiamento para Seguro
+           begin: 126
+           end: 146
+           type: numerico
+        -
+           description: Valor Financiamento para Capital de Giro
+           begin: 147
+           end: 167
+           type: numerico
+        -
+           description: Quantidade em Meses Amortização
+           begin: 168
+           end: 170
+           type: numerico
+        -
+           description: Quantidade em Meses de Carência
+           begin: 171
+           end: 173
+           type: numerico
+        -
+           description: Periodicidade Amortização
+           begin: 174
+           end: 179
+           type: numerico
+        -
+           description: Periodicidade de Carência
+           begin: 180
+           end: 185
+           type: numerico
+        -
+           description: Quantidade de Prestações de Amortização
+           begin: 186
+           end: 188
+           type: numerico
+        -
+           description: Quantidade de Prestações de Carência
+           begin: 189
+           end: 191
+           type: numerico
+        -
+           description: Unidade Monetária do Pedido de Financiamento
+           begin: 192
+           end: 194
+           type: numerico
+        -
+           description: Data Último Pagamento de Carência
+           begin: 195
+           end: 202
+           type: numerico
+        -
+           description: Data da Primeira Amortização
+           begin: 203
+           end: 210
+           type: numerico
+        -
+           description: Remuneração do Agente Financeiro
+           begin: 211
+           end: 216
+           type: numerico
+        -
+           description: Custo Financeiro
+           begin: 217
+           end: 219
+           type: numerico
+        -
+           description: Remuneração BNDES para a Primeira Moeda
+           begin: 220
+           end: 225
+           type: numerico
+        -
+           description: Remuneração BNDES para a Segunda Moeda
+           begin: 226
+           end: 231
+           type: numerico
+        -
+           description: Remuneração BNDES para a Terceira Moeda
+           begin: 232
+           end: 237
+           type: numerico
+        -
+           description: Percentual do Custo Financeiro da Primeira Moeda
+           begin: 238
+           end: 243
+           type: numerico
+        -
+           description: Percentual do Custo Financeiro da Segunda Moeda
+           begin: 244
+           end: 249
+           type: numerico
+        -
+           description: Percentual do Custo Financeiro da Terceira Moeda
+           begin: 250
+           end: 255
+           type: numerico
+        -
+           description: FGI - Classificação de Risco da Operação
+           begin: 256
+           end: 257
+           type: alfanumerico
+        -
+           description: FGI - Percentual Garantido
+           begin: 258
+           end: 263
+           type: numerico
+        -
+           description: Código CNAE do Investimento
+           begin: 264
+           end: 271
+           type: alfanumerico
+        -
+           description: Declaração Número 1
+           begin: 272
+           end: 273
+           type: numerico
+        -
+           description: Declaração Número 2
+           begin: 274
+           end: 275
+           type: numerico
+        -
+           description: Declaração Número 3
+           begin: 276
+           end: 277
+           type: numerico
+        -
+           description: Declaração Número 4
+           begin: 278
+           end: 279
+           type: numerico
+        -
+           description: Declaração Número 5
+           begin: 280
+           end: 281
+           type: numerico
+        -
+           description: Declaração Número 6
+           begin: 282
+           end: 283
+           type: numerico
+        -
+           description: Declaração Número 7
+           begin: 284
+           end: 285
+           type: numerico
+        -
+           description: Declaração Número 8
+           begin: 286
+           end: 287
+           type: numerico
+        -
+           description: Declaração Número 9
+           begin: 288
+           end: 289
+           type: numerico
+        -
+           description: Declaração Número 10
+           begin: 290
+           end: 291
+           type: numerico
+        -
+           description: Garantia Número 1
+           begin: 292
+           end: 294
+           type: numerico
+        -
+           description: Garantia Número 2
+           begin: 295
+           end: 297
+           type: numerico
+        -
+           description: Garantia Número 3
+           begin: 298
+           end: 300
+           type: numerico
+        -
+           description: Garantia Número 4
+           begin: 301
+           end: 303
+           type: numerico
+        -
+           description: Garantia Número 5
+           begin: 304
+           end: 306
+           type: numerico
+        -
+           description: Garantia Número 6
+           begin: 307
+           end: 309
+           type: numerico
+        -
+           description: Garantia Número 7
+           begin: 310
+           end: 312
+           type: numerico
+        -
+           description: Garantia Número 8
+           begin: 313
+           end: 315
+           type: numerico
+        -
+           description: Garantia Número 9
+           begin: 316
+           end: 318
+           type: numerico
+        -
+           description: Garantia Número 10
+           begin: 319
+           end: 321
+           type: numerico
+        -
+           description: Indicador de Final de Registro
+           begin: 322
+           end: 322
+           type: alfanumerico
+  detail_fabricante:
+    - metadata:
+       occurrence: *
+    - fields:
+        -
+           description: Indicador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Seqüência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Produto
+           begin: 30
+           end: 31
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 32
+           end: 34
+           type: numerico
+        -
+           description: Tipo de Registro
+           begin: 35
+           end: 36
+           type: numerico
+        -
+           description: Subtipo de Registro
+           begin: 37
+           end: 38
+           type: numerico
+        -
+           description: Ano da Proposta
+           begin: 39
+           end: 42
+           type: numerico
+        -
+           description: Filler
+           begin: 43
+           end: 43
+           type: alfanumerico
+        -
+           description: Número da Proposta
+           begin: 44
+           end: 51
+           type: alfanumerico
+        -
+           description: Indicador de Tipo de Operação (Inclusão / Reenvio)
+           begin: 52
+           end: 52
+           type: alfanumerico
+        -
+           description: CNPJ do Fabricante ou Fornecedor de Serviços
+           begin: 53
+           end: 66
+           type: alfanumerico
+        -
+           description: Razão Social do Fabricante ou Fornecedor de Serviços
+           begin: 67
+           end: 121
+           type: alfanumerico
+        -
+           description: Endereço da Sede – tipo de logradouro
+           begin: 122
+           end: 123
+           type: numerico
+        -
+           description: Endereço da Sede - logradouro
+           begin: 124
+           end: 178
+           type: alfanumerico
+        -
+           description: Endereço da Sede – número
+           begin: 179
+           end: 184
+           type: alfanumerico
+        -
+           description: Endereço da Sede – complemento
+           begin: 185
+           end: 196
+           type: alfanumerico
+        -
+           description: Bairro ou Distrito
+           begin: 197
+           end: 212
+           type: alfanumerico
+        -
+           description: Código do Município
+           begin: 213
+           end: 219
+           type: numerico
+        -
+           description: CEP
+           begin: 220
+           end: 227
+           type: numerico
+        -
+           description: Caracterização do Capital Social
+           begin: 228
+           end: 233
+           type: numerico
+        -
+           description: Indicador de Atividade Econômica especificada no Decreto nº 2.233
+           begin: 234
+           end: 234
+           type: alfanumerico
+        -
+           description: Natureza da Empresa
+           begin: 235
+           end: 240
+           type: numerico
+        -
+           description: Data da Constituição
+           begin: 241
+           end: 248
+           type: numerico
+        -
+           description: Porte da Empresa
+           begin: 249
+           end: 251
+           type: numerico
+        -
+           description: Código CNAE
+           begin: 252
+           end: 259
+           type: alfanumerico
+        -
+           description: Tipo de Renda Operacional Bruta (ROB) Anual 
+           begin: 260
+           end: 260
+           type: alfanumerico
+        -
+           description: Valor da ROB 
+           begin: 261
+           end: 281
+           type: numerico
+        -
+           description: Data de Referência da ROB 
+           begin: 282
+           end: 289
+           type: numerico
+        -
+           description: CNPJ do Líder do Grupo Econômico
+           begin: 290
+           end: 303
+           type: alfanumerico
+        -
+           description: Tipo de Renda Operacional Bruta Anual (ROB) do Grupo Econômico
+           begin: 304
+           end: 304
+           type: alfanumerico
+        -
+           description: Valor da ROB do Grupo Econômico
+           begin: 305
+           end: 325
+           type: numerico
+        -
+           description: Data de Referência da ROB do Grupo Econômico
+           begin: 326
+           end: 333
+           type: numerico
+        -
+           description: Indicador de Final de Registro
+           begin: 334
+           end: 334
+           type: alfanumerico
+  detail_comprador:
+    - metadata:
+       occurrence: *
+    - fields:
+        -
+           description: Indicador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Seqüência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Produto
+           begin: 30
+           end: 31
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 32
+           end: 34
+           type: numerico
+        -
+           description: Tipo de Registro
+           begin: 35
+           end: 36
+           type: numerico
+        -
+           description: Subtipo de Registro
+           begin: 37
+           end: 38
+           type: numerico
+        -
+           description: Ano da Proposta
+           begin: 39
+           end: 42
+           type: numerico
+        -
+           description: Filler
+           begin: 43
+           end: 43
+           type: alfanumerico
+        -
+           description: Número da Proposta
+           begin: 44
+           end: 51
+           type: alfanumerico
+        -
+           description: Indicador de Tipo de Operação (Inclusão / Reenvio)
+           begin: 52
+           end: 52
+           type: alfanumerico
+        -
+           description: Indicador Pessoa Jurídica / Física
+           begin: 53
+           end: 53
+           type: alfanumerico
+        -
+           description: CNPJ / CPF do Comprador ou Proprietário
+           begin: 54
+           end: 67
+           type: alfanumerico
+        -
+           description: Nome do Comprador ou Proprietário
+           begin: 68
+           end: 122
+           type: alfanumerico
+        -
+           description: Endereço da Sede – tipo de logradouro
+           begin: 123
+           end: 124
+           type: numerico
+        -
+           description: Endereço da Sede - logradouro
+           begin: 125
+           end: 179
+           type: alfanumerico
+        -
+           description: Endereço da Sede – número
+           begin: 180
+           end: 185
+           type: alfanumerico
+        -
+           description: Endereço da Sede – complemento
+           begin: 186
+           end: 197
+           type: alfanumerico
+        -
+           description: Bairro ou Distrito da Sede
+           begin: 198
+           end: 213
+           type: alfanumerico
+        -
+           description: Código do Município da Sede
+           begin: 214
+           end: 220
+           type: numerico
+        -
+           description: CEP da Sede
+           begin: 221
+           end: 228
+           type: numerico
+        -
+           description: Endereço de Correspondência – tipo de logradouro
+           begin: 229
+           end: 230
+           type: numerico
+        -
+           description: Endereço de Correspondência - logradouro
+           begin: 231
+           end: 285
+           type: alfanumerico
+        -
+           description: Endereço de Correspondência – número
+           begin: 286
+           end: 291
+           type: alfanumerico
+        -
+           description: Endereço de Correspondência – complemento
+           begin: 292
+           end: 303
+           type: alfanumerico
+        -
+           description: Bairro ou Distrito de Correspondência
+           begin: 304
+           end: 319
+           type: alfanumerico
+        -
+           description: Código do Município de Correspondência
+           begin: 320
+           end: 326
+           type: numerico
+        -
+           description: CEP de Correspondência
+           begin: 327
+           end: 334
+           type: numerico
+        -
+           description: Caracterização do Capital Social
+           begin: 335
+           end: 340
+           type: numerico
+        -
+           description: Indicador de Atividade Econômica especificada no Decreto 2233
+           begin: 341
+           end: 341
+           type: alfanumerico
+        -
+           description: Natureza da Empresa
+           begin: 342
+           end: 347
+           type: numerico
+        -
+           description: Data da Constituição da Empresa Compradora
+           begin: 348
+           end: 355
+           type: numerico
+        -
+           description: Porte da Empresa
+           begin: 356
+           end: 358
+           type: numerico
+        -
+           description: Código CNAE do Comprador ou Proprietário
+           begin: 359
+           end: 366
+           type: alfanumerico
+        -
+           description: Tipo da Receita Agropecuária Bruta Anual (RAB)
+           begin: 367
+           end: 367
+           type: alfanumerico
+        -
+           description: Valor da RAB
+           begin: 368
+           end: 388
+           type: numerico
+        -
+           description: Data de Referência da RAB
+           begin: 389
+           end: 396
+           type: numerico
+        -
+           description: Tipo da Renda Bruta Anual
+           begin: 397
+           end: 397
+           type: alfanumerico
+        -
+           description: Valor da Renda Bruta Anual
+           begin: 398
+           end: 418
+           type: numerico
+        -
+           description: Data de Referência da Renda Bruta Anual
+           begin: 419
+           end: 426
+           type: numerico
+        -
+           description: CNPJ do Líder do Grupo Econômico
+           begin: 427
+           end: 440
+           type: alfanumerico
+        -
+           description: Tipo de Renda Operacional Bruta (ROB) Anual do Grupo Econômico
+           begin: 441
+           end: 441
+           type: alfanumerico
+        -
+           description: Valor da ROB do Grupo Econômico
+           begin: 442
+           end: 462
+           type: numerico
+        -
+           description: Data de Referência da ROB do Grupo Econômico
+           begin: 463
+           end: 470
+           type: numerico
+        -
+           description: Número do CRNTRC
+           begin: 471
+           end: 487
+           type: numerico
+        -
+           description: Indicador de Final de Registro
+           begin: 488
+           end: 488
+           type: alfanumerico
+  detail_dadoscompl:
+    - metadata:
+       occurrence: *
+    - fields:
+        -
+           description: Indicador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Sequência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Produto
+           begin: 30
+           end: 31
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 32
+           end: 34
+           type: numerico
+        -
+           description: Tipo de Registro
+           begin: 35
+           end: 36
+           type: numerico
+        -
+           description: Subtipo de Registro
+           begin: 37
+           end: 38
+           type: numerico
+        -
+           description: Ano da Proposta
+           begin: 39
+           end: 42
+           type: numerico
+        -
+           description: Filler
+           begin: 43
+           end: 43
+           type: alfanumerico
+        -
+           description: Número da Proposta
+           begin: 44
+           end: 51
+           type: alfanumerico
+        -
+           description: Indicador de Tipo de Operação (Inclusão / Reenvio)
+           begin: 52
+           end: 52
+           type: alfanumerico
+        -
+           description: Telefone do Beneficiário
+           begin: 53
+           end: 62
+           type: numerico
+        -
+           description: Telefone celular do Beneficiário
+           begin: 63
+           end: 72
+           type: numerico
+        -
+           description: Email do Beneficiário
+           begin: 73
+           end: 107
+           type: alfanumerico
+        -
+           description: Caixa Postal do Beneficiário
+           begin: 108
+           end: 113
+           type: alfanumerico
+        -
+           description: Endereço do Investimento – tipo de logradouro
+           begin: 114
+           end: 115
+           type: numerico
+        -
+           description: Endereço do Investimento – logradouro
+           begin: 116
+           end: 170
+           type: alfanumerico
+        -
+           description: Endereço do Investimento – número
+           begin: 171
+           end: 176
+           type: alfanumerico
+        -
+           description: Endereço do Investimento – complemento
+           begin: 177
+           end: 188
+           type: alfanumerico
+        -
+           description: Bairro ou Distrito do Investimento
+           begin: 189
+           end: 204
+           type: alfanumerico
+        -
+           description: Código do Município do Investimento
+           begin: 205
+           end: 211
+           type: numerico
+        -
+           description: CEP do Investimento
+           begin: 212
+           end: 219
+           type: numerico
+        -
+           description: Caixa Postal do Investimento
+           begin: 220
+           end: 225
+           type: alfanumerico
+        -
+           description: Código da agência bancária onde foi realizada a operação de financiamento
+           begin: 226
+           end: 231
+           type: numerico
+        -
+           description: Quantidade de empregos diretos antes do investimento
+           begin: 232
+           end: 236
+           type: numerico
+        -
+           description: Quantidade de empregos diretos após o investimento
+           begin: 237
+           end: 241
+           type: numerico
+        -
+           description: Principal garantia do contrato
+           begin: 242
+           end: 244
+           type: numerico
+        -
+           description: Percentual da principal garantia do contrato
+           begin: 245
+           end: 249
+           type: numerico
+        -
+           description: Valor da Taxa de Abertura de Crédito (TAC)
+           begin: 250
+           end: 259
+           type: numerico
+        -
+           description: Indicador de Final de Registro
+           begin: 260
+           end: 260
+           type: alfanumerico
+  detail_rdme:
+    - metadata:
+       occurrence: *
+    - fields:
+        -
+           description: Indicador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Sequência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Produto
+           begin: 30
+           end: 31
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 32
+           end: 34
+           type: numerico
+        -
+           description: Tipo de Registro
+           begin: 35
+           end: 36
+           type: numerico
+        -
+           description: Subtipo de Registro
+           begin: 37
+           end: 38
+           type: numerico
+        -
+           description: Ano da Proposta
+           begin: 39
+           end: 42
+           type: numerico
+        -
+           description: Filler
+           begin: 43
+           end: 43
+           type: alfanumerico
+        -
+           description: Número da Proposta
+           begin: 44
+           end: 51
+           type: alfanumerico
+        -
+           description: Indicador de Tipo de Operação (Inclusão / Reenvio)
+           begin: 52
+           end: 52
+           type: alfanumerico
+        -
+           description: Número do Item do RDME
+           begin: 53
+           end: 56
+           type: numerico
+        -
+           description: Item do CE (Certificado de Enquadramento)
+           begin: 57
+           end: 60
+           type: numerico
+        -
+           description: Código do Equipamento
+           begin: 61
+           end: 67
+           type: numerico
+        -
+           description: Quantidade de Equipamentos
+           begin: 68
+           end: 72
+           type: numerico
+        -
+           description: Descrição Complementar do Equipamento
+           begin: 73
+           end: 172
+           type: alfanumerico
+        -
+           description: Valor Total dos Equipamentos ou Serviços
+           begin: 173
+           end: 193
+           type: numerico
+        -
+           description: Valor Total Financiado dos Equipamentos ou Serviços
+           begin: 194
+           end: 214
+           type: numerico
+        -
+           description: CNPJ do Fabricante ou Fornecedor de Serviços
+           begin: 215
+           end: 228
+           type: alfanumerico
+        -
+           description: Ano de Fabricação
+           begin: 229
+           end: 232
+           type: numerico
+        -
+           description: Indicador de Final de Registro
+           begin: 233
+           end: 233
+           type: alfanumerico
+  detail_vendpf:
+    - metadata:
+       occurrence: *
+    - fields:
+        -
+           description: Indicador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Sequência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Produto
+           begin: 30
+           end: 31
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 32
+           end: 34
+           type: numerico
+        -
+           description: Tipo de Registro
+           begin: 35
+           end: 36
+           type: numerico
+        -
+           description: Subtipo de Registro
+           begin: 37
+           end: 38
+           type: numerico
+        -
+           description: Ano da Proposta
+           begin: 39
+           end: 42
+           type: numerico
+        -
+           description: Filler
+           begin: 43
+           end: 43
+           type: alfanumerico
+        -
+           description: Número da Proposta
+           begin: 44
+           end: 51
+           type: alfanumerico
+        -
+           description: Indicador de Tipo de Operação (Inclusão / Reenvio)
+           begin: 52
+           end: 52
+           type: alfanumerico
+        -
+           description: Número do Item do RDME
+           begin: 53
+           end: 56
+           type: numerico
+        -
+           description: CPF do Vendedor
+           begin: 57
+           end: 67
+           type: numerico
+        -
+           description: Nome do Vendedor
+           begin: 68
+           end: 122
+           type: alfanumerico
+        -
+           description: Indicador de Final de Registro
+           begin: 123
+           end: 123
+           type: alfanumerico
+  detail_cronlib:
+    - metadata:
+       occurrence: *
+    - fields:
+        -
+           description: Indicador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Sequência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Produto
+           begin: 30
+           end: 31
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 32
+           end: 34
+           type: numerico
+        -
+           description: Tipo de Registro
+           begin: 35
+           end: 36
+           type: numerico
+        -
+           description: Subtipo de Registro
+           begin: 37
+           end: 38
+           type: numerico
+        -
+           description: Ano da Proposta
+           begin: 39
+           end: 42
+           type: numerico
+        -
+           description: Filler
+           begin: 43
+           end: 43
+           type: alfanumerico
+        -
+           description: Número da Proposta
+           begin: 44
+           end: 51
+           type: alfanumerico
+        -
+           description: Indicador de Tipo de Operação (Inclusão / Reenvio)
+           begin: 52
+           end: 52
+           type: alfanumerico
+        -
+           description: Número do Item do RDME
+           begin: 53
+           end: 56
+           type: numerico
+        -
+           description: Número da Parcela do Cronograma
+           begin: 57
+           end: 59
+           type: numerico
+        -
+           description: Data Prevista da Liberação
+           begin: 60
+           end: 67
+           type: numerico
+        -
+           description: Valor Previsto da Liberação
+           begin: 68
+           end: 88
+           type: numerico
+        -
+           description: Indicador de Final de Registro
+           begin: 89
+           end: 89
+           type: alfanumerico
+  detail_infoserv:
+    - metadata:
+       occurrence: *
+    - fields:
+        -
+           description: Indicador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Sequência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Produto
+           begin: 30
+           end: 31
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 32
+           end: 34
+           type: numerico
+        -
+           description: Tipo de Registro
+           begin: 35
+           end: 36
+           type: numerico
+        -
+           description: Subtipo de Registro
+           begin: 37
+           end: 38
+           type: numerico
+        -
+           description: Ano da Proposta
+           begin: 39
+           end: 42
+           type: numerico
+        -
+           description: Filler
+           begin: 43
+           end: 43
+           type: alfanumerico
+        -
+           description: Número da Proposta
+           begin: 44
+           end: 51
+           type: alfanumerico
+        -
+           description: Indicador de Tipo de Operação (Inclusão / Reenvio)
+           begin: 52
+           end: 52
+           type: alfanumerico
+        -
+           description: Número do Item do RDME
+           begin: 53
+           end: 56
+           type: numerico
+        -
+           description: Número de identificação/série  do equipamento
+           begin: 57
+           end: 86
+           type: alfanumerico
+        -
+           description: Código do Pais de Origem do equipamento
+           begin: 87
+           end: 92
+           type: numerico
+        -
+           description: Ano de aquisição do equipamento
+           begin: 93
+           end: 96
+           type: numerico
+        -
+           description: Nome do Fabricante
+           begin: 97
+           end: 151
+           type: alfanumerico
+        -
+           description: CNPJ do Fabricante
+           begin: 152
+           end: 165
+           type: alfanumerico
+        -
+           description: Prazo de conclusão do serviço
+           begin: 166
+           end: 168
+           type: numerico
+        -
+           description: Número da Descrição das Informações sobre Serviços
+           begin: 169
+           end: 171
+           type: numerico
+        -
+           description: Descrição do serviço
+           begin: 172
+           end: 371
+           type: alfanumerico
+        -
+           description: Indicador de Final de Registro
+           begin: 372
+           end: 372
+           type: alfanumerico
+  detail_observ:
+    - metadata:
+       occurrence: *
+    - fields:
+        -
+           description: Indicador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Sequência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Produto
+           begin: 30
+           end: 31
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 32
+           end: 34
+           type: numerico
+        -
+           description: Tipo de Registro
+           begin: 35
+           end: 36
+           type: numerico
+        -
+           description: Subtipo de Registro
+           begin: 37
+           end: 38
+           type: numerico
+        -
+           description: Ano da Proposta
+           begin: 39
+           end: 42
+           type: numerico
+        -
+           description: Filler
+           begin: 43
+           end: 43
+           type: alfanumerico
+        -
+           description: Número da Proposta
+           begin: 44
+           end: 51
+           type: alfanumerico
+        -
+           description: Indicador de Tipo de Operação (Inclusão / Reenvio)
+           begin: 52
+           end: 52
+           type: alfanumerico
+        -
+           description: Número da observação da PAC
+           begin: 53
+           end: 54
+           type: numerico
+        -
+           description: Observação da PAC
+           begin: 55
+           end: 254
+           type: alfanumerico
+        -
+           description: Indicador de Final de Registro
+           begin: 255
+           end: 255
+           type: alfanumerico
+  trailer:
+    - metadata:
+       occurrence: 1
+    - fields:
+        -
+           description: Indicador do Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Sequência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador do Produto
+           begin: 30
+           end: 31
+           type: numerico
+        -
+           description: Identificador da Versão
+           begin: 32
+           end: 34
+           type: numerico
+        -
+           description: Tipo de Registro
+           begin: 35
+           end: 36
+           type: numerico
+        -
+           description: Subtipo de Registro
+           begin: 37
+           end: 38
+           type: numerico
+        -
+           description: Quantidade Total de Registros
+           begin: 39
+           end: 44
+           type: numerico
+        -
+           description: Indicador de Final de Registro
+           begin: 45
+           end: 45
+           type: alfanumerico

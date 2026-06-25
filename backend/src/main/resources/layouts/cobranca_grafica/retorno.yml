@@ -1,0 +1,90 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  0: Header-0
+  1: Registro-Titulo-1
+  9: Trailer-9
+layout-definition:
+  Header-0:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Segment type
+        begin: 1
+        end: 1
+        type: alfanumerico
+      -
+        description: Source Vendor Name
+        begin: 2
+        end: 11
+        type: alfanumerico
+      -
+        description: Source Vendor ID
+        begin: 12
+        end: 21
+        type: numerico
+      -
+        description: Destination Vendor Name
+        begin: 22
+        end: 41
+        type: alfanumerico
+      -
+        description: Destination Vendor ID
+        begin: 42
+        end: 44
+        type: numerico
+      -
+        description: Date of File Recording
+        begin: 45
+        end: 50
+        type: numerico
+        format: DDMMYY
+      -
+        description: File sequence number
+        begin: 51
+        end: 60
+        type: numerico
+  Registro-Titulo-1:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Segment type
+        begin: 1
+        end: 1
+        type: alfanumerico
+      -
+        description: Number of participant control
+        begin: 2
+        end: 26
+        type: alfanumerico
+      -
+        description: Instruction type
+        begin: 27
+        end: 28
+        type: numerico
+      -
+        description: Instruction date
+        begin: 29
+        end: 36
+        type: numerico
+        format: DDMMYYYY
+  Trailer-9:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Segment type
+        begin: 1
+        end: 1
+        type: alfanumerico
+      -
+        description: Number of lines in the file
+        begin: 2
+        end: 11
+        type: numerico

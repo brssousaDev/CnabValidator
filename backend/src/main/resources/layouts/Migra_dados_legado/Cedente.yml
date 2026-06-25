@@ -1,0 +1,139 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  1: header
+  2: register
+  3: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: DATA DE GERACAO
+        begin: 2
+        end: 15
+        type: numerico
+        format: DDMMYYYY
+  register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: IDENTIFICADOR DO CEDENTE NO LEGADO
+        begin: 2
+        end: 13
+        type: numerico
+      -
+        description: IDENTIFICADOR DO GERENTE
+        begin: 14
+        end: 25
+        type: numerico
+      -
+        description: FREQUENCIA DE EXTRATO
+        begin: 26
+        end: 26
+        type: alfanumerico
+      -
+        description: TEXTO
+        begin: 27
+        end: 66
+        type: alfanumerico
+      -
+        description: RETORNA MORA NO ARQUIVO
+        begin: 67
+        end: 67
+        type: alfanumerico
+      -
+        description: IDENTIFICADOR DE LAYOUT
+        begin: 68
+        end: 70
+        type: numerico
+      -
+        description: TIPO DE LAYOUT CNAB
+        begin: 71
+        end: 73
+        type: numerico
+      -
+        description: MENSAGEM VARIALVEL
+        begin: 74
+        end: 74
+        type: alfanumerico
+      -
+        description: ARQUIVO DE LOGO
+        begin: 75
+        end: 104
+        type: alfanumerico
+      -
+        description: CONTADOR DE RETORNO
+        begin: 105
+        end: 114
+        type: numerico
+      -
+        description: GERA ARQUIVO RETORNO TELA
+        begin: 115
+        end: 115
+        type: alfanumerico
+      -
+        description: TIPO DE GERACAO DE RETORNO DO CEDENTE
+        begin: 116
+        end: 130
+        type: alfanumerico
+      -		
+        description: DIRETORIO DE ARQUIVOS DO CEDENTE
+        begin: 131
+        end: 230
+        type: alfanumerico
+      -
+        description: EMAIL DO CEDENTE
+        begin: 231
+        end: 330
+        type: alfanumerico
+      -
+        description: CONFERE SEQUENCIA DE REMESSA
+        begin: 331
+        end: 331
+        type: alfanumerico
+      -
+        description: ULTIMO SEQUENCIAL DA REMESSA
+        begin: 332
+        end: 339
+        type: numerico
+      -
+        description: GERA ARQUIVO DE RETORNO PELO PORTAL
+        begin: 340
+        end: 340
+        type: alfanumerico
+      -
+        description: SACADOS IMPOSSIBILITADOS DE OPERAR PARA ESTE CEDENTE
+        begin: 341
+        end: 540
+        type: alfanumerico
+  trailer:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: QUANTIDADE DE REGISTRO DO ARQUIVO
+        begin: 2
+        end: 7
+        type: alfanumerico

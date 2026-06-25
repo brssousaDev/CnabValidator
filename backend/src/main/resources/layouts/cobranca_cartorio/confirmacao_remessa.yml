@@ -1,0 +1,749 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  0: header-register
+  1: transaction-register
+  9: trailler-register
+  C: segment-c
+layout-definition:
+  header-register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identificacao do Registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Numero do Codigo do Portador
+        begin: 2
+        end: 4
+        type: numerico
+      -
+        description: Nome do Portador
+        begin: 5
+        end: 44
+        type: texto
+      -
+        description: Data do Movimento
+        begin: 45
+        end: 52
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Identificacao de Transacao - Remetente
+        begin: 53
+        end: 55
+        type: alfanumerico
+      -
+        description: Identificacao de Transacao - Destinatario
+        begin: 56
+        end: 58
+        type: alfanumerico
+      -
+        description: Identificacao de Transacao - Tipo
+        begin: 59
+        end: 61
+        type: alfanumerico
+      -
+        description: Numero Sequencial da Remessa
+        begin: 62
+        end: 67
+        type: numerico
+      -
+        description: Quantidade de Registros na Remessa
+        begin: 68
+        end: 71
+        type: numerico
+      -
+        description: Quantidade de Titulos na Remessa
+        begin: 72
+        end: 75
+        type: numerico
+      -
+        description: Quantidade de Indicacoes na Remessa
+        begin: 76
+        end: 79
+        type: numerico
+      -
+        description: Quantidade de Originais na Remessa
+        begin: 80
+        end: 83
+        type: numerico
+      -
+        description: Identificacao da Agencia Centralizadora
+        begin: 84
+        end: 89
+        type: alfanumerico
+      -
+        description: Versao do Layout
+        begin: 90
+        end: 92
+        type: numerico
+      -
+        description: Codigo do Municipio da Praca de Pagamento
+        begin: 93
+        end: 99
+        type: alfanumerico
+      -
+        description: Complemento do Registro
+        begin: 100
+        end: 996
+        type: alfanumerico
+      -
+        description: Numero Sequencial do Registro no Arquivo
+        begin: 997
+        end: 1000
+        type: numerico
+  transaction-register:
+    - metadata:
+       occurrence : '*'
+    - fields:
+      -
+        description: Identificacao do Registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Numero do Codigo do Portador
+        begin: 2
+        end: 4
+        type: numerico
+      -
+        description: Agencia / Codigo do Cedente
+        begin: 5
+        end: 19
+        type: alfanumerico
+      -
+        description: Nome do Cedente/Favorecido
+        begin: 20
+        end: 64
+        type: alfanumerico
+      -
+        description: Nome do Sacador/Vendedor
+        begin: 65
+        end: 109
+        type: alfanumerico
+      -
+        description: Documento do Sacador
+        begin: 110
+        end: 123
+        type: alfanumerico
+      -
+        description: Endereco do Sacador/Vendedor
+        begin: 124
+        end: 168
+        type: alfanumerico
+      -
+        description: CEP do Sacador/Vendedor
+        begin: 169
+        end: 176
+        type: numerico
+      -
+        description: Cidade do Sacador/Vendedor
+        begin: 177
+        end: 196
+        type: alfanumerico
+      -
+        description: UF do Sacador/Vendedor
+        begin: 197
+        end: 198
+        type: texto
+      -
+        description: Nosso Numero
+        begin: 199
+        end: 213
+        type: alfanumerico
+      -
+        description: Especie do Titulo
+        begin: 214
+        end: 216
+        type: texto
+      -
+        description: Numero do Titulo
+        begin: 217
+        end: 227
+        type: alfanumerico
+      -
+        description: Data da Emissao do Titulo
+        begin: 228
+        end: 235
+        type: numerico
+        format: DDMMYYYY      
+      -
+        description: Data de Vencimento do Titulo
+        begin: 236
+        end: 243
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Tipo de Moeda
+        begin: 244
+        end: 246
+        type: numerico
+      -
+        description: Valor do Titulo
+        begin: 247
+        end: 260
+        type: numerico
+      -
+        description: Saldo do Titulo
+        begin: 261
+        end: 274
+        type: numerico
+      -
+        description: Praca de Protesto
+        begin: 275
+        end: 294
+        type: alfanumerico
+      -
+        description: Tipo de Endosso
+        begin: 295
+        end: 295
+        type: texto
+      -
+        description: Informacao sobre Aceite
+        begin: 296
+        end: 296
+        type: texto
+      -
+        description: Numero de Controle do(s) Devedor(es)
+        begin: 297
+        end: 297
+        type: numerico
+      -
+        description: Nome do Devedor
+        begin: 298
+        end: 342
+        type: alfanumerico
+      -
+        description: Tipo de Identificacao do Devedor
+        begin: 343
+        end: 345
+        type: numerico
+      -
+        description: Numero de Identificacao do Devedor
+        begin: 346
+        end: 359
+        type: numerico
+      -
+        description: Documento do Devedor
+        begin: 360
+        end: 370
+        type: alfanumerico
+      -
+        description: Endereco do Devedor
+        begin: 371
+        end: 415
+        type: alfanumerico
+      -
+        description: CEP do Devedor
+        begin: 416
+        end: 423
+        type: numerico
+      -
+        description: Cidade do Devedor
+        begin: 424
+        end: 443
+        type: alfanumerico
+      -
+        description: UF do Devedor
+        begin: 444
+        end: 445
+        type: texto
+      -
+        description: Codigo do Cartorio
+        begin: 446
+        end: 447
+        type: numerico
+      -
+        description: Numero do Protocolo do Cartorio
+        begin: 448
+        end: 457
+        type: alfanumerico
+      -
+        description: Tipo de Ocorrencia
+        begin: 458
+        end: 458
+        type: alfanumerico
+      -
+        description: Data do Protocolo
+        begin: 459
+        end: 466
+        type: numerico
+        format: DDMMYYYY
+        exception-values: 
+          -
+            "00000000"
+      -
+        description: Valor das Custas do Cartorio
+        begin: 467
+        end: 476
+        type: numerico
+      -
+        description: Declaracao do Portador
+        begin: 477
+        end: 477
+        type: alfanumerico
+      -
+        description: Data da Ocorrencia
+        begin: 478
+        end: 485
+        type: numerico
+        format: DDMMYYYY
+        exception-values: 
+          -
+            "00000000"
+      -
+        description: Codigo de Irregularidade
+        begin: 486
+        end: 487
+        type: alfanumerico
+      -
+        description: Bairro do Devedor
+        begin: 488
+        end: 507
+        type: texto
+      -
+        description: Valor das Custas do Cartorio Distribuidor
+        begin: 508
+        end: 517
+        type: numerico
+      -
+        description: Registro de Distribuicao
+        begin: 518
+        end: 523
+        type: numerico
+      -
+        description: Valor da gravacao eletronica e demais despesas
+        begin: 524
+        end: 533
+        type: numerico
+      -
+        description: Numero da Operacao do Banco
+        begin: 534
+        end: 538
+        type: numerico
+      -
+        description: Numero do Contrato do Banco
+        begin: 539
+        end: 553
+        type: numerico
+      -
+        description: Numero da Parcela do Contrato
+        begin: 554
+        end: 556
+        type: numerico
+      -
+        description: Tipo da Letra de Cambio
+        begin: 557
+        end: 557
+        type: alfanumerico
+      -
+        description: Complemento Codigo de Irregularidade
+        begin: 558
+        end: 565
+        type: alfanumerico
+      -
+        description: Protesto por Motivo de Falencia
+        begin: 566
+        end: 566
+        type: texto
+      -
+        description: Instrumento de Protesto
+        begin: 567
+        end: 567
+        type: texto
+      -
+        description: Valor das demais despesas
+        begin: 568
+        end: 577
+        type: numerico
+      -
+        description: Custas DDA
+        begin: 578
+        end: 587
+        type: numerico
+      -
+        description: Data Limite para Pagamento
+        begin: 588
+        end: 595
+        type: numerico
+        format: DDMMYYYY
+        exception-values: 
+          -
+            "00000000"
+      -
+        description: CNPJ do Apresentante/Portador
+        begin: 596
+        end: 609
+        type: alfanumerico
+      -
+        description: Endosso
+        begin: 610
+        end: 610
+        type: texto
+      -
+        description: Tipo de Documento
+        begin: 611
+        end: 611
+        type: numerico
+      -
+        description: Documento do Cedente
+        begin: 612
+        end: 625
+        type: alfanumerico
+      -
+        description: Endereco do Cedente
+        begin: 626
+        end: 670
+        type: alfanumerico
+      -
+        description: Bairro do Cedente
+        begin: 671
+        end: 690
+        type: texto
+      -
+        description: CEP do Cedente
+        begin: 691
+        end: 698
+        type: numerico
+      -
+        description: Cidade do Cedente
+        begin: 699
+        end: 718
+        type: texto
+      -
+        description: UF do Cedente
+        begin: 719
+        end: 720
+        type: texto
+      -
+        description: Numero da Nota Fiscal Eletronica
+        begin: 721
+        end: 735
+        type: numerico
+      -
+        description: Codigo do Cartorio de Notas
+        begin: 736
+        end: 738
+        type: numerico
+      -
+        description: Valor das Custas Reconhecimento de Firmas
+        begin: 739
+        end: 748
+        type: numerico
+      -
+        description: Tarja Cheque ( campo 1 )
+        begin: 749
+        end: 756
+        type: numerico
+      -
+        description: Tarja Cheque ( campo 2 )
+        begin: 757
+        end: 766
+        type: numerico
+      -
+        description: Tarja Cheque ( campo 3 )
+        begin: 767
+        end: 778
+        type: numerico
+      -
+        description: Complemento do Registro
+        begin: 779
+        end: 996
+        type: alfanumerico
+      -
+        description: Numero Sequencial do Registro no Arquivo
+        begin: 997
+        end: 1000
+        type: numerico
+  segment-c:
+    - metadata:
+       occurrence : '*'
+    - fields:
+      -
+        description: Convenio
+        begin: 1
+        end: 1
+        type: texto
+      -
+        description: CMC7 1
+        begin: 2
+        end: 31
+        type: numerico
+      -
+        description: Check Value 1
+        begin: 32
+        end: 45
+        type: numerico
+      -
+        description: CMC7 2
+        begin: 46
+        end: 75
+        type: numerico
+      -
+        description: Check Value 2
+        begin: 76
+        end: 89
+        type: numerico
+      -
+        description: CMC7 3
+        begin: 90
+        end: 119
+        type: numerico
+      -
+        description: Check Value 3
+        begin: 120
+        end: 133
+        type: numerico
+      -
+        description: CMC7 4
+        begin: 134
+        end: 163
+        type: numerico
+      -
+        description: Check Value 4
+        begin: 164
+        end: 177
+        type: numerico
+      -
+        description: CMC7 5
+        begin: 178
+        end: 207
+        type: numerico
+      -
+        description: Check Value 5
+        begin: 208
+        end: 221
+        type: numerico
+      -
+        description: CMC7 6
+        begin: 222
+        end: 251
+        type: numerico
+      -
+        description: Check Value 6
+        begin: 252
+        end: 265
+        type: numerico
+      -
+        description: CMC7 7
+        begin: 266
+        end: 295
+        type: numerico
+      -
+        description: Check Value 7
+        begin: 296
+        end: 309
+        type: numerico
+      -
+        description: CMC7 8
+        begin: 310
+        end: 339
+        type: numerico
+      -
+        description: Check Value 8
+        begin: 340
+        end: 353
+        type: numerico
+      -
+        description: CMC7 9
+        begin: 354
+        end: 383
+        type: numerico
+      -
+        description: Check Value 9
+        begin: 384
+        end: 397
+        type: numerico
+      -
+        description: CMC7 10
+        begin: 398
+        end: 427
+        type: numerico
+      -
+        description: Check Value 10
+        begin: 428
+        end: 441
+        type: numerico
+      -
+        description: CMC7 11
+        begin: 442
+        end: 471
+        type: numerico
+      -
+        description: Check Value 11
+        begin: 472
+        end: 485
+        type: numerico
+      -
+        description: CMC7 12
+        begin: 486
+        end: 515
+        type: numerico
+      -
+        description: Check Value 12
+        begin: 516
+        end: 529
+        type: numerico
+      -
+        description: CMC7 13
+        begin: 530
+        end: 559
+        type: numerico
+      -
+        description: Check Value 13
+        begin: 560
+        end: 573
+        type: numerico
+      -
+        description: CMC7 14
+        begin: 574
+        end: 603
+        type: numerico
+      -
+        description: Check Value 14
+        begin: 604
+        end: 617
+        type: numerico
+      -
+        description: CMC7 15
+        begin: 618
+        end: 647
+        type: numerico
+      -
+        description: Check Value 15
+        begin: 648
+        end: 661
+        type: numerico
+      -
+        description: CMC7 16
+        begin: 662
+        end: 691
+        type: numerico
+      -
+        description: Check Value 16
+        begin: 692
+        end: 705
+        type: numerico
+      -
+        description: CMC7 17
+        begin: 706
+        end: 735
+        type: numerico
+      -
+        description: Check Value 17
+        begin: 736
+        end: 749
+        type: numerico
+      -
+        description: CMC7 18
+        begin: 750
+        end: 779
+        type: numerico
+      -
+        description: Check Value 18
+        begin: 780
+        end: 793
+        type: numerico
+      -
+        description: CMC7 19
+        begin: 794
+        end: 823
+        type: numerico
+      -
+        description: Check Value 19
+        begin: 824
+        end: 837
+        type: numerico
+      -
+        description: CMC7 20
+        begin: 838
+        end: 867
+        type: numerico
+      -
+        description: Check Value 20
+        begin: 868
+        end: 881
+        type: numerico
+      -
+        description: CMC7 21
+        begin: 882
+        end: 911
+        type: numerico
+      -
+        description: Check Value 21
+        begin: 912
+        end: 925
+        type: numerico
+      -
+        description: CMC7 22
+        begin: 926
+        end: 955
+        type: numerico
+      -
+        description: Check Value 22
+        begin: 956
+        end: 969
+        type: numerico
+      -
+        description: Reservado
+        begin: 970
+        end: 996
+        type: alfanumerico
+      -
+        description: Line Sequence Number
+        begin: 970
+        end: 1000
+        type: numerico
+  trailler-register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identificacao do Registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Numero do Codigo do Portador
+        begin: 2
+        end: 4
+        type: numerico
+      -
+        description: Nome do Portador
+        begin: 5
+        end: 44
+        type: texto
+      -
+        description: Data do Movimento
+        begin: 45
+        end: 52
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Somatorio de Seguranca - Qtde na Remessa
+        begin: 53
+        end: 57
+        type: numerico
+      -
+        description: Somatorio de Seguranca - Valor da Remessa
+        begin: 58
+        end: 75
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 76
+        end: 996
+        type: alfanumerico
+      -
+        description: Numero Sequencial do Registro no Arquivo
+        begin: 997
+        end: 1000
+        type: numerico

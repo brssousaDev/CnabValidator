@@ -1,0 +1,309 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  1: header
+  2: register
+  3: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: DATA DE GERACAO
+        begin: 2
+        end: 15
+        type: numerico
+        format: DDMMYYYY
+  register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: IDENTIFICACAO DA CARTEIRA NO LEGADO
+        begin: 2
+        end: 21
+        type: alfanumerico
+      -
+        description: IDENTIFICADOR DO CEDENTE NO LEGADO
+        begin: 22
+        end: 33
+        type: numerico
+      -
+        description: TIPO DE LIQUIDACAO
+        begin: 34
+        end: 36
+        type: alfanumerico
+      -
+        description: AGENCIA CONTA DEPOSITOS VINCULADOS A OPERACOES DE CREDITO
+        begin: 37
+        end: 40
+        type: numerico
+      -
+        description: NUMERO CONTA DEPOSITOS VINCULADOS A OPERACOES DE CREDITO 
+        begin: 41
+        end: 52
+        type: numerico
+      -
+        description: AGENCIA DA CONTA MOVIMENTACAO LIVRE
+        begin: 53
+        end: 56
+        type: numerico
+      -
+        description: NUMERO DA CONTA DE MOVIMENTACAO LIVRE
+        begin: 57
+        end: 68
+        type: numerico
+      -
+        description: COBRA JUROS MORA
+        begin: 69
+        end: 69
+        type: alfanumerico
+      -
+        description: TAXA JUROS MORA
+        begin: 70
+        end: 81
+        type: numerico
+      -
+        description: DIAS PARA COBRANCA DE JUROS MORA
+        begin: 82
+        end: 84
+        type: numerico
+      -
+        description: PROTESTAR EM CARTORIO
+        begin: 85
+        end: 85
+        type: alfanumerico
+      -
+        description: PRAZO PARA PROTESTO
+        begin: 86
+        end: 88
+        type: numerico
+      -		
+        description: ARQUIVO CNAB
+        begin: 89
+        end: 138
+        type: alfanumerico
+      -
+        description: EMITIR BLOQUETO
+        begin: 139
+        end: 139
+        type: alfanumerico
+      -
+        description: DIAS PARA ENVIO A BANCO CORRESPONDENTE
+        begin: 140
+        end: 142
+        type: numerico
+      -
+        description: BAIXAR AUTOMATICAMENTE
+        begin: 143
+        end: 143
+        type: alfanumerico
+      -
+        description: DIAS PARA BAIXA AUTOMATICA
+        begin: 144
+        end: 146
+        type: numerico
+      -
+        description: TRATA PROTESTO
+        begin: 147
+        end: 147
+        type: alfanumerico
+      -
+        description: DEBITA DEVOLUCAO DE CHEQUE
+        begin: 148
+        end: 148
+        type: alfanumerico
+      -
+        description: DEBITA QUALQUER DEVOLUCAO
+        begin: 149
+        end: 149
+        type: alfanumerico
+      -
+        description: CONCENTRACAO MAXIMA DE SACADO
+        begin: 150
+        end: 154
+        type: numerico
+      -
+        description: DATA LIQUIDACAO IGUAL DATA CREDITO
+        begin: 155
+        end: 155
+        type: alfanumerico
+      -
+        description: COBRA MULTA NO ATRASO
+        begin: 156
+        end: 156
+        type: alfanumerico
+      -
+        description: VALOR MULTA
+        begin: 157
+        end: 169
+        type: numerico
+      -
+        description: PERCENTUAL DE MULTA
+        begin: 170
+        end: 174
+        type: numerico
+      -
+        description: CARTEIRA DE ATRASO DO SACADO
+        begin: 175
+        end: 194
+        type: alfanumerico
+      -
+        description: BLOQUEADA
+        begin: 195
+        end: 195
+        type: alfanumerico
+      -
+        description: MODO DE TARIFA
+        begin: 196
+        end: 196
+        type: alfanumerico
+      -
+        description: DIAS PARA COBRANCA DA TARIFA
+        begin: 197
+        end: 198
+        type: numerico
+      -
+        description: PERMITE ENVIAR TITULO DE TERCEIRO
+        begin: 199
+        end: 199
+        type: alfanumerico
+      -
+        description: FORMA COMO A DATA DE BANCO COBRANCA E ATRIBUIDA
+        begin: 200
+        end: 202
+        type: alfanumerico
+      -
+        description: ADERE DDA
+        begin: 203
+        end: 203
+        type: alfanumerico
+      -
+        description: PRAZO ACEITACAO TITULO
+        begin: 204
+        end: 207
+        type: numerico
+      -
+        description: GERA ARQUIVO DE RETORNO
+        begin: 208
+        end: 208
+        type: alfanumerico
+      -
+        description: CHECA DUPLICATAS
+        begin: 209
+        end: 209
+        type: alfanumerico
+      -
+        description: PERCENTUAL MAIORES DEVEDORES DUPLICATAS
+        begin: 210
+        end: 214
+        type: numerico
+      -
+        description: VALOR MINIMO CHECAGEM DUPLICATAS
+        begin: 215
+        end: 229
+        type: numerico
+      -
+        description: USA NOSSO NUMERO EM REMESSA E RETORNO DE TERCEIROS
+        begin: 230
+        end: 230
+        type: alfanumerico
+      -
+        description: PERMITE OPERAR PELO INTERNET BANKING
+        begin: 231
+        end: 231
+        type: alfanumerico
+      -
+        description: OBRIGA CONFIRMACAO DE BANCO CORRESPONDENTE
+        begin: 232
+        end: 232
+        type: alfanumerico
+      -
+        description: UTILIZA PRAZO DE PROTESTO DO ARQUIVO
+        begin: 233
+        end: 233
+        type: alfanumerico
+      -
+        description: VALIDA CEP DO SACADO
+        begin: 234
+        end: 234
+        type: alfanumerico
+      -
+        description: BANCO CORRESPONDENTE IMPRIME BOLETO
+        begin: 235
+        end: 235
+        type: alfanumerico
+      -
+        description: NUMERO MAXIMO DE PRORROGACOES PERMITIDAS
+        begin: 236
+        end: 238
+        type: numerico
+      -
+        description: PRAZO MAXIMO DE PRORROGACOES
+        begin: 239
+        end: 241
+        type: numerico
+      -
+        description: SALDO MAXIMO CEDENTE
+        begin: 242
+        end: 254
+        type: numerico
+      -
+        description: NUMERO DE DIAS TITULO VENCIDO COMO GARANTIA
+        begin: 255
+        end: 257
+        type: numerico
+      -
+        description: VINCULAR TITULOS COMO GARANTIA VENCIMENTO SUPERIOR
+        begin: 258
+        end: 258
+        type: alfanumerico
+      -
+        description: SUMARIZA LANCAMENTOS DO SDTES
+        begin: 259
+        end: 259
+        type: alfanumerico
+      -
+        description: AGRUPA TARIFAS NO SDTES
+        begin: 260
+        end: 260
+        type: alfanumerico
+      -
+        description: COBRA TARIFA DE TITULO VENCIDO
+        begin: 261
+        end: 261
+        type: alfanumerico
+      -
+        description: PRAZO DE ENVIO DE BOLETO
+        begin: 262
+        end: 264
+        type: alfanumerico
+  trailer:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: QUANTIDADE DE REGISTRO DO ARQUIVO
+        begin: 2
+        end: 7
+        type: alfanumerico

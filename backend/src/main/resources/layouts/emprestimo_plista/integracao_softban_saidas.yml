@@ -1,0 +1,248 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 2
+		 
+key-map:
+  70: header-label
+  77: transaction-register-type-1
+  79: trailler-register
+  
+layout-definition:
+  header-label:
+    - metadata:
+      occurrence : 1
+    - fields:
+      -
+       description: Codigo do Registro 
+       begin: 1
+       end: 2
+       type: numerico
+      -
+       description: Codigo da Agencia
+       begin: 4
+       end: 8
+       type: numerico
+      -
+       description: Data Base
+       begin: 10
+       end: 17
+       type: numerico
+      -
+       description: Codigo do Sistema
+       begin: 19
+       end: 20
+       type: numerico
+      -
+       description: Sigla do Sistema
+       begin: 22
+       end: 23
+       type: alfanumerico
+      -
+       description: Sequencia de Registros
+       begin: 493
+       end: 500
+       type: numerico
+  transaction-register-type-1:
+    - metadata:
+      occurrence : 1
+    - fields:
+      -
+       description: Codigo do Registro 
+       begin: 1
+       end: 2
+       type: numerico
+      -
+       description: Numero da Conta
+       begin: 4
+       end: 13
+       type: numerico
+      -
+       description: Numero do Cliente
+       begin: 15
+       end: 24
+       type: numerico
+      -
+       description: CNPJ/CPF
+       begin: 26
+       end: 40
+       type: alfanumerico
+      -
+       description: Numero do Contrato
+       begin: 42
+       end: 50
+       type: numerico
+      -
+       description: Codigo Modalidade
+       begin: 52
+       end: 54
+       type: numerico
+      -
+       description: Data do  Contrato
+       begin: 56
+       end: 63
+       type: numerico
+       format: ddmmaaaa
+      -
+       description: Data do Vencimento do Contrato
+       begin: 65
+       end: 72
+       type: numerico
+       format: ddmmaaaa
+      -
+       description: Data da Baixa para Prejuizo
+       begin: 74
+       end: 81
+       type: numerico
+       format: ddmmaaaa
+      -
+       description: Taxa de Juros Efetiva
+       begin: 83
+       end: 90
+       type: numerico
+      -
+       description: Data da prestacao
+       begin: 92
+       end: 99
+       type: ddmmaaaa
+      -
+       description: Indice de correcao
+       begin: 101
+       end: 103
+       type: numerico
+      -
+       description: Variacao cambial
+       begin: 105
+       end: 107
+       type: numerico
+      -
+       description: Valor da operacao contratada 
+       begin: 109
+       end: 125
+       type: numerico
+      -
+       description: Identificacao do contrato
+       begin: 127
+       end: 141
+       type: alfanumerico
+      -
+       description: Percentual do indexador
+       begin: 143
+       end: 152
+       type: numerico
+      -
+       description: Indicador operacao Cedida
+       begin: 154
+       end: 154
+       type: numerico
+      -
+       description: Tipo e Subtipo da informacao adicional 1
+       begin: 154
+       end: 154
+       type: alfanumerico
+      -
+       description: Codigo da informacao adicional 1
+       begin: 170
+       end: 209
+       type: alfanumerico
+      -
+       description: Identificacao da informacao adicional 1
+       begin: 211
+       end: 224
+       type: alfanumerico
+      -
+       description: Valor da informacao adicional 1
+       begin: 226
+       end: 242
+       type: numerico
+      -
+       description: Percentual da informacao adicional 1
+       begin: 244
+       end: 248
+       type: numerico
+      -
+       description: Quantidade de registros da informacao adicional 1
+       begin: 250
+       end: 258
+       type: alfanumerico
+      -
+       description: Tipo e Subtipo da informacao adicional 2
+       begin: 260
+       end: 263
+       type: alfanumerico
+      -
+       description: Codigo da informacao adicional 2
+       begin: 265
+       end: 304
+       type: alfanumerico
+      -
+       description: Identificacao da informacao adicional 2
+       begin: 306
+       end: 319
+       type: alfanumerico
+      -
+       description: Valor da informacao adicional 2
+       begin: 321
+       end: 337
+       type: numerico
+      -
+       description: Percentual da informacao adicional 2
+       begin: 339
+       end: 343
+       type: numerico
+      -
+       description: Quantidade de registros da informacao adicional 2
+       begin: 345
+       end: 353
+       type: alfanumerico
+      -
+       description: Tipo e Subtipo da informacao adicional 3
+       begin: 355
+       end: 358
+       type: alfanumerico
+      -
+       description: Codigo da informacao adicional 3
+       begin: 360
+       end: 399
+       type: alfanumerico
+      -
+       description: Identificacao da informacao adicional 3
+       begin: 401
+       end: 414
+       type: alfanumerico
+      -
+       description: Valor da informacao adicional 3
+       begin: 416
+       end: 432
+       type: numerico
+      -
+       description: Percentual da informacao adicional 3
+       begin: 434
+       end: 438
+       type: numerico
+      -
+       description: Quantidade de registros da informacao adicional 3
+       begin: 440
+       end: 448
+       type: alfanumerico
+      -
+       description: Sequencia
+       begin: 493
+       end: 500
+       type: numerico
+  trailler-register:
+    - metadata:
+      occurrence : 1
+    - fields:	  
+      -
+       description: Codigo do Registro 
+       begin: 1
+       end: 2
+       type: numerico
+      -
+       description: Sequencia
+       begin: 493
+       end: 500
+       type: numerico

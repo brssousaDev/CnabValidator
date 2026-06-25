@@ -1,0 +1,377 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  0: header
+  1: detail-register
+  9: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Tipo de registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Codigo retorno
+        begin: 2
+        end: 2
+        type: numerico
+      -
+        description: Literal retorno
+        begin: 3
+        end: 9
+        type: alfanumerico
+      -
+        description: Codigo servico
+        begin: 10
+        end: 11
+        type: numerico
+      -
+        description: Literal COBRANCA
+        begin: 12
+        end: 26
+        type: alfanumerico
+      -
+        description: Identificacao da Empresa no Banco
+        begin: 27
+        end: 40
+        type: alfanumerico
+      -
+        description: Vago
+        begin: 41
+        end: 46
+        type: alfanumerico
+      -
+        description: Nome por Extenso do Cliente
+        begin: 47
+        end: 76
+        type: alfanumerico
+      -
+        description: Codigo Banco
+        begin: 77
+        end: 79
+        type: numerico
+      -
+        description: Nome Banco
+        begin: 80
+        end: 94
+        type: alfanumerico
+      -
+        description: Data Gravacao Arquivo
+        begin: 95
+        end: 100
+        type: numerico
+        format: DDMMYY
+      -
+        description: Densidade de Gravacao
+        begin: 101
+        end: 108
+        type: alfanumerico
+      -
+        description: Numero do Aviso
+        begin: 109
+        end: 113
+        type: numerico
+      -
+        description: Vago
+        begin: 114
+        end: 394
+        type: alfanumerico
+      -
+        description: Sequencial
+        begin: 395
+        end: 400
+        type: numerico
+  detail-register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Tipo de registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Tipo de Inscricao da empresa
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: CNPJ da empresa
+        begin: 4
+        end: 17
+        type: alfanumerico
+      -
+        description: Identificacao da Empresa no Banco
+        begin: 18
+        end: 31
+        type: numerico
+      -
+        description: Vago
+        begin: 32
+        end: 37
+        type: alfanumerico
+      -
+        description: Uso Empresa
+        begin: 38
+        end: 58
+        type: alfanumerico
+      -
+        description: Nosso numero
+        begin: 59
+        end: 70
+        type: alfanumerico
+      -
+        description: Numero do Contrato
+        begin: 71
+        end: 80
+        type: numerico
+      -
+        description: Código do Erro Detectado na Remessa
+        begin: 81
+        end: 82
+        type: numerico
+      -
+        description: Vago
+        begin: 83
+        end: 107
+        type: alfanumerico
+      -
+        description: Codigo da Carteira
+        begin: 108
+        end: 108
+        type: numerico
+      -
+        description: Codigo Ocorrencia Retorno
+        begin: 109
+        end: 110
+        type: numerico
+      -
+        description: Data ocorrencia
+        begin: 111
+        end: 116
+        type: numerico
+        format: DDMMYY
+      -
+        description: Seu numero
+        begin: 117
+        end: 126
+        type: alfanumerico
+      -
+        description: Nosso Numero
+        begin: 127
+        end: 134
+        type: numerico
+      -
+        description: Vago
+        begin: 135
+        end: 146
+        type: alfanumerico
+      -     
+        description: Data vencimento
+        begin: 147
+        end: 152
+        type: numerico
+        format: DDMMYY
+      -
+        description: Valor titulo
+        begin: 153
+        end: 165
+        type: numerico
+      -
+        description: Banco/Agencia de Liquidacao
+        begin: 166
+        end: 172
+        type: numerico
+      -
+        description: Vago
+        begin: 173
+        end: 173
+        type: alfanumerico
+      -
+        description: Especie do Documento
+        begin: 174
+        end: 175
+        type: alfanumerico
+      -
+        description: Valor tarifa cobranca
+        begin: 176
+        end: 188
+        type: numerico
+      -
+        description: Vago
+        begin: 189
+        end: 214
+        type: alfanumerico
+      -
+        description: Valor do IOF (Nota de Seguro)
+        begin: 215
+        end: 227
+        type: numerico
+      -
+        description: Valor abatimento
+        begin: 228
+        end: 240
+        type: numerico
+      -
+        description: Valor desconto
+        begin: 241
+        end: 253
+        type: numerico
+      -
+        description: Valor pago pelo Sacado
+        begin: 254
+        end: 266
+        type: numerico
+      -
+        description: Valor Mora Pago Pelo Sacado
+        begin: 267
+        end: 279
+        type: numerico
+      -
+        description: Nao Utilizado
+        begin: 280
+        end: 292
+        type: numerico
+      -
+        description: Vago
+        begin: 293
+        end: 295
+        type: alfanumerico
+      -
+        description: Data credito
+        begin: 296
+        end: 301
+        type: numerico
+        format: DDMMYY
+      -
+        description: Vago
+        begin: 302
+        end: 394
+        type: alfanumerico
+      -
+        description: Sequencial
+        begin: 395
+        end: 400
+        type: numerico
+  trailer:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Tipo de registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Identificacao do Retorno
+        begin: 2
+        end: 2
+        type: numerico
+      -
+        description: Identificacao do Tipo de Servico
+        begin: 3
+        end: 4
+        type: numerico
+      -
+        description: Numero do Banco
+        begin: 5
+        end: 7
+        type: numerico
+      -
+        description: Vago
+        begin: 8
+        end: 17
+        type: alfanumerico
+      -
+        description: Quantidade de Titulos em Cobranca Simples
+        begin: 18
+        end: 25
+        type: numerico
+      -
+        description: Valor Total em Cobranca Simples
+        begin: 26
+        end: 39
+        type: numerico
+      -
+        description: Referencia do Aviso Bancario Simples
+        begin: 40
+        end: 47
+        type: numerico
+      -
+        description: Vago
+        begin: 48
+        end: 57
+        type: alfanumerico
+      -
+        description: Quantidade de Titulos em Cobranca Vinculada
+        begin: 58
+        end: 65
+        type: numerico
+      -
+        description: Valor Total em Cobranca Vinculada
+        begin: 66
+        end: 79
+        type: numerico
+      -
+        description: Referencia do Aviso Bancario Vinculada
+        begin: 80
+        end: 87
+        type: numerico
+      -
+        description: Vago
+        begin: 88
+        end: 97
+        type: alfanumerico
+      -
+        description: Quantidade de Titulos em Cobranca Caucionada
+        begin: 98
+        end: 105
+        type: numerico
+      -
+        description: Valor Total em Cobranca Caucionada
+        begin: 106
+        end: 119
+        type: numerico
+      -
+        description: Referencia do Aviso Bancario Caucionada
+        begin: 120
+        end: 127
+        type: numerico
+      -
+        description: Vago
+        begin: 128
+        end: 137
+        type: alfanumerico
+      -
+        description: Quantidade de Titulos em Cobranca Desconto
+        begin: 138
+        end: 145
+        type: numerico
+      -
+        description: Valor Total em Cobranca Desconto
+        begin: 146
+        end: 159
+        type: numerico
+      -
+        description: Referencia do Aviso Bancario Desconto
+        begin: 160
+        end: 167
+        type: numerico
+      -
+        description: Vago
+        begin: 168
+        end: 394
+        type: alfanumerico
+      -     
+        description: Sequencial
+        begin: 395
+        end: 400
+        type: numerico        

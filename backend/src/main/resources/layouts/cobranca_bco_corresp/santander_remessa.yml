@@ -1,0 +1,424 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  0: header
+  1: movement-register
+  2: movement-register-detail
+  9: trailler
+layout-definition:
+  header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Codigo da remessa
+        begin: 2
+        end: 2
+        type: numerico
+      -
+        description: Literal de transmissao
+        begin: 3
+        end: 9
+        type: alfanumerico
+      -
+        description: Codigo do servico
+        begin: 10
+        end: 11
+        type: numerico
+      -
+        description: Literal de servico	
+        begin: 12
+        end: 26
+        type: alfanumerico
+      -
+        description: Codigo de Transmissao
+        begin: 27
+        end: 46
+        type: numerico
+      -
+        description: Nome do cedente
+        begin: 47
+        end: 76
+        type: alfanumerico
+      -
+        description: Codigo do Banco
+        begin: 77
+        end: 79
+        type: numerico
+      -
+        description: Nome do Banco
+        begin: 80
+        end: 94
+        type: alfanumerico
+      -
+        description: Data de Gravacao
+        begin: 95
+        end: 100
+        type: numerico
+        format: DDMMYY
+      -
+        description: Zeros
+        begin: 101
+        end: 116
+        type: numerico
+      -
+        description: Brancos
+        begin: 117
+        end: 391
+        type: alfanumerico
+      -
+        description: Numero da versao da remessa opcional
+        begin: 392
+        end: 394
+        type: numerico
+      -
+        description: Numero sequencial do registro no arquivo
+        begin: 395
+        end: 400 
+        type: numerico
+  movement-register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Tipo de inscricao do cedente
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: CGC ou CPF do cedente
+        begin: 4
+        end: 17
+        type: numerico
+      -
+        description: Codigo de Transmissao
+        begin: 18
+        end: 37
+        type: numerico
+      -
+        description: Numero de controle do participante
+        begin: 38
+        end: 62
+        type: alfanumerico
+      -
+        description: Nosso numero
+        begin: 63
+        end: 70
+        type: numerico
+      -
+        description: Data do segundo desconto
+        begin: 71
+        end: 76
+        type: numerico
+        format: DDMMYY
+      -
+        description: Branco
+        begin: 77
+        end: 77
+        type: alfanumerico
+      -
+        description: Informacao de multa
+        begin: 78
+        end: 78
+        type: numerico
+      -
+        description: Percentual multa por atraso
+        begin: 79
+        end: 82
+        type: numerico
+      -
+        description: Unidade de valor moeda corrente
+        begin: 83
+        end: 84
+        type: numerico
+      -
+        description: Valor do titulo em outra unidade
+        begin: 85
+        end: 97
+        type: numerico
+      -
+        description: Brancos
+        begin: 98
+        end: 101
+        type: alfanumerico
+      -
+        description: Data para cobranca de multa
+        begin: 102
+        end: 107
+        type: numerico
+        format: DDMMYY
+      -
+        description: Codigo da carteira
+        begin: 108
+        end: 108
+        type: numerico
+      -
+        description: Codigo da ocorrencia
+        begin: 109
+        end: 110
+        type: numerico
+      -
+        description: Seu numero
+        begin: 111
+        end: 120
+        type: alfanumerico
+      -
+        description: Data de vencimento do titulo
+        begin: 121
+        end: 126
+        type: numerico
+        format: DDMMYY
+      -
+        description: Valor do titulo
+        begin: 127
+        end: 139
+        type: numerico
+      -
+        description: Numero Banco cobrador
+        begin: 140
+        end: 142
+        type: numerico
+      -
+        description: Cod da agencia cobradora
+        begin: 143
+        end: 147
+        type: numerico
+      -
+        description: Especie de documento
+        begin: 148
+        end: 149
+        type: numerico
+      -
+        description: Tipo de aceite
+        begin: 150
+        end: 150
+        type: alfanumerico
+      -
+        description: Data da emissao do titulo
+        begin: 151
+        end: 156
+        type: numerico
+        format: DDMMYY
+      -
+        description: Primeira instrucao cobranca	
+        begin: 157
+        end: 158
+        type: numerico
+      -
+        description: Segunda instrucao cobranca
+        begin: 159
+        end: 160
+        type: numerico
+      -
+        description: Valor de mora
+        begin: 161
+        end: 173
+        type: numerico
+      -
+        description: Data limite para concessao de desconto
+        begin: 174
+        end: 179
+        type: numerico
+        format: DDMMYY
+      -
+        description: Valor de desconto a ser concedido
+        begin: 180
+        end: 192
+        type: numerico
+      -
+        description: Valor do IOF
+        begin: 193
+        end: 205
+        type: numerico
+      -
+        description: Valor do abatimento
+        begin: 206
+        end: 218
+        type: numerico
+      -
+        description: Tipo de inscricao do sacado
+        begin: 219
+        end: 220
+        type: numerico
+      -
+        description: CGC ou CPF do sacado
+        begin: 221
+        end: 234
+        type: numerico
+      -
+        description: Nome do sacado
+        begin: 235
+        end: 274
+        type: alfanumerico
+      -
+        description: Endereco do sacado
+        begin: 275
+        end: 314
+        type: alfanumerico
+      -
+        description: Bairro do sacado
+        begin: 315
+        end: 326
+        type: alfanumerico
+      -
+        description: CEP do sacado
+        begin: 327
+        end: 331
+        type: numerico
+      -
+        description: Complemento do CEP
+        begin: 332
+        end: 334
+        type: numerico
+      -
+        description: Municipio do sacado
+        begin: 335
+        end: 349
+        type: alfanumerico
+      -
+        description: UF Estado do sacado
+        begin: 350
+        end: 351
+        type: alfanumerico
+      -
+        description: Nome do sacador ou coobrigado
+        begin: 352
+        end: 381
+        type: alfanumerico
+      -
+        description: Brancos
+        begin: 382
+        end: 382
+        type: alfanumerico
+      -
+        description: Identificador do Complemento
+        begin: 383
+        end: 383
+        type: alfanumerico
+      -
+        description: Complemento
+        begin: 384
+        end: 385
+        type: numerico
+      -
+        description: Brancos
+        begin: 386
+        end: 391
+        type: alfanumerico
+      -
+        description: Numero de dias para protesto
+        begin: 392
+        end: 393
+        type: numerico
+      -
+        description: Branco
+        begin: 394
+        end: 394
+        type: alfanumerico
+      -
+        description: Numero sequencial do registro no arquivo
+        begin: 395
+        end: 400
+        type: numerico
+  movement-register-detail:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Brancos
+        begin: 2
+        end: 17
+        type: alfanumerico
+      -
+        description: Codigo de Transmissao
+        begin: 18
+        end: 37
+        type: numerico
+      -
+        description: Brancos
+        begin: 38
+        end: 47
+        type: alfanumerico
+      -
+        description: Subsequencias do registro
+        begin: 48
+        end: 49
+        type: numerico
+      -
+        description: Mensagem variavel por titulo
+        begin: 50
+        end: 99
+        type: alfanumerico
+      -
+        description: Brancos
+        begin: 100
+        end: 382
+        type: alfanumerico
+      -
+        description: Identificador do Complemento
+        begin: 383
+        end: 383
+        type: alfanumerico
+      -
+        description: Complemento
+        begin: 384
+        end: 385
+        type: numerico
+      -
+        description: Brancos
+        begin: 386
+        end: 394
+        type: alfanumerico
+      -
+        description: Numero sequencial do registro no arquivo
+        begin: 395
+        end: 400
+        type: numerico
+  trailler:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Qtdade total de linhas no arquivo
+        begin: 2
+        end: 7
+        type: numerico
+      -
+        description: Valor total dos titulos
+        begin: 8
+        end: 20
+        type: numerico
+      -
+        description: Zeros
+        begin: 21
+        end: 394
+        type: numerico
+      -
+        description: Numero sequencial do registro no arquivo
+        begin: 395
+        end: 400
+        type: numerico

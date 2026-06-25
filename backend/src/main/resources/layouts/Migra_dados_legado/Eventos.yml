@@ -1,0 +1,355 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  1: header
+  2: register
+  3: regiter_optional
+  4: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: DATA DE GERACAO
+        begin: 2
+        end: 15
+        type: numerico
+        format: DDMMYYYY
+  register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: TIPO DE REGISTRO
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: TIPO DE EVENTO
+        begin: 4
+        end: 5
+        type: numerico
+      -
+        description: IDENTIFICADOR DO TITULO NO SISTEMA LEGADO
+        begin: 6
+        end: 25
+        type: alfanumerico
+      -
+        description: IDENTIFICADOR DO EVENTO NO SISTEMA LEGADO
+        begin: 26
+        end: 45
+        type: alfanumerico
+      -
+        description: DATA DO EVENTO
+        begin: 46
+        end: 53
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: VALOR
+        begin: 54
+        end: 66
+        type: numerico
+      -
+        description: DATA
+        begin: 67
+        end: 74
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: CARTEIRA
+        begin: 75
+        end: 94
+        type: alfanumerico
+      -
+        description: USO EMPRESA
+        begin: 95
+        end: 119
+        type: alfanumerico
+      -
+        description: PARAMETRO TEXTO
+        begin: 120
+        end: 219
+        type: alfanumerico
+      -
+        description: DATA DE CANCELAMENTO
+        begin: 220
+        end: 227
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: RESPONSAVEL PELO CANCELAMENTO
+        begin: 228
+        end: 257
+        type: alfanumerico
+  regiter_optional:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -		
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: TIPO DE REGISTRO
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: NUMERO IDENTIFICADOR DO TITULO NO SISTEMA LEGADO
+        begin: 4
+        end: 23
+        type: alfanumerico
+      -
+        description: IDENTIFICADOR DO EVENTO NO SISTEMA LEGADO
+        begin: 24
+        end: 43
+        type: alfanumerico
+      -
+        description: DATA DO EVENTO
+        begin: 44
+        end: 51
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: NOVO ENDERECO DO SACADO
+        begin: 52
+        end: 151
+        type: alfanumerico
+      -
+        description: NOVO BAIRRO DO SACADO
+        begin: 152
+        end: 216
+        type: alfanumerico
+      -
+        description: NOVA CIDADE DO SACADO
+        begin: 217
+        end: 276
+        type: alfanumerico
+      -
+        description: NOVA UF DO SACADO
+        begin: 277
+        end: 278
+        type: alfanumerico
+      -
+        description: NOVO CEP DO SACADO
+        begin: 279
+        end: 286
+        type: numerico
+      -
+        description: NOVO DDD TELEFONE1 DO SACADO
+        begin: 287
+        end: 290
+        type: alfanumerico
+      -
+        description: NOVO TELEFONE1 DO SACADO
+        begin: 291
+        end: 300
+        type: alfanumerico
+      -
+        description: NOVO CONTATO TELEFONE1 SACADO
+        begin: 301
+        end: 320
+        type: alfanumerico
+      -
+        description: NOVO DDD TELEFONE2 DO SACADO
+        begin: 321
+        end: 324
+        type: alfanumerico
+      -
+        description: NOVO TELEFONE2 DO SACADO
+        begin: 325
+        end: 334
+        type: alfanumerico
+      -
+        description: NOVO CONTATO TELEFONE2 SACADO
+        begin: 335
+        end: 354
+        type: alfanumerico
+      -
+        description: NOVO DDD FAX SACADO
+        begin: 355
+        end: 358
+        type: alfanumerico
+      -
+        description: NOVO FAX DO SACADO
+        begin: 359
+        end: 368
+        type: alfanumerico
+      -
+        description: NOVO ENDERECO DO EMITENTE
+        begin: 369
+        end: 468
+        type: alfanumerico
+      -
+        description: NOVO BAIRRO DO EMITENTE
+        begin: 469
+        end: 533
+        type: alfanumerico
+      -
+        description: NOVA CIDADE DO EMITENTE
+        begin: 534
+        end: 593
+        type: alfanumerico
+      -
+        description: NOVA UF DO EMITENTE
+        begin: 594
+        end: 595
+        type: alfanumerico
+      -
+        description: NOVO CEP DO EMITENTE
+        begin: 596
+        end: 603
+        type: numerico
+      -
+        description: NOVO DDD TELEFONE1 DO EMITENTE
+        begin: 604
+        end: 607
+        type: alfanumerico
+      -
+        description: NOVO TELEFONE1 DO EMITENTE
+        begin: 608
+        end: 617
+        type: alfanumerico
+      -
+        description: NOVO CONTATO TELEFONE1 EMITENTE
+        begin: 618
+        end: 637
+        type: alfanumerico
+      -
+        description: NOVO DDD TELEFONE2 DO EMITENTE
+        begin: 638
+        end: 641
+        type: alfanumerico
+      -
+        description: NOVO TELEFONE2 DO EMITENTE
+        begin: 642
+        end: 651
+        type: alfanumerico
+      -
+        description: NOVO CONTATO TELEFONE2 EMITENTE
+        begin: 652
+        end: 671
+        type: alfanumerico
+      -
+        description: NOVO DDD FAX EMITENTE
+        begin: 672
+        end: 675
+        type: alfanumerico
+      -
+        description: NOVO FAX EMITENTE
+        begin: 676
+        end: 685
+        type: alfanumerico
+      -
+        description: NOVO SEU NUMERO
+        begin: 686
+        end: 695
+        type: alfanumerico
+      -
+        description: NOVA DATA VENCIMENTO
+        begin: 696
+        end: 703
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: NOVO VALOR VENCIMENTO
+        begin: 704
+        end: 716
+        type: numerico
+      -
+        description: NOVO VALOR DESCONTO
+        begin: 717
+        end: 729
+        type: numerico
+      -
+        description: NOVO PRAZO DESCONTO
+        begin: 730
+        end: 732
+        type: numerico
+      -
+        description: PROTESTAR
+        begin: 733
+        end: 733
+        type: alfanumerico
+      -
+        description: NOVO PRAZO PARA PROTESTO
+        begin: 734
+        end: 736
+        type: numerico
+      -
+        description: COBRA JUROS MORA
+        begin: 737
+        end: 737
+        type: alfanumerico
+      -
+        description: NOVO VALOR JUROS
+        begin: 738
+        end: 750
+        type: numerico
+      -
+        description: NOVO DIAS JUROS
+        begin: 751
+        end: 753
+        type: numerico
+      -
+        description: NOVO TIPO COBRANCA
+        begin: 754
+        end: 754
+        type: alfanumerico
+      -
+        description: NOVO DIAS DE MULTA
+        begin: 755
+        end: 757
+        type: numerico
+      -
+        description: NOVA TAXA MULTA
+        begin: 758
+        end: 769
+        type: numerico
+      -
+        description: NOVO VALOR MULTA
+        begin: 770
+        end: 782
+        type: numerico
+      -
+        description: DATA DE CANCELAMENTO
+        begin: 783
+        end: 790
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: RESPONSAVEL PELO CANCELAMENTO
+        begin: 791
+        end: 820
+        type: alfanumerico
+  trailer:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: QUANTIDADE DE REGISTRO DO ARQUIVO
+        begin: 2
+        end: 7
+        type: alfanumerico

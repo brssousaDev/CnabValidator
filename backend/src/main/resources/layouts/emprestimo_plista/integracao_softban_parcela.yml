@@ -1,0 +1,163 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 2
+		 
+key-map:
+  70: header-label
+  78: transaction-register-type-1
+  79: trailler-register
+  
+layout-definition:
+  header-label:
+    - metadata:
+      occurrence : 1
+    - fields:
+      -
+       description: Codigo do Registro 
+       begin: 1
+       end: 2
+       type: numerico
+      -
+       description: Codigo da Agencia
+       begin: 4
+       end: 8
+       type: numerico
+      -
+       description: Data Base
+       begin: 10
+       end: 17
+       type: numerico
+      -
+       description: Codigo do Sistema
+       begin: 19
+       end: 20
+       type: numerico
+      -
+       description: Sigla do Sistema
+       begin: 22
+       end: 23
+       type: alfanumerico
+      -
+       description: Sequencia de Registros
+       begin: 293
+       end: 300
+       type: numerico
+  transaction-register-type-1:
+    - metadata:
+      occurrence : 1
+    - fields:
+      -
+       description: Codigo do Registro 
+       begin: 1
+       end: 2
+       type: numerico
+      -
+       description: Numero da Conta
+       begin: 4
+       end: 13
+       type: numerico
+      -
+       description: Numero do Contrato
+       begin: 15
+       end: 23
+       type: numerico
+      -
+       description: Numero da Prestacao
+       begin: 25
+       end: 27
+       type: numerico
+      -
+       description: Vencimeno da Prestacao
+       begin: 29
+       end: 36
+       type: numerico
+       format: ddmmaaaa
+      -
+       description: Data da Liquidacao
+       begin: 38
+       end: 45
+       type: numerico
+       format: ddmmaaaa
+      -
+       description: Taxa da operacao
+       begin: 47
+       end: 54
+       type: numerico
+      -
+       description: Valor Principal
+       begin: 56
+       end: 72
+       type: numerico
+      -
+       description: Juros da Prestacao na data Base
+       begin: 74
+       end: 90
+       type: numerico
+      -
+       description: Juros da Prestacao no Vencimento
+       begin: 92
+       end: 108
+       type: numerico
+      -
+       description: Correcao da Prestacao
+       begin: 110
+       end: 126
+       type: numerico
+      -
+       description: Curva na data base do valor cedido para cessao de credito
+       begin: 128
+       end: 144
+       type: numerico
+      -
+       description: Classificacao contabil
+       begin: 164
+       end: 164
+       type: alfanumerico
+      -
+       description: Numero do Banco Cessionario
+       begin: 166
+       end: 168
+       type: numerico
+      -
+       description: Data base da cessao de credito
+       begin: 170
+       end: 177
+       type: numerico
+       format: ddmmaaaa
+      -
+       description: Valor da Cessao
+       begin: 179
+       end: 195
+       type: numerico
+      -
+       description: Taxa Efetiva Anual Da Cessao
+       begin: 197
+       end: 204
+       type: numerico
+      -
+       description: Numero do Contrato da Cessao 
+       begin: 206
+       end: 214
+       type: numerico
+      -
+       description: Sequencia 
+       begin: 293
+       end: 300
+       type: numerico
+  trailler-register:
+    - metadata:
+      occurrence : 1
+    - fields:	  
+      -
+       description: Codigo do Registro 
+       begin: 1
+       end: 2
+       type: numerico
+      -
+       description: Sequencia
+       begin: 293
+       end: 300
+       type: numerico

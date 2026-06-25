@@ -1,0 +1,1478 @@
+seq-show: true
+rules:
+   column:
+      key-length:
+        -
+          begin-column: 8
+          end-column: 8
+        -
+          begin-column: 14
+          end-column: 14
+        -
+          begin-column: 18
+          end-column: 18
+        -
+          begin-column: 19
+          end-column: 19
+key-map:
+  0: file-header
+  1: batch-header
+#  3P: segmentp
+#  3Q: segmentq
+#  3R: segmentr
+#  3S1: segments12
+#  3S2: segments12
+#  3S3: segments3
+#  3Y01: segmenty01
+#  3Y03: segmenty04
+  3T: segment3t
+  3U: segment3u
+  5: batch-trailler        
+  9: file-trailler
+layout-definition:
+  file-header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do Banco na Compensacao
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Lote de Servico
+        begin: 4
+        end: 7
+        type: numerico
+      -
+        description: Tipo de Registro
+        begin: 8
+        end: 8
+        type: numerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 9
+        end: 17
+        type: alfanumerico
+      -
+        description: Tipo de Inscricao da Empresa
+        begin: 18
+        end: 18
+        type: numerico
+      -
+        description: Numero de Inscricao da Empresa
+        begin: 19
+        end: 32
+        type: alfanumerico
+      -
+        description: Codigo do Convenio no Banco
+        begin: 33
+        end: 52
+        type: alfanumerico
+      -
+        description: Agencia Mantenedora da Conta
+        begin: 53
+        end: 57
+        type: numerico
+      -
+        description: Digito Verificador da Agencia
+        begin: 58
+        end: 58
+        type: alfanumerico
+      -
+        description: Numero da Conta Corrente
+        begin: 59
+        end: 70
+        type: numerico
+      -
+        description: Digito Verificador da Conta
+        begin: 71
+        end: 71
+        type: alfanumerico
+      -
+        description: Digito Verificador da Ag/Conta
+        begin: 72
+        end: 72
+        type: alfanumerico
+      -
+        description: Nome da Empresa
+        begin: 73
+        end: 102
+        type: alfanumerico
+      -
+        description: Nome do Banco
+        begin: 103
+        end: 132
+        type: alfanumerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 133
+        end: 142
+        type: alfanumerico
+      -
+        description: Codigo Remessa / Retorno
+        begin: 143
+        end: 143
+        type: numerico
+      -
+        description: Data de Geracao do Arquivo
+        begin: 144
+        end: 151
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Hora de Geracao do Arquivo
+        begin: 152
+        end: 157
+        type: numerico
+      -
+        description: Numero Sequencial do Arquivo
+        begin: 158
+        end: 163
+        type: numerico
+      -
+        description: Numero da Versao do Layout do Arquivo
+        begin: 164
+        end: 166
+        type: numerico
+      -
+        description: Densidade de Gravacao do Arquivo
+        begin: 167
+        end: 171
+        type: numerico
+      -
+        description: Para Uso Reservado do Banco
+        begin: 172
+        end: 191
+        type: alfanumerico
+      -
+        description: Para Uso Reservado da Empresa
+        begin: 192
+        end: 211
+        type: alfanumerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 212
+        end: 240
+        type: alfanumerico
+  batch-header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do Banco na Compensacao
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Lote de Servico
+        begin: 4
+        end: 7
+        type: numerico
+      -
+        description: Tipo de Registro
+        begin: 8
+        end: 8
+        type: numerico
+      -
+        description: Tipo de Operacao
+        begin: 9
+        end: 9
+        type: alfanumerico
+      -
+        description: Tipo de Servico
+        begin: 10
+        end: 11
+        type: numerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 12
+        end: 13
+        type: alfanumerico
+      -
+        description: Numero da Versao do Layout do Lote
+        begin: 14
+        end: 16
+        type: numerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 17
+        end: 17
+        type: alfanumerico
+      -
+        description: Tipo de Inscricao da Empresa
+        begin: 18
+        end: 18
+        type: numerico
+      -
+        description: Numero de Inscricao da Empresa
+        begin: 19
+        end: 33
+        type: alfanumerico
+      -
+        description: Codigo do Convenio no Banco
+        begin: 34
+        end: 53
+        type: alfanumerico
+      -
+        description: Agencia Mantenedora da Conta
+        begin: 54
+        end: 58
+        type: numerico
+      -
+        description: Digito Verificador da Conta
+        begin: 59
+        end: 59
+        type: alfanumerico
+      -
+        description: Numero da Conta Corrente
+        begin: 60
+        end: 71
+        type: numerico
+      -
+        description: Digito Verificador da Conta
+        begin: 72
+        end: 72
+        type: alfanumerico
+      -
+        description: Digito Verificador da Ag/Conta
+        begin: 73
+        end: 73
+        type: alfanumerico
+      -
+        description: Nome da Empresa
+        begin: 74
+        end: 103
+        type: alfanumerico
+      -
+        description: Mensagem 1
+        begin: 104
+        end: 143
+        type: alfanumerico
+      -
+        description: Mensagem 2
+        begin: 144
+        end: 183
+        type: alfanumerico
+      -
+        description: Numero Remessa / Retorno
+        begin: 184
+        end: 191
+        type: numerico
+      -
+        description: Data de Gravacao Remessa/Retorno
+        begin: 192
+        end: 199
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Data do Credito
+        begin: 200
+        end: 207
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 207
+        end: 240
+        type: alfanumerico
+  segmentp:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do Banco na Compensacao
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Lote de Servico
+        begin: 4
+        end: 7
+        type: numerico
+      -
+        description: Tipo de Registro
+        begin: 8
+        end: 8
+        type: numerico  
+      -
+        description: Numero Sequencial do Registro no Lote
+        begin: 9
+        end: 13
+        type: numerico
+      -
+        description: Codigo Segmento do Registro Detalhe
+        begin: 14
+        end: 14
+        type: alfanumerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 15
+        end: 15
+        type: alfanumerico
+      -
+        description: Codigo de Movimento Remessa
+        begin: 16
+        end: 17
+        type: numerico
+      -
+        description: Agencia Mantenedora da Conta
+        begin: 18
+        end: 22
+        type: numerico
+      -
+        description: Digito Verificador da Agencia
+        begin: 23
+        end: 23
+        type: alfanumerico
+      -
+        description: Numero da Conta Corrente
+        begin: 24
+        end: 35
+        type: numerico
+      -
+        description: Digito Verificador da Conta
+        begin: 36
+        end: 36
+        type: alfanumerico
+      -
+        description: Digito Verificador da Ag/Conta
+        begin: 37
+        end: 37
+        type: alfanumerico
+      -
+        description: Identificacao do Titulo no Banco
+        begin: 38
+        end: 57
+        type: alfanumerico
+      -
+        description: Codigo da Carteira
+        begin: 58
+        end: 59
+        type: numerico
+      -
+        description: Tipo de Documento
+        begin: 60
+        end: 60
+        type: alfanumerico
+      -
+        description: Identificacao da Emissao do Bloqueto
+        begin: 61
+        end: 61
+        type: numerico
+      -
+        description: Identificacao da Distribuicao
+        begin: 62
+        end: 62
+        type: alfanumerico
+      -
+        description: Numero do Documento de Cobranca (Seu Numero)
+        begin: 63
+        end: 77
+        type: alfanumerico
+      -
+        description: Data de Vencimento do Titulo
+        begin: 78
+        end: 85
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Valor Nominal do Titulo
+        begin: 86
+        end: 100
+        type: numerico
+      -
+        description: Agencia Encarregada da Cobranca
+        begin: 101
+        end: 105
+        type: numerico
+      -
+        description: Digito Verificador da Agencia
+        begin: 106
+        end: 106
+        type: alfanumerico
+      -
+        description: Especie do Titulo
+        begin: 107
+        end: 108
+        type: numerico
+      -
+        description: Identific. de Titulo Aceito/Nao aceito
+        begin: 109
+        end: 109
+        type: alfanumerico
+      -
+        description: Data da Emissao do Titulo
+        begin: 110
+        end: 117
+        type: numerico 
+        format: DDMMYYYY  
+      -
+        description: Codigo do Juros de Mora
+        begin: 118
+        end: 118
+        type: numerico
+      -
+        description: Data do Juros de Mora
+        begin: 119
+        end: 126
+        type: numerico
+        format: DDMMYYYY   
+        exception-values:
+          -
+            "00000000"
+      -
+        description: Juros de Mora por Dia/Taxa
+        begin: 127
+        end: 141
+        type: numerico
+      -
+        description: Codigo do Desconto 1
+        begin: 142
+        end: 142
+        type: numerico   
+      -
+        description: Data do Desconto 1
+        begin: 143
+        end: 150
+        type: numerico
+        format: DDMMYYYY
+        exception-values:
+          -
+            "00000000"
+      -
+        description: Valor/Percentual a ser Concedido
+        begin: 151
+        end: 165
+        type: numerico   
+      -
+        description: Valor do IOF a ser Recolhido
+        begin: 166
+        end: 180
+        type: numerico
+      -
+        description: Valor do Abatimento
+        begin: 181
+        end: 195
+        type: numerico   
+      -
+        description: Identificacao do Titulo na Empresa
+        begin: 196
+        end: 220
+        type: alfanumerico
+      -
+        description: Codigo para Protesto
+        begin: 221
+        end: 221
+        type: numerico   
+      -
+        description: Numero de Dias para Protesto
+        begin: 222
+        end: 223
+        type: numerico
+      -
+        description: Codigo para Baixa/Devolucao
+        begin: 224
+        end: 224
+        type: numerico   
+      -
+        description: Numero de Dias para Baixa/Devolucao
+        begin: 225
+        end: 227
+        type: alfanumerico
+      -
+        description: Codigo da Moeda
+        begin: 228
+        end: 229
+        type: numerico   
+      -
+        description: Numero do Contrato da Operacao de Credito
+        begin: 230
+        end: 239
+        type: numerico
+      -
+        description: Uso livre banco/empresa ou autorizacao de pagamento parcial
+        begin: 240
+        end: 240
+        type: alfanumerico
+  segmentq:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do Banco na Compensacao
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Lote de Servico
+        begin: 4
+        end: 7
+        type: numerico
+      -
+        description: Tipo de Registro
+        begin: 8
+        end: 8
+        type: numerico  
+      -
+        description: Numero Sequencial do Registro no Lote
+        begin: 9
+        end: 13
+        type: numerico
+      -
+        description: Codigo Segmento do Registro Detalhe
+        begin: 14
+        end: 14
+        type: alfanumerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 15
+        end: 15
+        type: alfanumerico
+      -
+        description: Codigo de Movimento Remessa
+        begin: 16
+        end: 17
+        type: numerico
+      -
+        description: Tipo de Inscricao
+        begin: 18
+        end: 18
+        type: numerico
+      -
+        description: Numero de Inscricao
+        begin: 19
+        end: 33
+        type: alfanumerico
+      -
+        description: Nome
+        begin: 34
+        end: 73
+        type: alfanumerico
+      -
+        description: Endereco
+        begin: 74
+        end: 113
+        type: alfanumerico
+      -
+        description: Bairro
+        begin: 114
+        end: 128
+        type: alfanumerico
+      -
+        description: CEP
+        begin: 129
+        end: 133
+        type: numerico
+      -
+        description: Sufixo do CEP
+        begin: 134
+        end: 136
+        type: numerico
+      -
+        description: Cidade
+        begin: 137
+        end: 151
+        type: alfanumerico
+      -
+        description: Unidade da Federacao
+        begin: 152
+        end: 153
+        type: alfanumerico
+      -
+        description: Tipo de Inscricao
+        begin: 154
+        end: 154
+        type: numerico
+      -
+        description: Numero de Inscricao
+        begin: 155
+        end: 169
+        type: alfanumerico
+      -
+        description: Nome do Sacador/Avalista
+        begin: 170
+        end: 209
+        type: alfanumerico
+      -
+        description: Cod. Bco. Corresp. na Compensacao
+        begin: 210
+        end: 212
+        type: numerico
+      -
+        description: Nosso Numero no Banco Correspondente
+        begin: 213
+        end: 232
+        type: alfanumerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 233
+        end: 240
+        type: alfanumerico
+  segmentr:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do Banco na Compensacao
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Lote de Servico
+        begin: 4
+        end: 7
+        type: numerico
+      -
+        description: Tipo de Registro
+        begin: 8
+        end: 8
+        type: numerico  
+      -
+        description: Numero Sequencial do Registro no Lote
+        begin: 9
+        end: 13
+        type: numerico
+      -
+        description: Codigo Segmento do Registro Detalhe
+        begin: 14
+        end: 14
+        type: alfanumerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 15
+        end: 15
+        type: alfanumerico
+      -
+        description: Codigo de Movimento Remessa
+        begin: 16
+        end: 17
+        type: numerico
+      -
+        description: Codigo do Desconto 2
+        begin: 18
+        end: 18
+        type: numerico
+      -
+        description: Data do Desconto 2
+        begin: 19
+        end: 26
+        type: numerico
+        format: DDMMYYYY
+        exception-values:
+          -
+            "00000000"
+      -
+        description: Valor/Percentual a ser Concedido
+        begin: 27
+        end: 41
+        type: numerico
+      -
+        description: Codigo do Desconto 3
+        begin: 42
+        end: 42
+        type: numerico
+      -
+        description: Data do Desconto 3
+        begin: 43
+        end: 50
+        type: numerico
+        format: DDMMYYYY
+        exception-values:
+          -
+            "00000000"
+      -
+        description: Valor/Percentual a ser Concedido
+        begin: 51
+        end: 65
+        type: numerico
+      -
+        description: Codigo da Multa
+        begin: 66
+        end: 66
+        type: alfanumerico
+      -
+        description: Data da Multa
+        begin: 67
+        end: 74
+        type: numerico
+        format: DDMMYYYY
+        exception-values:
+          -
+            "00000000"
+      -
+        description: Valor/Percentual a ser Aplicado
+        begin: 75
+        end: 89
+        type: numerico
+      -
+        description: Informacao ao Sacado
+        begin: 90
+        end: 99
+        type: alfanumerico
+      -
+        description: Mensagem 3
+        begin: 100
+        end: 139
+        type: alfanumerico
+      -
+        description: Mensagem 4
+        begin: 140
+        end: 179
+        type: alfanumerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 180
+        end: 199
+        type: alfanumerico
+      -
+        description: Cod. Ocor. do Sacado
+        begin: 200
+        end: 207
+        type: numerico
+      -
+        description: Cod. do Banco na Conta do Debito
+        begin: 208
+        end: 210
+        type: numerico
+      -
+        description: Codigo da Agencia do Debito
+        begin: 211
+        end: 215
+        type: numerico
+      -
+        description: Digito Verificador da Agencia
+        begin: 216
+        end: 216
+        type: alfanumerico
+      -
+        description: Conta Corrente para Debito
+        begin: 217
+        end: 228
+        type: numerico
+      -
+        description: Digito Verificador da Conta
+        begin: 229
+        end: 229
+        type: alfanumerico 
+      -
+        description: Digito Verificador da Ag/Conta
+        begin: 230
+        end: 230
+        type: alfanumerico
+      -
+        description: Aviso para Debito Automatico
+        begin: 231
+        end: 231
+        type: numerico   
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 232
+        end: 240
+        type: alfanumerico
+  segments12:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do Banco na Compensacao
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Lote de Servico
+        begin: 4
+        end: 7
+        type: numerico
+      -
+        description: Tipo de Registro
+        begin: 8
+        end: 8
+        type: numerico  
+      -
+        description: Numero Sequencial do Registro no Lote
+        begin: 9
+        end: 13
+        type: numerico
+      -
+        description: Codigo Segmento do Registro Detalhe
+        begin: 14
+        end: 14
+        type: alfanumerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 15
+        end: 15
+        type: alfanumerico
+      -
+        description: Codigo de Movimento Remessa
+        begin: 16
+        end: 17
+        type: numerico
+      -
+        description: Identificacao da Impressao
+        begin: 18
+        end: 18
+        type: numerico   
+      -
+        description: Numero da Linha a ser Impressa
+        begin: 19
+        end: 20
+        type: numerico
+      -
+        description: Mensagem a ser Impressa
+        begin: 21
+        end: 160
+        type: alfanumerico   
+      -
+        description: Tipo do Caracter a ser Impresso
+        begin: 161
+        end: 162
+        type: numerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 163
+        end: 240
+        type: alfanumerico   
+  segments3:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do Banco na Compensacao
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Lote de Servico
+        begin: 4
+        end: 7
+        type: numerico
+      -
+        description: Tipo de Registro
+        begin: 8
+        end: 8
+        type: numerico  
+      -
+        description: Numero Sequencial do Registro no Lote
+        begin: 9
+        end: 13
+        type: numerico
+      -
+        description: Codigo Segmento do Registro Detalhe
+        begin: 14
+        end: 14
+        type: alfanumerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 15
+        end: 15
+        type: alfanumerico
+      -
+        description: Codigo de Movimento Remessa
+        begin: 16
+        end: 17
+        type: numerico
+      -
+        description: Identificacao da Impressao
+        begin: 18
+        end: 18
+        type: numerico
+      -
+        description: Mensagem 5
+        begin: 19
+        end: 58
+        type: alfanumerico   
+      -
+        description: Mensagem 6
+        begin: 59
+        end: 98
+        type: alfanumerico
+      -
+        description: Mensagem 7
+        begin: 99
+        end: 138
+        type: alfanumerico   
+      -
+        description: Mensagem 8
+        begin: 139
+        end: 178
+        type: alfanumerico
+      -
+        description: Mensagem 9
+        begin: 179
+        end: 218
+        type: alfanumerico   
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 219
+        end: 240
+        type: alfanumerico
+  segmenty01:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do Banco na Compensacao
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Lote de Servico
+        begin: 4
+        end: 7
+        type: numerico
+      -
+        description: Tipo de Registro
+        begin: 8
+        end: 8
+        type: numerico  
+      -
+        description: Numero Sequencial do Registro no Lote
+        begin: 9
+        end: 13
+        type: numerico
+      -
+        description: Codigo Segmento do Registro Detalhe
+        begin: 14
+        end: 14
+        type: alfanumerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 15
+        end: 15
+        type: alfanumerico
+      -
+        description: Codigo de Movimento Remessa
+        begin: 16
+        end: 17
+        type: numerico
+      -
+        description: Identificacao do Registro Opcional
+        begin: 18
+        end: 19
+        type: numerico
+      -
+        description: Tipo de Inscricao
+        begin: 20
+        end: 20
+        type: numerico   
+      -
+        description: Numero de Inscricao
+        begin: 21
+        end: 35
+        type: alfanumerico
+      -
+        description: Nome do Sacador/Avalista
+        begin: 36
+        end: 75
+        type: alfanumerico   
+      -
+        description: Endereco
+        begin: 76
+        end: 115
+        type: alfanumerico
+      -
+        description: Bairro
+        begin: 116
+        end: 130
+        type: alfanumerico   
+      -
+        description: CEP
+        begin: 131
+        end: 135
+        type: numerico
+      -
+        description: Sufixo do CEP
+        begin: 136
+        end: 138
+        type: numerico   
+      -
+        description: Cidade
+        begin: 139
+        end: 153
+        type: alfanumerico
+      -
+        description: Unidade da Federacao
+        begin: 154
+        end: 155
+        type: alfanumerico   
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 156
+        end: 240
+        type: alfanumerico
+  segmenty04:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do Banco na Compensacao
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Lote de Servico
+        begin: 4
+        end: 7
+        type: numerico
+      -
+        description: Tipo de Registro
+        begin: 8
+        end: 8
+        type: numerico  
+      -
+        description: Numero Sequencial do Registro no Lote
+        begin: 9
+        end: 13
+        type: numerico
+      -
+        description: Codigo Segmento do Registro Detalhe
+        begin: 14
+        end: 14
+        type: alfanumerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 15
+        end: 15
+        type: alfanumerico
+      -
+        description: Codigo de Movimento
+        begin: 16
+        end: 17
+        type: numerico
+      -
+        description: Identificacao do Registro Opcional
+        begin: 18
+        end: 19
+        type: numerico
+      -
+        description: E-mail para envio da informacao
+        begin: 20
+        end: 69
+        type: alfanumerico   
+      -
+        description: Codigo DDD
+        begin: 70
+        end: 71
+        type: numerico
+      -
+        description: Numero do celular (para envio de SMS)
+        begin: 72
+        end: 79
+        type: numerico   
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 80
+        end: 240
+        type: alfanumerico
+  segment3t:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do Banco na Compensacao
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Lote de Servico
+        begin: 4
+        end: 7
+        type: numerico
+      -
+        description: Tipo de Registro
+        begin: 8
+        end: 8
+        type: numerico  
+      -
+        description: Numero Sequencial Registro no Lote
+        begin: 9
+        end: 13
+        type: numerico
+      -
+        description: Codigo Segmento do Registro Detalhe
+        begin: 14
+        end: 14
+        type: alfanumerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 15
+        end: 15
+        type: alfanumerico
+      -
+        description: Codigo de Movimento Retorno
+        begin: 16
+        end: 17
+        type: numerico
+      -
+        description: Agencia Mantenedora da Conta
+        begin: 18
+        end: 22
+        type: numerico
+      -
+        description: Digito Verificador da Agencia
+        begin: 23
+        end: 23
+        type: numerico   
+      -
+        description: Numero da Conta Corrente
+        begin: 24
+        end: 35
+        type: numerico
+      -
+        description: Digito Verificador da Conta
+        begin: 36
+        end: 36
+        type: numerico   
+      -
+        description: Digito Verificador da Ag/Conta
+        begin: 37
+        end: 37
+        type: numerico
+      -
+        description: Identificacao do Titulo
+        begin: 38
+        end: 57
+        type: alfanumerico   
+      -
+        description: Codigo da Carteira (NAO UTILIZADO)
+        begin: 58
+        end: 58
+        type: numerico
+      -
+        description: Numero do Documento de Cobranca
+        begin: 59
+        end: 73
+        type: alfanumerico   
+      -
+        description: Data do Vencimento do Titulo
+        begin: 74
+        end: 81
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Valor Nominal do Titulo
+        begin: 82
+        end: 96
+        type: numerico   
+      -
+        description: Numero do Banco 
+        begin: 97
+        end: 99
+        type: numerico
+      -
+        description: Agencia Cobradora/Recebedora
+        begin: 100
+        end: 104
+        type: numerico
+      -
+        description: Digito Verificador da Agencia
+        begin: 105
+        end: 105
+        type: numerico   
+      -
+        description: Identificacao do Titulo na Empresa
+        begin: 106
+        end: 130
+        type: alfanumerico
+      -
+        description: Codigo da Moeda
+        begin: 131
+        end: 132
+        type: numerico   
+      -
+        description: Tipo de Inscricao
+        begin: 133
+        end: 133
+        type: numerico
+      -
+        description: Numero de Inscricao
+        begin: 134
+        end: 148
+        type: alfanumerico   
+      -
+        description: Nome
+        begin: 149
+        end: 188
+        type: alfanumerico
+      -
+        description: Numero do Contr. da Operacao de Credito
+        begin: 189
+        end: 198
+        type: numerico   
+      -
+        description: Valor da Tarifa / Custas
+        begin: 199
+        end: 213
+        type: numerico
+      -
+        description: Identificacao para Rejeicoes, Tarifas, Custas, Liquidacoes e Baixas
+        begin: 214
+        end: 223
+        type: alfanumerico   
+      -
+        description: Codigo da Carteira (MATERA)
+        begin: 224
+        end: 225
+        type: numerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB 
+        begin: 226
+        end: 240
+        type: alfanumerico
+  segment3u:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do Banco na Compensacao
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Lote de Servico
+        begin: 4
+        end: 7
+        type: numerico
+      -
+        description: Tipo de Registro
+        begin: 8
+        end: 8
+        type: numerico  
+      -
+        description: Numero Sequencial do Registro no Lote
+        begin: 9
+        end: 13
+        type: numerico
+      -
+        description: Codigo Segmento do Registro Detalhe
+        begin: 14
+        end: 14
+        type: alfanumerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 15
+        end: 15
+        type: alfanumerico
+      -
+        description: Codigo de Movimento Retorno
+        begin: 16
+        end: 17
+        type: numerico
+      -
+        description: Juros/Multa/Encargos
+        begin: 18
+        end: 32
+        type: numerico
+      -
+        description: Valor do Desconto Concedido
+        begin: 33
+        end: 47
+        type: numerico   
+      -
+        description: Valor do Abat. Concedido/Cancel
+        begin: 48
+        end: 62
+        type: numerico
+      -
+        description: Valor do IOF Recolhido
+        begin: 63
+        end: 77
+        type: numerico   
+      -
+        description: Valor Pago pelo Sacado
+        begin: 78
+        end: 92
+        type: numerico
+      -
+        description: Valor Liquido a ser Creditado
+        begin: 93
+        end: 107
+        type: alfanumerico   
+      -
+        description: Valor de Outras Despesas
+        begin: 108
+        end: 122
+        type: numerico
+      -
+        description: Valor de Outros Creditos
+        begin: 123
+        end: 137
+        type: numerico   
+      -
+        description: Data da Ocorrencia
+        begin: 138
+        end: 145
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Data da Efetivacao do Credito
+        begin: 146
+        end: 153
+        type: numerico   
+      -
+        description: Codigo da Ocorrencia 
+        begin: 154
+        end: 157
+        type: numerico
+        exception-values:
+          -
+            "    "
+      -
+        description: Data da Ocorrencia
+        begin: 158
+        end: 165
+        type: numerico
+        format: DDMMYYYY
+        exception-values:
+          -
+            "        "
+      -
+        description: Valor da Ocorrencia
+        begin: 166
+        end: 180
+        type: numerico   
+      -
+        description: Complem. da Ocorrencia
+        begin: 181
+        end: 210
+        type: alfanumerico
+      -
+        description: Codigo Banco Correspondente Compens.
+        begin: 211
+        end: 213
+        type: numerico   
+      -
+        description: Nosso Numero Banco Correspondente
+        begin: 214
+        end: 233
+        type: numerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 234
+        end: 240
+        type: alfanumerico   
+  batch-trailler:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do Banco na Compensacao
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Lote de Servico
+        begin: 4
+        end: 7
+        type: numerico
+      -
+        description: Tipo de Registro
+        begin: 8
+        end: 8
+        type: numerico
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 9
+        end: 17
+        type: texto
+      -
+        description: Quantidade de Registros no Lote
+        begin: 18
+        end: 23
+        type: numerico  
+      -
+        description: Quantidade de Titulos em Cobranca
+        begin: 24
+        end: 29
+        type: numerico
+      -
+        description: Valor Total dos Titulos em Carteiras
+        begin: 30
+        end: 46
+        type: numerico  
+      -
+        description: Quantidade de Titulos em Cobranca
+        begin: 47
+        end: 52
+        type: numerico
+      -
+        description: Valor Total dos Titutlos em Carteiras
+        begin: 53
+        end: 69
+        type: numerico
+      -
+        description: Quantidade de Titulos em Cobranca
+        begin: 70
+        end: 75
+        type: numerico  
+      -
+        description: Quantidade de Titulos em Carteira
+        begin: 76
+        end: 92
+        type: numerico
+      -
+        description: Quantidade de Titulos em Cobranca
+        begin: 93
+        end: 98
+        type: numerico
+      -
+        description: Valor Total dos Titulos em Carteiras
+        begin: 99
+        end: 115
+        type: numerico  
+      -
+        description: Numero do Aviso de Lancamento
+        begin: 116
+        end: 123
+        type: texto                                         
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 124
+        end: 240
+        type: texto
+  file-trailler:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do Banco na Compensacao
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Lote de Servico
+        begin: 4
+        end: 7
+        type: numerico
+      -
+        description: Tipo de Registro
+        begin: 8
+        end: 8
+        type: numerico  
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 9
+        end: 17
+        type: texto
+      -
+        description: Quantidade de Lotes do Arquivo
+        begin: 18
+        end: 23
+        type: numerico  
+      -
+        description: Quantidade de Registros do Arquivo
+        begin: 24
+        end: 29
+        type: numerico
+      -
+        description: Quantidade de Contas para Conc. (Lotes)
+        begin: 30
+        end: 35
+        type: numerico  
+      -
+        description: Uso Exclusivo FEBRABAN/CNAB
+        begin: 36
+        end: 240
+        type: alfanumerico                                                

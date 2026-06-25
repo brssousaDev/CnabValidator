@@ -1,0 +1,343 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  0: header
+  1: detail-register
+#  2: detail-register-optional
+  9: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence: 1
+    - fields:
+      -
+        description: IDENTIFICADOR DO REGISTRO
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: IDENTIFICADOR DO ARQUIVO RETORNO
+        begin: 2
+        end: 2
+        type: numerico
+      -
+        description: IDENTIFICADOR EXTENSO RETORNO
+        begin: 3
+        end: 9
+        type: alfanumerico
+      -
+        description: IDENTIFICADOR TIPO SERVIÇO
+        begin: 10
+        end: 11
+        type: numerico
+      -
+        description: IDENTIFICADOR EXTENSO SERVIÇO
+        begin: 12
+        end: 26
+        type: alfanumerico
+      -
+        description: CÓDIGO DA EMPRESA
+        begin: 27
+        end: 46
+        type: numerico
+      -
+        description: NOME DA EMPRESA
+        begin: 47
+        end: 76
+        type: alfanumerico
+      -
+        description: NÚMERO DO BANCO
+        begin: 77
+        end: 79
+        type: numerico
+      -
+        description: NOME DO BANCO POR EXTENSO
+        begin: 80
+        end: 94
+        type: alfanumerico
+      -
+        description: DATA DA GRAVAÇÃO DO ARQUIVO
+        begin: 95
+        end: 100
+        type: numerico
+        format: DDMMYY
+      -
+        description: DENSIDADE DE GRAVAÇÃO
+        begin: 101
+        end: 105
+        type: numerico
+      -
+        description: UNIDADE DE DENSIDADE DE GRAVAÇÃO
+        begin: 106
+        end: 108
+        type: alfanumerico
+      -
+        description: USO DO BANCO
+        begin: 109
+        end: 379
+        type: alfanumerico
+      -
+        description: DATA DO CREDITO
+        begin: 380
+        end: 385
+        type: numerico
+      -
+        description: USO DO BANCO
+        begin: 386
+        end: 389
+        type: alfanumerico
+      -
+        description: NUMERO DE SEQÜÊNCIA DO RETORNO
+        begin: 390
+        end: 394
+        type: numerico
+      -
+        description: NUMERO DE SEQÜÊNCIA DO REGISTRO
+        begin: 395
+        end: 400
+        type: numerico
+  detail-register:
+    - metadata:
+         occurrence : 1
+    - fields:
+      -
+        description: IDENTIFICADOR DO REGISTRO
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: TIPO DE INSCRIÇÃO DA EMPRESA
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: USO DO BANCO
+        begin: 18
+        end: 24
+        type: numerico
+      -
+        description: NÚMERO DA CONTA CORRENTE DEPOSITÁIRA
+        begin: 25
+        end: 36
+        type: numerico
+      -
+        description: DÍGITO DA CONTA CORRENTE DEPOSITÁRIA
+        begin: 37
+        end: 37
+        type: numerico
+      -
+        description: CONTROLE DA EMPRESA
+        begin: 38
+        end: 62
+        type: alfanumerico
+      -
+        description: IDENTIFICAÇÃO DO TITULO NO BANCO
+        begin: 63
+        end: 75
+        type: numerico
+      -
+        description: DIGITO DO TITULO NO BANCO 
+        begin: 76
+        end: 76
+        type: numerico
+      -
+        description: NUMERO DO CONTRATO NO BANCO
+        begin: 77
+        end: 86
+        type: numerico
+      -
+        description: NÚMERO DE PARCELAS DO CONTRATO
+        begin: 87
+        end: 88
+        type: numerico
+      -
+        description: NÚMERO DA PARCELA CORRENTE
+        begin: 89
+        end: 90
+        type: numerico
+      -
+        description: NUMERO DAS NOTAS FISCAIS
+        begin: 91
+        end: 111
+        type: alfanumerico
+      -
+        description: USO DO BANCO
+        begin: 112
+        end: 115
+        type: numerico
+      -
+        description: CARTEIRA QUE A EMPRESA OPERA NO BANCO
+        begin: 116
+        end: 117
+        type: alfanumerico
+      -
+        description: IDENTIFICAÇÃO DA OCORRÊNCIA
+        begin: 118
+        end: 119
+        type: numerico
+      -
+        description: DATA DA OCORRÊNCIA NO BANCO
+        begin: 120
+        end: 125
+        type: numerico
+        format: DDMMYY
+      -
+        description: USO DO BANCO
+        begin: 126
+        end: 146
+        type: alfanumerico
+      -
+        description: DATA DE VENCIMENTO  DO TITULO
+        begin: 147
+        end: 152
+        type: numerico    
+        format: DDMMYY
+      -
+        description: VALOR TOTAL DO TITULO
+        begin: 153
+        end: 165
+        type: numerico
+      -
+        description: BANCO LIQUIDAÇÃO/BAIXA
+        begin: 166
+        end: 168
+        type: numerico
+      -
+        description: AGENCIA LIQUIDAÇÃO/BAIXA
+        begin: 169
+        end: 173
+        type: numerico
+      -
+        description: ESPÉCIE  DO TITULO
+        begin: 174
+        end: 175
+        type: numerico
+      -
+        description: DESPESAS DE COBRANÇA
+        begin: 176
+        end: 188
+        type: numerico
+      -
+        description: OUTRAS DESPESAS
+        begin: 189
+        end: 201
+        type: numerico
+      -
+        description: JUROS OPERAÇÃO ATRASO
+        begin: 202
+        end: 214
+        type: numerico
+      -
+        description: IOF DEVIDO
+        begin: 215
+        end: 227
+        type: numerico
+      -
+        description: ABATIMENTO CONCEDIDO
+        begin: 228
+        end: 240
+        type: numerico
+      -
+        description: DESCONTO CONCEDIDO
+        begin: 241
+        end: 253
+        type: numerico
+      -
+        description: VALOR PAGO
+        begin: 254
+        end: 266
+        type: numerico
+      -
+        description: JUROS DE MORA
+        begin: 267
+        end: 279
+        type: numerico
+      -
+        description: OUTROS CRÉDITOS
+        begin: 280
+        end: 292
+        type: numerico
+      -
+        description: TITULO PAGO EM CARTÓRIO
+        begin: 293
+        end: 294
+        type: numerico
+      -
+        description: USO DO BANCO
+        begin: 295
+        end: 295
+        type: alfanumerico
+      -
+        description: VALOR TÍTULO TAXA VENDOR
+        begin: 296
+        end: 308
+        type: numerico
+      -
+        description: USO DO BANCO
+        begin: 309
+        end: 394
+        type: numerico
+      -
+        description: NUMERO SEQÜÊNCIA DO REGISTRO
+        begin: 395
+        end: 400
+        type: numerico
+  trailer:
+    - metadata:
+         occurrence : 1
+    - fields:
+      -
+        description: IDENTIFICADOR DO REGISTRO
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: IDENTIFICADOR DE RETORNO
+        begin: 2
+        end: 2
+        type: numerico
+      -
+        description: IDENTIFICADOR DO TIPO DE REGISTRO
+        begin: 3
+        end: 4
+        type: numerico
+      -
+        description: CÓDIGO DO BANCO NA COMPENSAÇÃO
+        begin: 5
+        end: 7
+        type: numerico
+      -
+        description: USO DO BANCO
+        begin: 8
+        end: 17
+        type: alfanumerico
+      -
+        description: QUANTIDADE DE TÍTULOS EM COBRANÇA
+        begin: 18
+        end: 25
+        type: numerico
+      -
+        description: VALOR TOTAL EM COBRANÇA
+        begin: 26
+        end: 39
+        type: numerico
+      -
+        description: NUMERO DO AVISO BANCÁRIO
+        begin: 40
+        end: 47
+        type: numerico
+      -
+        description: USO DO BANCO    
+        begin: 48
+        end: 394
+        type: alfanumerico
+      -
+        description: NUMERO DE SEQÜÊNCIA DO REGISTRO
+        begin: 395
+        end: 400
+        type: numerico
+    

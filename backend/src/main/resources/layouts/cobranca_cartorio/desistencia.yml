@@ -1,0 +1,234 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  0: file-header
+  1: notorizer-header
+  2: transaction-register
+  8: notorizer-trailler
+  9: file-trailler
+layout-definition:
+  file-header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Codigo do Apresentante
+        begin: 2
+        end: 4
+        type: numerico
+      -
+        description: Nome do Apresentante
+        begin: 5
+        end: 49
+        type: texto
+      -
+        description: Data do Movimento
+        begin: 50
+        end: 57
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Quantidade de Desistencias
+        begin: 58
+        end: 62
+        type: numerico
+      -
+        description: Quantidade de Registros Tipo 2 no Arquivo
+        begin: 63
+        end: 67
+        type: numerico
+      -
+        description: Reservado
+        begin: 68
+        end: 122
+        type: texto
+      -
+        description: Sequencia do Registro
+        begin: 123
+        end: 127
+        type: numerico
+  notorizer-header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Codigo do Cartorio
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: Quantidade de Desistencias
+        begin: 4
+        end: 8
+        type: numerico
+      -
+        description: Codigo do Municipio
+        begin: 9
+        end: 15
+        type: numerico
+      -
+        description: Reservado
+        begin: 16
+        end: 122
+        type: texto
+      -
+        description: Sequencia do Registro
+        begin: 123
+        end: 127
+        type: numerico
+  transaction-register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Numero do Protocolo
+        begin: 2
+        end: 11
+        type: numerico
+      -
+        description: Data de Protocolagem
+        begin: 12
+        end: 19
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Numero do Titulo
+        begin: 20
+        end: 30
+        type: numerico
+      -
+        description: Nome do Primeiro Devedor
+        begin: 31
+        end: 75
+        type: texto
+      -
+        description: Valor do Titulo
+        begin: 76
+        end: 89
+        type: numerico
+      -
+        description: Solicitacao de Sustacao (S)
+        begin: 90
+        end: 90
+        type: texto
+      -
+        description: Agencia/conta
+        begin: 91
+        end: 102
+        type: numerico
+      -
+        description: Carteira/Nosso Numero
+        begin: 103
+        end: 114
+        type: numerico
+      -
+        description: Reservado
+        begin: 115
+        end: 116
+        type: texto
+      -
+        description: Numero de Controle de Recebimento (nao utilizar)
+        begin: 117
+        end: 122
+        type: numerico
+        exception-values: 
+          -
+            "000000"
+      -
+        description: Sequencia do Registro
+        begin: 123
+        end: 127
+        type: numerico
+  notorizer-trailler:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Codigo do Cartorio
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: Soma do total de Desistencias informada no Header do Cartorio e Registros Tipo 2 do mesmo
+        begin: 4
+        end: 8
+        type: numerico
+      -
+        description: Reservado
+        begin: 9
+        end: 122
+        type: texto
+      -
+        description: Sequencia do Registro
+        begin: 123
+        end: 127
+        type: numerico
+  file-trailler:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Codigo do Apresentante
+        begin: 2
+        end: 4
+        type: numerico
+      -
+        description: Nome do Apresentante
+        begin: 5
+        end: 49
+        type: texto
+      -
+        description: Data do Movimento
+        begin: 50
+        end: 57
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Soma do total de Desistencias informada no Header do Arquivo e Registros Tipo 2 do mesmo
+        begin: 58
+        end: 62
+        type: numerico
+      -
+        description: Somatoria do Campo Valor do Titulo
+        begin: 63
+        end: 76
+        type: numerico
+      -
+        description: Reservado
+        begin: 77
+        end: 122
+        type: texto
+      -
+        description: Sequencia do Registro
+        begin: 123
+        end: 127
+        type: numerico

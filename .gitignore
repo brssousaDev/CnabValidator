@@ -1,0 +1,156 @@
+# ============================================================================
+# JAVA / MAVEN (Backend)
+# ============================================================================
+target/
+build/
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+.classpath
+.project
+.settings/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+.gradle/
+.gradle
+*.gradlew
+gradlew
+gradlew.bat
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+nb-configuration.xml
+nbactions.xml
+
+# ============================================================================
+# FLUTTER / DART (Frontend)
+# ============================================================================
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+.pub-cache/
+pubspec.lock
+.fvm/
+flutter_export_environment.sh
+*.web.js
+android/.gradle/
+android/gradle_wrapper.jar
+android/.gradle/gradle.properties
+ios/Pods/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/.symlinks/
+ios/Flutter/flutter_assets
+macos/Pods/
+macos/.symlinks/
+
+# ============================================================================
+# IDE / EDITORS
+# ============================================================================
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.vscode-config.json
+.code-workspace
+
+# ============================================================================
+# ENVIRONMENT & CONFIGURATION
+# ============================================================================
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.sh
+.envrc
+.env.example.local
+!.env.example
+
+# ============================================================================
+# LOGS & TEMPORARY FILES
+# ============================================================================
+*.log
+*.log.*
+logs/
+*.trace
+*.lock
+*.pid
+tmp/
+temp/
+*.tmp
+Thumbs.db
+
+# ============================================================================
+# DOCKER
+# ============================================================================
+docker-compose.override.yml
+docker-compose.local.yml
+docker.env
+
+# ============================================================================
+# DEPENDENCIES
+# ============================================================================
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# ============================================================================
+# BUILD OUTPUT
+# ============================================================================
+dist/
+*.out
+out/
+*.o
+*.so
+*.dylib
+
+# ============================================================================
+# APPLICATION SPECIFIC
+# ============================================================================
+uploads/
+downloads/
+*.rem
+*.ret
+temp_files/
+backup/
+cache/
+.cache/
+*.bak
+*.backup
+
+# ============================================================================
+# OS SPECIFIC
+# ============================================================================
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+.directory
+Desktop.ini
+
+# ============================================================================
+# SECURITY
+# ============================================================================
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+.ssh/
+.credentials
+credentials.json

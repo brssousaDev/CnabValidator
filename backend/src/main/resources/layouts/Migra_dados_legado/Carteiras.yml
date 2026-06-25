@@ -1,0 +1,134 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  1: header
+  2: register
+  3: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: DATA DE GERACAO
+        begin: 2
+        end: 15
+        type: numerico
+        format: DDMMYYYY
+  register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: IDENTIFICACAO DA CARTEIRA NO LEGADO
+        begin: 2
+        end: 21
+        type: alfanumerico
+      -
+        description: DESCRICAO
+        begin: 22
+        end: 51
+        type: alfanumerico
+      -
+        description: TIPO DE CARTEIRA
+        begin: 52
+        end: 52
+        type: alfanumerico
+      -
+        description: TIPO DE TARIFA DE CARTEIRA
+        begin: 53
+        end: 54
+        type: numerico
+      -
+        description: DEVOLVE TITULOS COM ERRO
+        begin: 55
+        end: 55
+        type: alfanumerico
+      -
+        description: PERMITE LIQUIDACAO AUTOMATICA
+        begin: 56
+        end: 56
+        type: alfanumerico
+      -
+        description: TIPO DE LIQUIDACAO AUTOMATICA
+        begin: 57
+        end: 58
+        type: alfanumerico
+      -
+        description: ENVIA PARA BANCO COBRANCA
+        begin: 59
+        end: 59
+        type: alfanumerico
+      -
+        description: DEBITA CEDENTE
+        begin: 60
+        end: 60
+        type: alfanumerico
+      -
+        description: HISTORICO DE DEBITO PARA CEDENTE
+        begin: 61
+        end: 64
+        type: numerico
+      -
+        description: CARTEIRA DE COBRANCA CAUCAO
+        begin: 65
+        end: 65
+        type: alfanumerico
+      -
+        description: APRESENTA CHEQUE NO SDCOMPE
+        begin: 66
+        end: 66
+        type: alfanumerico
+      -		
+        description: ENVIA TITULOS AO BANCO COBRANCA
+        begin: 67
+        end: 67
+        type: alfanumerico
+      -
+        description: CREDITA CHEQUE EM CONTA
+        begin: 68
+        end: 68
+        type: alfanumerico
+      -
+        description: TIPO DE COBRANCA
+        begin: 69
+        end: 69
+        type: alfanumerico
+      -
+        description: PERMITE VINCULAR TITULOS COMO GARANTIA
+        begin: 70
+        end: 70
+        type: alfanumerico
+      -
+        description: TRANSFERE TITULOS PARA CARTEIRA SIMPLES
+        begin: 71
+        end: 71
+        type: alfanumerico
+  trailer:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: QUANTIDADE DE REGISTRO DO ARQUIVO
+        begin: 2
+        end: 7
+        type: alfanumerico

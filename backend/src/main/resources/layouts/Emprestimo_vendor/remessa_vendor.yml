@@ -1,0 +1,337 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  0: header
+  1: detail-register
+#  2: detail-register-optional
+  9: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence: 1
+    - fields:
+      -
+        description: IDENTIFICADOR DO REGISTRO
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: IDENTIFICADOR DO ARQUIVO REMESSA
+        begin: 2
+        end: 2
+        type: numerico
+      -
+        description: IDENTIFICADOR EXTENSO REMESSA
+        begin: 3
+        end: 9
+        type: alfanumerico
+      -
+        description: IDENTIFICADOR TIPO SERVICO
+        begin: 10
+        end: 11
+        type: numerico
+      -
+        description: IDENTIFICADOR EXTENSO SERVICO
+        begin: 12
+        end: 26
+        type: alfanumerico
+      -
+        description: CODIGO DA EMPRESA
+        begin: 27
+        end: 46
+        type: numerico
+      -
+        description: NOME DA EMPRESA
+        begin: 47
+        end: 76
+        type: alfanumerico
+      -
+        description: NUMERO DO BANCO
+        begin: 77
+        end: 79
+        type: numerico
+      -
+        description: NOME DO BANCO POR EXTENSO
+        begin: 80
+        end: 94
+        type: alfanumerico
+      -
+        description: DATA DA GRAVACAO DO ARQUIVO
+        begin: 95
+        end: 100
+        type: numerico
+        format: DDMMYY
+      -
+        description: DENSIDADE DE GRAVACAO
+        begin: 101
+        end: 105
+        type: numerico
+      -
+        description: UNIDADE DE DENSIDADE DE GRAVACAO
+        begin: 106
+        end: 108
+        type: alfanumerico
+      -
+        description: USO DO BANCO
+        begin: 109
+        end: 389
+        type: alfanumerico
+      -
+        description: NUMERO DE SEQUENCIA DA REMESSA
+        begin: 390
+        end: 394
+        type: numerico
+      -
+        description: NUMERO DE SEQUENCIA DO REGISTRO
+        begin: 395
+        end: 400
+        type: numerico
+  detail-register:
+    - metadata:
+         occurrence : 1
+    - fields:
+      -
+        description: IDENTIFICADOR DO REGISTRO
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: TIPO DE INSCRIÇÃO DA EMPRESA
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: NUMERO DE INSCRIÇÃO DA EMPRESA
+        begin: 4
+        end: 17
+        type: numerico
+      -
+        description: USO DO BANCO
+        begin: 18
+        end: 24
+        type: numerico
+      -
+        description: NÚMERO DA CONTA CORRENTE DEPOSITÁRIA
+        begin: 25
+        end: 36
+        type: numerico
+      -
+        description: DÍGITO DA CONTA CORRENTE DEPOSITÁRIA
+        begin: 37
+        end: 37
+        type: numerico
+      -
+        description: CONTROLE DA EMPRESA
+        begin: 38
+        end: 62
+        type: alfanumerico
+      -
+        description: IDENTIFICAÇÃO DO TITULO NO BANCO
+        begin: 63
+        end: 75
+        type: numerico
+      -
+        description: DIGITO DO TITULO NO BANCO
+        begin: 76
+        end: 76
+        type: numerico
+      -
+        description: NUMERO DO CONTRATO NO BANCO
+        begin: 77
+        end: 86
+        type: numerico
+      -
+        description: NÚMERO DE PARCELAS DO CONTRATO
+        begin: 87
+        end: 88
+        type: numerico
+      -
+        description: NÚMERO DA PARCELA CORRENTE
+        begin: 89
+        end: 90
+        type: numerico
+      -
+        description: NUMERO DAS NOTAS FISCAIS
+        begin: 91
+        end: 111
+        type: alfanumerico
+      -
+        description: CARTEIRA QUE A EMPRESA OPERA NO BANCO
+        begin: 112
+        end: 113
+        type: alfanumerico
+      -
+        description: IDENTIFICAÇÃO DA OCORRÊNCIA
+        begin: 114
+        end: 115
+        type: numerico
+      -
+        description: USO DO BANCO
+        begin: 116
+        end: 120
+        type: numerico
+      -
+        description: DATA DE VENCIMENTO DO TITULO
+        begin: 121
+        end: 126
+        type: numerico
+        format: DDMMYY
+      -
+        description: VALOR TOTAL DO TITULO
+        begin: 127
+        end: 139
+        type: numerico
+      -
+        description: BANCO ENCARREGADO DA COBRANÇA
+        begin: 140
+        end: 142
+        type: numerico
+      -
+        description: USO DO BANCO
+        begin: 143
+        end: 147
+        type: numerico
+      -
+        description: ESPÉCIE  DO TITULO
+        begin: 148
+        end: 149
+        type: numerico
+      -
+        description: ACEITE
+        begin: 150
+        end: 150
+        type: alfanumerico
+      -
+        description: DATA DE EMISSÃO DO TITULO
+        begin: 151
+        end: 156
+        type: numerico
+        format: DDMMYY
+      -
+        description: INSTRUÇÃO DE COBRANÇA
+        begin: 157
+        end: 158
+        type: numerico
+      -
+        description: USO DO BANCO
+        begin: 159
+        end: 160
+        type: numerico
+      -
+        description: CÓDIGO DE MORA
+        begin: 161
+        end: 161
+        type: numerico
+      -
+        description: TAXA DE MORA A SER COBRADA
+        begin: 162
+        end: 166
+        type: numerico
+      -
+        description: USO DO BANCO
+        begin: 167
+        end: 179
+        type: numerico
+      -
+        description: VALOR DOS ENCARGOS FINANCEIROS
+        begin: 180
+        end: 192
+        type: numerico
+      -
+        description: VALOR DO ABATIMENTO
+        begin: 193
+        end: 205
+        type: numerico
+      -
+        description: TIPO INDEXADOR VENDOR
+        begin: 206
+        end: 208
+        type: alfanumerico
+      -
+        description: PERCENTUAL DO INDEXADOR VENDOR
+        begin: 209
+        end: 213
+        type: numerico
+      -
+        description: TAXA PRÉ-FIXADA VENDOR
+        begin: 214
+        end: 218
+        type: numerico
+      -
+        description: IDENTIFICAÇÃO TIPO INSCRIÇÃO SACADO
+        begin: 219
+        end: 220
+        type: numerico
+      -
+        description: NÚMERO DE INSCRIÇÃO DO SACADO
+        begin: 221
+        end: 234
+        type: numerico
+      -
+        description: NOME  DO SACADO
+        begin: 235
+        end: 274
+        type: alfanumerico
+      -
+        description: ENDEREÇO DO SACADO
+        begin: 275
+        end: 314
+        type: alfanumerico
+      -
+        description: BAIRRO DO SACADO
+        begin: 315
+        end: 326
+        type: alfanumerico
+      -
+        description:CEP DO SACADO
+        begin: 327
+        end: 331
+        type: numerico
+      -
+        description: COMPLEMENTO CEP DO SACADO
+        begin: 332
+        end: 334
+        type: numerico
+      -
+        description: CIDADE  DO SACADO
+        begin: 335
+        end: 349
+        type: alfanumerico
+      -
+        description: ESTADO DO SACADO
+        begin: 350
+        end: 351
+        type: alfanumerico
+      -
+        description: MENSAGEM
+        begin: 352
+        end: 394
+        type: alfanumerico
+      -
+        description: NUMERO SEQÜÊNCIA DO REGISTRO
+        begin: 395
+        end: 400
+        type: numerico
+  trailer:
+    - metadata:
+         occurrence :1
+    - fields:
+      -
+        description: IDENTIFICADOR DO REGISTRO
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: USO DO BANCO
+        begin: 2
+        end: 394
+        type: alfanumerico
+      -
+        description: NUMERO DE SEQÜÊNCIA DO REGISTRO
+        begin:395
+        end:400
+        type: numerico

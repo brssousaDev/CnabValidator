@@ -1,0 +1,258 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 2
+		 
+key-map:
+  70: header-label
+  77: transaction-register-type-1
+  79: trailler-register
+  
+layout-definition:
+  header-label:
+    - metadata:
+      occurrence : 1
+    - fields:
+      -
+       description: Codigo do Registro 
+       begin: 1
+       end: 2
+       type: numerico
+      -
+       description: Codigo da Agencia
+       begin: 4
+       end: 8
+       type: numerico
+      -
+       description: Data Base
+       begin: 10
+       end: 17
+       type: numerico
+      -
+       description: Codigo do Sistema
+       begin: 19
+       end: 20
+       type: numerico
+      -
+       description: Sigla do Sistema
+       begin: 22
+       end: 23
+       type: alfanumerico
+      -
+       description: Sequencia de Registros
+       begin: 393
+       end: 400
+       type: numerico
+  transaction-register-type-1:
+    - metadata:
+      occurrence : 1
+    - fields:
+      -
+       description: Codigo do Registro 
+       begin: 1
+       end: 2
+       type: numerico
+      -
+       description: Numero da Conta
+       begin: 4
+       end: 13
+       type: numerico
+      -
+       description: Numero do Cliente
+       begin: 15
+       end: 24
+       type: numerico
+      -
+       description: CNPJ/CPF
+       begin: 26
+       end: 40
+       type: alfanumerico
+      -
+       description: Numero do Contrato
+       begin: 42
+       end: 50
+       type: numerico
+      -
+       description: Codigo Modalidade
+       begin: 52
+       end: 54
+       type: numerico
+      -
+       description: Data do  Contrato
+       begin: 56
+       end: 63
+       type: numerico
+       format: ddmmaaaa
+      -
+       description: Data do Vencimento do Contrato
+       begin: 65
+       end: 72
+       type: numerico
+       format: ddmmaaaa
+      -
+       description: Data da Baixa para Prejuizo
+       begin: 74
+       end: 81
+       type: numerico
+       format: ddmmaaaa
+      -
+       description: Prazo Medio do Contrato/Prazo a Decorrer
+       begin: 83
+       end: 86
+       type: numerico
+      -
+       description: taxa do Contrato
+       begin: 88
+       end: 95
+       type: numerico
+      -
+       description: Taxa de Juros Efetiva
+       begin: 97
+       end: 104
+       type: numerico
+      -
+       description: Codigo do Gerente
+       begin: 106
+       end: 109
+       type: numerico
+      -
+       description: Data da prestacao
+       begin: 111
+       end: 118
+       type: ddmmaaaa
+      -
+       description: Indice de correcao
+       begin: 120
+       end: 122
+       type: numerico
+      -
+       description: Variacao cambial
+       begin: 124
+       end: 126
+       type: numerico
+      -
+       description: Forma de pagamento 
+       begin: 128
+       end: 128
+       type: alfanumerico
+      -
+       description: Carencia 
+       begin: 130
+       end: 132
+       type: numerico
+      -
+       description: Codigo da renovacao 
+       begin: 134
+       end: 134
+       type: numerico
+      -
+       description: Curva na data base do valor cedido para cessao de credito
+       begin: 136
+       end: 149
+       type: numerico
+      -
+       description: Valor da operacao contratada 
+       begin: 151
+       end: 167
+       type: numerico
+      -
+       description: Valor do principal 
+       begin: 169
+       end: 185
+       type: numerico
+      -
+       description: Valor da curva na data base
+       begin: 187
+       end: 203
+       type: numerico
+      -
+       description: Valor final
+       begin: 205
+       end: 221
+       type: numerico
+      -
+       description: Saldo medio
+       begin: 223
+       end: 239
+       type: numerico
+      -
+       description: Valor liquido liberado
+       begin: 241
+       end: 257
+       type: numerico
+      -
+       description: Rendas a apropriar
+       begin: 259
+       end: 275
+       type: numerico
+      -
+       description: Valor da receita
+       begin: 277
+       end: 293
+       type: numerico
+      -
+       description: Data de inicio operacao original
+       begin: 295
+       end: 302
+       type: numerico
+      -
+       description: Dias atraso operacao original
+       begin: 304
+       end: 307
+       type: numerico
+      -
+       description: Saldo devedor operacao original
+       begin: 309
+       end: 325
+       type: numerico
+      -
+       description: Percentual de amortizacao
+       begin: 327
+       end: 329
+       type: numerico
+      -
+       description: Numero do contrato original
+       begin: 331
+       end: 339
+       type: numerico
+      -
+       description: Data da renegociacao
+       begin: 341
+       end: 348
+       type: numerico
+      -
+       description: Quantidade de parcelas
+       begin: 350
+       end: 352
+       type: numerico
+      -
+       description: Identificacao do contrato
+       begin: 354
+       end: 368
+       type: alfanumerico
+      -
+       description: Percentual do indexador
+       begin: 370
+       end: 379
+       type: numerico
+      -
+       description: Sequencia
+       begin: 393
+       end: 400
+       type: numerico
+  trailler-register:
+    - metadata:
+      occurrence : 1
+    - fields:	  
+      -
+       description: Codigo do Registro 
+       begin: 1
+       end: 2
+       type: numerico
+      -
+       description: Sequencia
+       begin: 393
+       end: 400
+       type: numerico

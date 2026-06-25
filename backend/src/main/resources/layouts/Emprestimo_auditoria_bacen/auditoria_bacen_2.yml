@@ -1,0 +1,226 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  S: transaction-register-type-1
+layout-definition:
+    transaction-register-type-1:
+    - metadata:
+        occurrence : 1
+    - fields:
+      -
+        description: Codigo do Sistema
+        begin: 1
+        end: 6
+        type: alfanumerico
+      -
+        description: Indicador CNPJ/CPF
+        begin: 7
+        end: 7
+        type: alfanumerico
+      -
+        description: CNPJ/CPF
+        begin: 8
+        end: 21
+        type: alfanumerico
+      -
+        description: Nome do Cliente
+        begin: 22
+        end: 51
+        type: alfanumerico
+      -
+        description: Agencia
+        begin: 52  
+        end: 55
+        type: alfanumerico
+      -
+        description: Numero de Contrato
+        begin: 56
+        end: 65
+        type: alfanumerico
+      -
+        description: Operacao
+        begin: 66
+        end: 68
+        type: alfanumerico
+      -
+        description: Cosif
+        begin: 69
+        end: 76
+        type: alfanumerico
+      -
+        description: Fonte
+        begin: 77
+        end: 79
+        type: alfanumerico
+      -
+        description: Grupo Economico
+        begin: 80
+        end: 85
+        type: alfanumerico
+      -
+        description: Risco da Operacao
+        begin: 86
+        end: 87
+        type: alfanumerico
+      -
+        description: Data da Classifica��o de Risco
+        begin: 88
+        end: 95
+        type: numerico
+        format: YYYYMMDD
+      -
+        description: Modalidade
+        begin: 96
+        end: 99
+        type: alfanumerico
+      -
+        description: Data Inicio
+        begin: 100
+        end: 107
+        type: numerico
+        format: YYYYMMDD
+      -
+        description: Data Final
+        begin: 108
+        end: 115
+        type: numerico
+        format: YYYYMMDD
+      -
+        description: Valor Contratado
+        begin: 116
+        end: 132
+        type: numerico
+      -
+        description: Indexador
+        begin: 133
+        end: 138
+        type: alfanumerico
+      -
+        description: Percentual do Indexador
+        begin: 139
+        end: 143
+        type: numerico
+      -
+        description: Taxa da Operacao
+        begin: 144
+        end: 151
+        type: numerico
+      -
+        description: Forma Pagamento
+        begin: 152
+        end: 152
+        type: alfanumerico
+      -
+        description: Data de Fim de Car�ncia
+        begin: 153
+        end: 160
+        type: numerico
+        format: YYYYMMDD
+      -
+        description: Parcelas
+        begin: 161
+        end: 163
+        type: numerico
+      -
+        description: Parcelas em Aberto
+        begin: 164
+        end: 166
+        type: numerico
+      -
+        description: Parcelas Vencidas
+        begin: 167
+        end: 169
+        type: numerico
+      -
+        description: Data da Primeira Parcela Vencida N�o Paga
+        begin: 170
+        end: 177
+        type: numerico
+        format: YYYYMMDD
+      -
+        description: Proximo Vencimento
+        begin: 178
+        end: 185
+        type: numerico
+        format: YYYYMMDD
+      -
+        description: Data da Parcela Vencida no Mes
+        begin: 186
+        end: 193
+        type: numerico
+        format: YYYYMMDD
+      -
+        description: Saldo
+        begin: 194
+        end: 210
+        type: numerico
+      -
+        description: Saldo em Bruto
+        begin: 211
+        end: 227
+        type: numerico
+      -
+        description: Saldo em PDD
+        begin: 228
+        end: 244
+        type: numerico
+      -
+        description: Saldo a Desembolsar
+        begin: 245
+        end: 261
+        type: numerico
+      -
+        description: Rendas Apropriadas no M�s
+        begin: 262
+        end: 278
+        type: numerico
+      -
+        description: Rendas Apropriadas Totais
+        begin: 279
+        end: 295
+        type: numerico
+      -
+        description: Fluxo de Caixa Total
+        begin: 296
+        end: 312
+        type: numerico
+      -
+        description: Limite de Conta Garantida
+        begin: 313
+        end: 329
+        type: numerico
+      -
+        description: Fluxo de Caixa Devido na Data-Base
+        begin: 330
+        end: 346
+        type: numerico
+      -
+        description: Fluxo de Caixa Recebido na Data-Base
+        begin: 347
+        end: 363
+        type: numerico
+      -
+        description: Fluxo de Caixa Desembolsado na Data-Base
+        begin: 364
+        end: 380
+        type: numerico
+      -
+        description: Renegociacoes
+        begin: 381
+        end: 382
+        type: numerico
+      -
+        description: Data da Ultima Renegociacao
+        begin: 383
+        end: 390
+        type: numerico
+        format: YYYYMMDD
+      -
+        description: Codigo do Cliente
+        begin: 391
+        end: 402
+        type: alfanumerico

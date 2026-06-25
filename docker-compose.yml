@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: cnab-backend
+    ports:
+      - "9084:9084"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9084/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - cnab-network
+
+  frontend:
+    build: ./frontend
+    container_name: cnab-frontend
+    ports:
+      - "9085:9085"
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      - API_BASE_URL=http://backend:9084
+    networks:
+      - cnab-network
+
+networks:
+  cnab-network:
+    driver: bridge

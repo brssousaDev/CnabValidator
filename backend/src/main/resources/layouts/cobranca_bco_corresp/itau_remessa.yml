@@ -1,0 +1,762 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  0: header
+  1: detail-register
+  4: detail-register-optional
+  5: detail-register-optional2
+  9: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identificacao do Registro header
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Tipo de Operacao - Remessa
+        begin: 2
+        end: 2
+        type: numerico
+      -
+        description: Identificacao por extenso do movimento
+        begin: 3
+        end: 9
+        type: alfanumerico
+      -
+        description: Identificacao do tipo de servico
+        begin: 10
+        end: 11
+        type: numerico
+      -
+        description: Identificacao por extenso do tipo de servico
+        begin: 12
+        end: 26
+        type: alfanumerico
+      -
+        description: Agencia mantenedora da conta
+        begin: 27
+        end: 30
+        type: numerico
+      -
+        description: Complemento de registro
+        begin: 31
+        end: 32
+        type: numerico
+      -
+        description: Numero da conta corrente da empresa
+        begin: 33
+        end: 37
+        type: numerico
+      -
+        description: Digito de auto conferencia ag/conta empresa
+        begin: 38
+        end: 38
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 39
+        end: 46
+        type: alfanumerico
+      -
+        description: Nome por extenso da "empresa mae"
+        begin: 47
+        end: 76
+        type: alfanumerico
+      -
+        description: Numero do banco na camara de compensacao
+        begin: 77
+        end: 79
+        type: numerico
+      -
+        description: Nome por extenso do banco cobrador
+        begin: 80
+        end: 94
+        type: alfanumerico
+      -
+        description: Data de geracao do arquivo
+        begin: 95
+        end: 100
+        type: numerico
+        format: DDMMYY
+      -
+        description: Complemento do registro
+        begin: 101
+        end: 394
+        type: alfanumerico
+      -
+        description: Numero sequencial do registro no arquivo
+        begin: 395
+        end: 400
+        type: numerico
+  detail-register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identificacao do Registro transacao
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Tipo de Inscricao da empresa
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: Numero de inscricao da empresa (cpf/cnpj)
+        begin: 4
+        end: 17
+        type: alfanumerico
+      -
+        description: Agencia mantenedora da conta
+        begin: 18
+        end: 21
+        type: numerico
+      -
+        description: Complemento de registro
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Numero da conta corrente da empresa
+        begin: 24
+        end: 28
+        type: numerico
+      -
+        description: Digito de auto conferencia ag/conta empresa
+        begin: 29
+        end: 29
+        type: numerico
+      -
+        description: Complemento de registro
+        begin: 30
+        end: 33
+        type: alfanumerico
+      -
+        description: Cod. Instrucao/Alegacao a ser cancelada
+        begin: 34
+        end: 37
+        type: numerico
+      -
+        description: Identificacao do titulo na empresa
+        begin: 38
+        end: 62
+        type: alfanumerico
+      -
+        description: Identificacao do titulo no banco
+        begin: 63
+        end: 70
+        type: numerico
+      -
+        description: Quantidade de moeda variavel
+        begin: 71
+        end: 83
+        type: numerico
+      -
+        description: Numero da carteira no banco
+        begin: 84
+        end: 86
+        type: numerico
+      -
+        description: Identificacao da operacao no banco
+        begin: 87
+        end: 107
+        type: alfanumerico
+      -
+        description: Codigo da carteira
+        begin: 108
+        end: 108
+        type: alfanumerico
+      -
+        description: Identificacao da ocorrencia
+        begin: 109
+        end: 110
+        type: numerico
+      -
+        description: Numero do documento de cobranca (DUPL., NP ETC.)
+        begin: 111
+        end: 120
+        type: alfanumerico
+      -
+        description: Data de vencimento do titulo
+        begin: 121
+        end: 126
+        type: numerico
+      -
+        description: Valor nominal do titulo
+        begin: 127
+        end: 139
+        type: numerico
+      -
+        description: Numero do banco na camara de compensacao
+        begin: 140
+        end: 142
+        type: numerico
+      -
+        description: Agencia onde o titulo sera cobrado
+        begin: 143
+        end: 147
+        type: numerico
+      -
+        description: Especie do titulo
+        begin: 148
+        end: 149
+        type: alfanumerico
+      -
+        description: Identificacao de titulo aceito ou nao aceito
+        begin: 150
+        end: 150
+        type: alfanumerico
+      -
+        description: Data da emissao do titulo
+        begin: 151
+        end: 156
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Primeira instrucao de cobranca
+        begin: 157
+        end: 158
+        type: alfanumerico
+      -
+        description: Segunda instrucao de cobranca
+        begin: 159
+        end: 160
+        type: alfanumerico
+      -
+        description: Valor de mora por dia de atraso
+        begin: 161
+        end: 173
+        type: numerico
+      -
+        description: Data limite para concessao de desconto
+        begin: 174
+        end: 179
+        type: numerico
+        format: DDMMYY
+      -
+        description: Valor do desconto a ser concedido
+        begin: 180
+        end: 192
+        type: numerico
+      -
+        description: Valor do IOF Recolhido P/ Notas seguro
+        begin: 193
+        end: 205
+        type: numerico
+      -
+        description: Valor do Abatimento a ser concedido
+        begin: 206
+        end: 218
+        type: numerico
+      -
+        description: Identificacao do tipo de inscricao/sacado
+        begin: 219
+        end: 220
+        type: numerico
+      -
+        description: Numero de inscricao do sacado (CPF/CNPJ)
+        begin: 221
+        end: 234
+        type: alfanumerico
+      -
+        description: Nome do sacado
+        begin: 235
+        end: 264
+        type: alfanumerico
+      -
+        description: Complemento de registro
+        begin: 265
+        end: 274
+        type: alfanumerico
+      -
+        description: Rua, Numero e Complemento do sacado
+        begin: 275
+        end: 314
+        type: alfanumerico
+      -
+        description: Bairro do sacado
+        begin: 315
+        end: 326
+        type: alfanumerico
+      -
+        description: CEP do Sacado
+        begin: 327
+        end: 334
+        type: numerico
+      -
+        description: Cidade do sacado
+        begin: 335
+        end: 349
+        type: alfanumerico
+      -
+        description: UF do sacado
+        begin: 350
+        end: 351
+        type: alfanumerico
+      -
+        description: Nome do sacador ou avalista
+        begin: 352
+        end: 381
+        type: alfanumerico
+      -
+        description: Complemento do registro
+        begin: 382
+        end: 385
+        type: alfanumerico
+      -
+        description: Data de mora
+        begin: 386
+        end: 391
+        type: numerico
+        format: DDMMYY
+      -
+        description: Quantidade de dias
+        begin: 392
+        end: 393
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 394
+        end: 394
+        type: alfanumerico
+      -
+        description: Numero sequencial do registro no arquivo
+        begin: 395
+        end: 400
+        type: numerico
+  detail-register-optional:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identificacao do Registro transacao
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Tipo de Inscricao da empresa
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: Numero de inscricao da empresa (cpf/cnpj)
+        begin: 4
+        end: 17
+        type: alfanumerico
+      -
+        description: Agencia mantenedora da conta
+        begin: 18
+        end: 21
+        type: numerico
+      -
+        description: Complemento de registro
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Numero da conta corrente da empresa
+        begin: 24
+        end: 28
+        type: numerico
+      -
+        description: Digito de auto conferencia ag/conta empresa
+        begin: 29
+        end: 29
+        type: numerico
+      -
+        description: Numero da carteira no banco
+        begin: 30
+        end: 32
+        type: numerico
+      -
+        description: Identificacao do titulo no banco
+        begin: 33
+        end: 40
+        type: numerico
+      -
+        description: DAC do nosso numero
+        begin: 41
+        end: 41
+        type: numerico
+      -
+        description: Numero sequencial dos registros tipo 4 do titulo
+        begin: 42
+        end: 43
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 44
+        end: 47
+        type: numerico
+      -
+        description: Numero da conta para credito
+        begin: 48
+        end: 54
+        type: numerico
+      -
+        description: Digito de auto-conferencia ag/conta para credito
+        begin: 55
+        end: 55
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 56
+        end: 68
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 69
+        end: 72
+        type: numerico
+      -
+        description: Numero da conta para credito
+        begin: 73
+        end: 79
+        type: numerico
+      -
+        description: Digito de auto-conferencia ag/conta credito
+        begin: 80
+        end: 80
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 81
+        end: 93
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 94
+        end: 97
+        type: numerico
+      -
+        description: Numero da conta para credito
+        begin: 98
+        end: 104
+        type: numerico
+      -
+        description: Digito de auto-conferencia ag/conta credito
+        begin: 105
+        end: 105
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 106
+        end: 118
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 119
+        end: 122
+        type: numerico
+      -
+        description: Numero da conta para credito
+        begin: 123
+        end: 129
+        type: numerico
+      -
+        description: Digito de auto-conferencia ag/conta credito
+        begin: 130
+        end: 130
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 131
+        end: 143
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 144
+        end: 147
+        type: numerico
+      -
+        description: Numero da conta para credito
+        begin: 148
+        end: 154
+        type: numerico
+      -
+        description: Digito de auto-conferencia ag/conta credito
+        begin: 155
+        end: 155
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 156
+        end: 168
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 169
+        end: 172
+        type: numerico
+      -
+        description: Numero da conta para credito
+        begin: 173
+        end: 179
+        type: numerico
+      -
+        description: Digito de auto-conferencia ag/conta credito
+        begin: 180
+        end: 180
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 181
+        end: 193
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 194
+        end: 197
+        type: numerico
+      -
+        description: Numero da conta para credito
+        begin: 198
+        end: 204
+        type: numerico
+      -
+        description: Digito de auto-conferencia ag/conta credito
+        begin: 205
+        end: 205
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 206
+        end: 218
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 219
+        end: 222
+        type: numerico
+      -
+        description: Numero da conta para credito
+        begin: 223
+        end: 229
+        type: numerico
+      -
+        description: Digito de auto-conferencia ag/conta credito
+        begin: 230
+        end: 230
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 231
+        end: 243
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 244
+        end: 247
+        type: numerico
+      -
+        description: Numero da conta para credito
+        begin: 248
+        end: 254
+        type: numerico
+      -
+        description: Digito de auto-conferencia ag/conta credito
+        begin: 255
+        end: 255
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 256
+        end: 268
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 269
+        end: 272
+        type: numerico
+      -
+        description: Numero da conta para credito
+        begin: 273
+        end: 279
+        type: numerico
+      -
+        description: Digito de auto-conferencia ag/conta credito
+        begin: 280
+        end: 280
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 281
+        end: 293
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 294
+        end: 297
+        type: numerico
+      -
+        description: Numero da conta para credito
+        begin: 298
+        end: 304
+        type: numerico
+      -
+        description: Digito de auto-conferencia ag/conta credito
+        begin: 305
+        end: 305
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 306
+        end: 318
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 319
+        end: 322
+        type: numerico
+      -
+        description: Numero da conta para credito
+        begin: 323
+        end: 329
+        type: numerico
+      -
+        description: Digito de auto-conferencia ag/conta credito
+        begin: 330
+        end: 330
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 331
+        end: 343
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 344
+        end: 347
+        type: numerico
+      -
+        description: Numero da conta para credito
+        begin: 348
+        end: 354
+        type: numerico
+      -
+        description: Digito de auto-conferencia ag/conta credito
+        begin: 355
+        end: 355
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 356
+        end: 368
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 369
+        end: 372
+        type: numerico
+      -
+        description: Numero da conta para credito
+        begin: 373
+        end: 379
+        type: numerico
+      -
+        description: Digito de auto-conferencia ag/conta credito
+        begin: 380
+        end: 380
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 381
+        end: 393
+        type: numerico
+      -
+        description: Tipo de valor informado
+        begin: 394
+        end: 394
+        type: numerico
+      -
+        description: Numero sequencial do registro no arquivo
+        begin: 395
+        end: 400
+        type: numerico
+  detail-register-optional2:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identificacao do registro transacao
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Endereco de e-mail do sacado
+        begin: 2
+        end: 121
+        type: alfanumerico
+      -
+        description: Ident. do tipo de inscricao do sacador/avalista
+        begin: 122
+        end: 123
+        type: numerico
+      -
+        description: Numero de inscricao do sacador avalista
+        begin: 124
+        end: 137
+        type: numerico
+      -
+        description: Rua, numero e complemento do sacador avalista
+        begin: 138
+        end: 177
+        type: alfanumerico
+      -
+        description: Bairro do sacador avalista
+        begin: 178
+        end: 189
+        type: alfanumerico
+      -
+        description: CEP do sacador avalista
+        begin: 190
+        end: 197
+        type: numerico
+      -
+        description: Cidade do sacador avalista
+        begin: 198
+        end: 212
+        type: alfanumerico
+      -
+        description: UF do sacador avalista
+        begin: 213
+        end: 214
+        type: alfanumerico
+      -
+        description: Complemento de registro
+        begin: 215
+        end: 394
+        type: alfanumerico
+      -
+        description: Numero sequencial do registro no arquivo
+        begin: 395
+        end: 400
+        type: numerico
+  trailer:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identificacao do registro trailer
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 2
+        end: 394
+        type: alfanumerico
+      -
+        description: Numero sequencial do registro no arquivo
+        begin: 395
+        end: 400
+        type: numerico

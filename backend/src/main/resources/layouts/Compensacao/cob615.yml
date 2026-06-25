@@ -1,0 +1,351 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 7
+         end-column: 31
+       -  
+         begin-column: 45
+         end-column: 46
+key-map:
+  00: header-label
+  40: detalhe
+  44: detalhe
+  9999999999999999999999999: controle-fech-de-lote
+  99: trailler-register
+layout-definition:
+  header-label:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Controle do Healer
+        begin: 1
+        end: 47
+        type: numerico
+      -
+        description: Nome do Arquivo
+        begin: 48
+        end: 53
+        type: alfanumerico
+      -
+        description: Local Origem
+        begin: 54
+        end: 56
+        type: numerico
+      -
+        description: Nr. da versão do arq.
+        begin: 57
+        end: 60
+        type: numerico
+      -
+        description: Nr. código banco dest.
+        begin: 61
+        end: 63
+        type: numerico
+      -
+        description: D.V.Nr.código banco dest.
+        begin: 64
+        end: 64
+        type: alfanumerico
+      -
+        description: Indicador de remessa
+        begin: 65
+        end: 65
+        type: numerico
+      -
+        description: Data do movimento
+        begin: 66
+        end: 73
+        type: numerico
+        format: 'YYYYMMDD'
+      -
+        description: Flag fim
+        begin: 74
+        end: 76
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 77
+        end: 90
+        type: alfanumerico
+      -
+        description: Parcial do processador
+        begin: 91
+        end: 93
+        type: numerico
+      -
+        description: Origem do arquivo
+        begin: 94
+        end: 98
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 99
+        end: 150
+        type: alfanumerico
+      -
+        description: Sequêncial de arquivo
+        begin: 151
+        end: 160
+        type: numerico
+  detalhe:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Nr. Código banco dest.
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Código da moeda
+        begin: 4
+        end: 4
+        type: numerico
+      -
+        description: D.V.cód. de barra
+        begin: 5
+        end: 5
+        type: numerico
+      -
+        description: Fator de Vencimento
+        begin: 6
+        end: 9
+        type: numerico
+      -
+        description: Valor do documento
+        begin: 10
+        end: 19
+        type: numerico
+      -
+        description: Campo livre
+        begin: 20
+        end: 44
+        type: alfanumerico
+      -
+        description: Tipo de documento.
+        begin: 45
+        end: 46
+        type: numerico
+      -
+        description: Local Origem
+        begin: 47
+        end: 49
+        type: numerico
+      -
+        description: Tipo de Captura
+        begin: 50
+        end: 50
+        type: alfanumerico
+      -
+        description: Cód. Devolução cbr.
+        begin: 51
+        end: 52
+        type: numerico
+      -
+        description: Filler
+        begin: 53
+        end: 53
+        type: alfanumerico
+      -
+        description: Nr. Cód. banco acolhedor
+        begin: 54
+        end: 56
+        type: numerico
+      -
+        description: Nr. Cód. Ag. Acolhedora
+        begin: 57
+        end: 60
+        type: numerico
+      -
+        description: Nr. do lote
+        begin: 61
+        end: 67
+        type: numerico
+      -
+        description: Sequencial do Lote
+        begin: 68
+        end: 70
+        type: numerico
+      -
+        description: Data do movimento
+        begin: 71
+        end: 78
+        type: numerico
+        format: 'YYYYMMDD'
+      -
+        description: Centro processador
+        begin: 79
+        end: 84
+        type: alfanumerico
+      -
+        description: Valor líquido do título
+        begin: 85
+        end: 96
+        type: numerico
+      -
+        description: Filler
+        begin: 97
+        end: 150
+        type: alfanumerico
+      -
+        description: Sequencial de arquivo
+        begin: 151
+        end: 160
+        type: numerico
+  controle-fech-de-lote:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Local Destino.
+        begin: 1
+        end: 3
+        type: numerico
+      -
+        description: Nr. Cod. Banco dest.
+        begin: 4
+        end: 6
+        type: numerico
+      -
+        description: Controle de fech. de lote
+        begin: 7
+        end: 31
+        type: numerico
+      -
+        description: Tipo de documento
+        begin: 32
+        end: 33
+        type: numerico
+      -
+        description: Valor do lote
+        begin: 34
+        end: 50
+        type: numerico
+      -
+        description: Constante 999
+        begin: 51
+        end: 53
+        type: numerico
+      -
+        description: Nr. Cód. Banco rem
+        begin: 54
+        end: 56
+        type: numerico
+      -
+        description: Filler
+        begin: 57
+        end: 60
+        type: alfanumerico
+      -
+        description: Nr. do lote
+        begin: 61
+        end: 67
+        type: numerico
+      -
+        description: Constante 999
+        begin: 68
+        end: 70
+        type: numerico
+      -
+        description: Data do movimento
+        begin: 71
+        end: 78
+        type: numerico
+        format: 'YYYYMMDD'
+      -
+        description: Centro processador
+        begin: 79
+        end: 84
+        type: alfanumerico
+      -
+        description: Versão do arquivo
+        begin: 85
+        end: 91
+        type: numerico
+      -
+        description: Unid. Fed. do fech. do lote
+        begin: 92
+        end: 93
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 94
+        end: 150
+        type: alfanumerico
+      -
+        description: Sequencial de arquivo
+        begin: 151
+        end: 160
+        type: numerico
+  trailler-register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Controle do Trailer
+        begin: 1
+        end: 47
+        type: numerico
+      -
+        description: Nome do arquivo
+        begin: 48
+        end: 53
+        type: alfanumerico
+      -
+        description: Local origem
+        begin: 54
+        end: 56
+        type: numerico
+      -
+        description: Nr. da versão do arq.
+        begin: 57
+        end: 60
+        type: numerico
+      -
+        description: Nr. Código banco dest.
+        begin: 61
+        end: 63
+        type: numerico
+      -
+        description: D.V.Nr. Código do Bco. dest.
+        begin: 64
+        end: 64
+        type: alfanumerico
+      -
+        description: Indicador de remessa
+        begin: 65
+        end: 65
+        type: numerico
+      -
+        description: Data do movimento
+        begin: 66
+        end: 73
+        type: numerico
+        format: 'YYYYMMDD'
+      -
+        description: Valor do arquivo
+        begin: 74
+        end: 90
+        type: numerico
+      -
+        description: Parcial do processador
+        begin: 91
+        end: 93
+        type: numerico
+      -
+        description: Origem do arquivo
+        begin: 94
+        end: 98
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 99
+        end: 150
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 151
+        end: 160
+        type: numerico

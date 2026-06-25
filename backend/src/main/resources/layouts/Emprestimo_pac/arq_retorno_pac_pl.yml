@@ -1,0 +1,359 @@
+seq-show: true
+rules:
+   column:
+      key-length:
+        -
+          begin-column: 33
+          end-column: 34
+key-map:
+  00: header
+  10: pac
+  20: erro_pac
+  30: pl
+  40: erro_pl
+  99: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence: 1
+    - fields:
+        -
+           description: Identificador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento de Saída
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Seqüência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 30
+           end: 32
+           type: numerico
+        -
+           description: Tipo Registro
+           begin: 33
+           end: 34
+           type: numerico
+        -
+           description: Vago
+           begin: 35
+           end: 200
+           type: alfanumerico
+  pac:
+    - metadata:
+       occurrence: *
+    - fields:
+        -
+           description: Identificador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento de Saída
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Seqüência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 30
+           end: 32
+           type: numerico
+        -
+           description: Tipo Registro
+           begin: 33
+           end: 34
+           type: numerico
+        -
+           description: Identificador do Movimento de Entrada
+           begin: 35
+           end: 42
+           type: alfanumerico
+        -
+           description: Ano da Proposta
+           begin: 43
+           end: 46
+           type: numerico
+        -
+           description: Número de Proposta 
+           begin: 47
+           end: 54
+           type: alfanumerico
+        -
+           description: Identificador do Programa
+           begin: 55
+           end: 57
+           type: alfanumerico
+        -
+           description: Situação da Proposta
+           begin: 58
+           end: 58
+           type: alfanumerico
+        -
+           description: Vago
+           begin: 59
+           end: 200
+           type: alfanumerico
+  erro_pac:
+    - metadata:
+       occurrence: *
+    - fields:
+        -
+           description: Identificador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento de Saída
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Seqüência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 30
+           end: 32
+           type: numerico
+        -
+           description: Tipo Registro
+           begin: 33
+           end: 34
+           type: numerico
+        -
+           description: Identificador do Movimento de Entrada
+           begin: 35
+           end: 42
+           type: alfanumerico
+        -
+           description: Ano da Proposta
+           begin: 43
+           end: 46
+           type: numerico
+        -
+           description: Número de Proposta
+           begin: 47
+           end: 54
+           type: alfanumerico
+        -
+           description: Identificador do Programa
+           begin: 55
+           end: 57
+           type: alfanumerico
+        -
+           description: Código do Erro
+           begin: 58
+           end: 62
+           type: numerico
+        -
+           description: Parâmetros do Erro
+           begin: 63
+           end: 200
+           type: alfanumerico
+  pl:
+    - metadata:
+       occurrence: *
+    - fields:
+        -
+           description: Identificador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento de Saída
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Seqüência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 30
+           end: 32
+           type: numerico
+        -
+           description: Tipo Registro
+           begin: 33
+           end: 34
+           type: numerico
+        -
+           description: Identificador do Movimento de Entrada
+           begin: 35
+           end: 42
+           type: alfanumerico
+        -
+           description: Ano da PROPOSTA
+           begin: 43
+           end: 46
+           type: numerico
+        -
+           description: Número de Proposta 
+           begin: 47
+           end: 54
+           type: alfanumerico
+        -
+           description: Identificador do Programa
+           begin: 55
+           end: 57
+           type: alfanumerico
+        -
+           description: Número do Pedido de Liberação
+           begin: 58
+           end: 60
+           type: numerico
+        -
+           description: Situação do PL
+           begin: 61
+           end: 61
+           type: alfanumerico
+        -
+           description: Vago
+           begin: 62
+           end: 200
+           type: alfanumerico
+  erro_pl:
+    - metadata:
+       occurrence: *
+    - fields:
+        -
+           description: Identificador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento de Saída
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Seqüência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 30
+           end: 32
+           type: numerico
+        -
+           description: Tipo Registro
+           begin: 33
+           end: 34
+           type: numerico
+        -
+           description: Identificador do Movimento de Entrada
+           begin: 35
+           end: 42
+           type: alfanumerico
+        -
+           description: Ano da Proposta
+           begin: 43
+           end: 46
+           type: numerico
+        -
+           description: Número de Proposta 
+           begin: 47
+           end: 54
+           type: alfanumerico
+        -
+           description: Identificador do Programa
+           begin: 55
+           end: 57
+           type: alfanumerico
+        -
+           description: Número do Pedido de Liberação
+           begin: 58
+           end: 60
+           type: numerico
+        -
+           description: Código do Erro
+           begin: 61
+           end: 65
+           type: numerico
+        -
+           description: Parâmetros do Erro
+           begin: 66
+           end: 200
+           type: alfanumerico
+  trailer:
+    - metadata:
+       occurrence: 1
+    - fields:
+        -
+           description: Identificador de Tipo de Parceiro
+           begin: 1
+           end: 1
+           type: alfanumerico
+        -
+           description: Identificador do Parceiro
+           begin: 2
+           end: 15
+           type: numerico
+        -
+           description: Identificador do Movimento de Saída
+           begin: 16
+           end: 23
+           type: alfanumerico
+        -
+           description: Seqüência
+           begin: 24
+           end: 29
+           type: numerico
+        -
+           description: Identificador de Versão
+           begin: 30
+           end: 32
+           type: numerico
+        -
+           description: Tipo Registro
+           begin: 33
+           end: 34
+           type: numerico
+        -
+           description: Vago
+           begin: 35
+           end: 200
+           type: alfanumerico

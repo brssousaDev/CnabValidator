@@ -1,0 +1,693 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  0: header-label
+  1: transaction-register-type-1
+#  2: transaction-register-type-2
+#  3: transaction-register-type-3
+#  7: transaction-register-type-7
+  9: trailler-register
+layout-definition:
+  header-label:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identificacao do Registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Identificacao do Arquivo Retorno
+        begin: 2
+        end: 2
+        type: numerico
+      -
+        description: Literal Retorno
+        begin: 3
+        end: 9
+        type: alfanumerico
+      -
+        description: Codigo de Servico
+        begin: 10
+        end: 11
+        type: numerico
+      -
+        description: Literal Servico
+        begin: 12
+        end: 26
+        type: alfanumerico
+      -
+        description: Codigo da Empresa
+        begin: 27
+        end: 46
+        type: numerico
+      -
+        description: Nome da Empresa por Extenso
+        begin: 47
+        end: 76
+        type: alfanumerico
+      -
+        description: Numero do Bradesco na Camara de Compensacao
+        begin: 77
+        end: 79
+        type: numerico
+      -
+        description: Nome do Banco por Extenso
+        begin: 80
+        end: 94
+        type: alfanumerico
+      -
+        description: Data da Gravacao do Arquivo
+        begin: 95
+        end: 100
+        type: numerico
+        format: DDMMYY
+      -
+        description: Densidade de Gravacao
+        begin: 101
+        end: 108
+        type: numerico
+      -
+        description: Numero Aviso Bancario
+        begin: 109
+        end: 113
+        type: numerico
+      -
+        description: Branco
+        begin: 114
+        end: 379
+        type: alfanumerico
+      -
+        description: Data do Credito
+        begin: 380
+        end: 385
+        type: numerico
+        format: DDMMYY
+      -
+        description: Branco
+        begin: 386
+        end: 394
+        type: alfanumerico
+      -
+        description: Numero Sequencial de registro
+        begin: 395
+        end: 400
+        type: numerico
+  transaction-register-type-1:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identificacao do Registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Tipo de Inscricao Empresa
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: Numero Inscricao da Empresa
+        begin: 4
+        end: 17
+        type: alfanumerico
+      -
+        description: Zeros
+        begin: 18
+        end: 20
+        type: alfanumerico
+      -
+        description: Identificacao da Empresa Cedente no Banco
+        begin: 21
+        end: 37
+        type: alfanumerico
+      -
+        description: Numero Controle do Participante
+        begin: 38
+        end: 62
+        type: alfanumerico
+      -
+        description: Zeros
+        begin: 63
+        end: 70
+        type: numerico
+      -
+        description: Identificacao do Titulo no Banco
+        begin: 71
+        end: 82
+        type: alfanumerico
+      -
+        description: Uso do Banco
+        begin: 83
+        end: 92
+        type: numerico
+      -
+        description: Uso do Banco
+        begin: 93
+        end: 104
+        type: alfanumerico
+      -
+        description: Indicador de Rateio Credito
+        begin: 105
+        end: 105
+        type: alfanumerico
+      -
+        description: Zeros
+        begin: 106
+        end: 107
+        type: numerico
+      -
+        description: Carteira
+        begin: 108
+        end: 108
+        type: numerico
+      -
+        description: Identificacao de Ocorrencia
+        begin: 109
+        end: 110
+        type: numerico
+      -
+        description: Data Ocorrencia no Banco
+        begin: 111
+        end: 116
+        type: numerico
+        format: DDMMYY
+      -
+        description: Numero do Documento
+        begin: 117
+        end: 126
+        type: alfanumerico
+      -
+        description: Identificacao do Titulo no Banco
+        begin: 127
+        end: 146
+        type: alfanumerico
+      -
+        description: Data Vencimento do Titulo
+        begin: 147
+        end: 152
+        type: numerico
+        format: DDMMYY
+      -
+        description: Valor do Titulo
+        begin: 153
+        end: 165
+        type: numerico
+      -
+        description: Banco Cobrador
+        begin: 166
+        end: 168
+        type: numerico
+      -
+        description: Agencia Cobradora
+        begin: 169
+        end: 173
+        type: numerico
+      -
+        description: Especie do Titulo
+        begin: 174
+        end: 175
+        type: alfanumerico
+      -
+        description: Despesas de cobranca para os Codigos de Ocorrencia
+        begin: 176
+        end: 188
+        type: numerico
+      -
+        description: Outras despesas Custas de Protesto
+        begin: 189
+        end: 201
+        type: numerico
+      -
+        description: Juros Operacao em Atraso
+        begin: 202
+        end: 214
+        type: numerico
+      -
+        description: IOF Devido
+        begin: 215
+        end: 227
+        type: numerico
+      -
+        description: Abatimento Concedido sobre o Titulo
+        begin: 228
+        end: 240
+        type: numerico
+      -
+        description: Desconto Concedido
+        begin: 241
+        end: 253
+        type: numerico
+      -
+        description: Valor Pago
+        begin: 254
+        end: 266
+        type: numerico
+      -
+        description: Juros de Mora
+        begin: 267
+        end: 279
+        type: numerico
+      -
+        description: Outros Creditos
+        begin: 280
+        end: 292
+        type: numerico
+      -
+        description: Brancos
+        begin: 293
+        end: 294
+        type: alfanumerico
+      -
+        description: Motivo do Codigo de Ocorrencia 25 (Confirmacao de Instrucao de Protesto Falimentar e do Codigo de Ocorrencia 19 Confirmacao de Instrucao de Protesto)
+        begin: 295
+        end: 295
+        type: alfanumerico
+      -
+        description: Data do Credito
+        begin: 296
+        end: 301
+        type: numerico
+        format: DDMMYY
+      -
+        description: Origem Pagamento
+        begin: 302
+        end: 304
+        type: numerico
+      -
+        description: Brancos
+        begin: 305
+        end: 314
+        type: alfanumerico
+      -
+        description: Quando cheque Bradesco informe 0237
+        begin: 315
+        end: 318
+        type: numerico
+      -
+        description: Motivos das Rejeicoes para os Codigos de Ocorrencia da Posicao 109 a 110
+        begin: 319
+        end: 328
+        type: numerico
+      -
+        description: Brancos
+        begin: 329
+        end: 368
+        type: alfanumerico
+      -
+        description: Numero do Cartorio
+        begin: 369
+        end: 370
+        type: numerico
+      -
+        description: Numero do Protocolo
+        begin: 371
+        end: 380
+        type: alfanumerico
+      -
+        description: Brancos
+        begin: 381
+        end: 394
+        type: numerico
+      -
+        description: Numero Sequencial de Registro
+        begin: 395
+        end: 400
+        type: numerico
+  transaction-register-type-3:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identifiacacao do Registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Identificacao da Empresa no Banco
+        begin: 2
+        end: 17
+        type: alfanumerico
+      -
+        description: Identificacao Titulo no Banco
+        begin: 18
+        end: 29
+        type: alfanumerico
+      -
+        description: Codigo de Calculo do Rateio
+        begin: 30
+        end: 30
+        type: numerico
+      -
+        description: Tipo de Valor Informado
+        begin: 31
+        end: 31
+        type: numerico
+      -
+        description: Filler
+        begin: 32
+        end: 43
+        type: alfanumerico
+      -
+        description: Codigo do Banco para Credito do Primeiro Beneficiario
+        begin: 44
+        end: 46
+        type: numerico
+      -
+        description: Codigo da Agencia para Credito do Primeiro Beneficiario
+        begin: 47
+        end: 51
+        type: numerico
+      -
+        description: Digito da Agencia para Credito do Primeiro Beneficiario
+        begin: 52
+        end: 52
+        type: alfanumerico
+      -
+        description: Numero da Conta Corrente para Credito do Primeiro Beneficiario
+        begin:  53
+        end: 64
+        type: numerico
+      -
+        description: Digito da Conta Corrente para Credito do Primeiro Beneficiario
+        begin: 65
+        end: 65
+        type: alfanumerico
+      -
+        description: Valor efetivo do Rateio quando do pagamento
+        begin: 66
+        end: 80
+        type: numerico
+      -
+        description: Nome do Primeiro Beneficiario
+        begin: 81
+        end: 120
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 121
+        end: 141
+        type: alfanumerico
+      -
+        description: Parcela
+        begin: 142
+        end: 147
+        type: alfanumerico
+      -
+        description: Floating para o Primeiro Beneficiario
+        begin: 148
+        end: 150
+        type: numerico
+      -
+        description: Data do Credito para o Primeiro Beneficiario
+        begin: 151
+        end: 158
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Status / Motivo da Oocrrencia de Rateio
+        begin: 159
+        end: 160
+        type: numerico
+      -
+        description: Codigo do Banco para Credito do Segundo Beneficiario quando do pagamento
+        begin: 161
+        end: 163
+        type: numerico
+      -
+        description: Codigo da Agencia para Credito do Segundo Beneficiario
+        begin: 164
+        end: 168
+        type: numerico
+      -
+        description: Digito da Agencia para Credito do Segundo Beneficiario
+        begin: 169 
+        end: 169
+        type: alfanumerico
+      -
+        description: Numero da Conta Corrente para Credito do Segundo Beneficiario
+        begin: 170
+        end: 181
+        type: numerico
+      -
+        description: Digito da Conta Corrente para Credito do Segundo Beneficiario
+        begin: 182
+        end: 182
+        type: alfanumerico
+      -
+        description: Valor Efetivo do Rateio Quando do Pagamento
+        begin: 183
+        end: 197
+        type: numerico
+      -
+        description: Nome do Segundo Beneficiario
+        begin: 198
+        end: 237
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 238
+        end: 258
+        type: alfanumerico
+      -
+        description: Parcela
+        begin: 259
+        end: 264
+        type: alfanumerico
+      -
+        description: Floating para o Segundo Beneficiario
+        begin: 265
+        end: 267
+        type: alfanumerico
+      -
+        description: Data do Credito para o Segundo Beneficiario quando do pagamento
+        begin: 268
+        end: 275
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Status / Motivo da Oocrrencia de Rateio
+        begin: 276
+        end: 277
+        type: numerico
+      -
+        description: Codigo do Banco para Credito do Terceiro Beneficiario
+        begin: 278
+        end: 280
+        type: numerico
+      -
+        description: Codigo da Agencia para Credito do Terceiro Beneficiario
+        begin: 281
+        end: 285
+        type: numerico
+      -
+        description: Digito da Agencia para Credito do Terceiro Beneficiario
+        begin: 286
+        end: 286
+        type: alfanumerico
+      -
+        description: Numero da Conta para Credito do Terceiro Beneficiario
+        begin: 287
+        end: 298
+        type: numerico
+      -
+        description: Digito da Conta Corrente para Credito do Terceiro Beneficiario
+        begin: 299
+        end: 299
+        type: alfanumerico
+      -
+        description: Valor Efetivo do Rateio Quando do Pagamento
+        begin: 300
+        end: 314
+        type: numerico
+      -
+        description: Nome do Terceiro Beneficiario
+        begin: 315
+        end: 354
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 355
+        end: 375
+        type: alfanumerico
+      -
+        description: Parcela
+        begin: 376
+        end: 381
+        type: alfanumerico
+      -
+        description: Floating para o Terceiro Beneficiario
+        begin: 382
+        end: 384
+        type: numerico
+      -
+        description: Data do Credito para o Terceiro Beneficiario Quando do Pagamento
+        begin: 385
+        end: 392
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Status / Motivo da Oocrrencia de Rateio
+        begin: 393
+        end: 394
+        type: numerico
+      -
+        description: Numero Sequencial do Registro
+        begin: 395
+        end: 400
+        type: numerico
+  trailler-register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identifiacacao do Registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Identificacao do Retorno
+        begin: 2
+        end: 2
+        type: numerico
+      -
+        description: Identificacao Tipo de Registro
+        begin: 3
+        end: 4
+        type: numerico
+      -
+        description: Codigo do Branco
+        begin: 5
+        end: 7
+        type: numerico
+      -
+        description: Brancos
+        begin: 8
+        end: 17
+        type: alfanumerico
+      -
+        description: Quantidade de Titulos em Cobranca
+        begin: 18
+        end: 25
+        type: numerico
+      -
+        description: Valor Total em Cobranca
+        begin: 26
+        end: 39
+        type: numerico
+      -
+        description: Numero do Aviso Bancario
+        begin: 40
+        end: 47
+        type: numerico
+      -
+        description: Brancos
+        begin: 48
+        end: 57
+        type: alfanumerico
+      -
+        description: Quantidade de Registros - Ocorrencia 02 - Confirmacao de Entradas
+        begin:  58
+        end: 62
+        type: numerico
+      -
+        description: Valor dos Registros - Ocorrencia 02 - Confirmacao de Entradas
+        begin: 63
+        end: 74
+        type: numerico
+      -
+        description: Valor dos Registros - Ocorrencia 06 - Liquidacao
+        begin: 75
+        end: 86
+        type: numerico
+      -
+        description: Quantidade dos Registros - Ocorrencia 06 - Liquidacao
+        begin: 87
+        end: 91
+        type: numerico
+      -
+        description: Valor dos Registros - Ocorrencia 06
+        begin: 92
+        end: 103
+        type: numerico
+      -
+        description: Quantidad dos Registros - Ocorrencia 09 e 10 - Titulos Baixados
+        begin: 104
+        end: 108
+        type: numerico
+      -
+        description: Valor dos Registros - Ocorrencia 09 e 10 - Titulos Baixados
+        begin: 109
+        end: 120
+        type: numerico
+      -
+        description: Quantidade de registros - ocorrencia 13 - Abatimento Cancelado
+        begin: 121
+        end: 125
+        type: numerico
+      -
+        description: Valor dos Registros - Ocorrencia 13 - Abatimento Cancelado
+        begin: 126
+        end: 137
+        type: numerico
+      -
+        description: Quantidade dos Registros - Ocorrencia 14 - Vencimento Alterado 
+        begin: 138
+        end: 142
+        type: numerico
+      -
+        description: Valor dos Registros - Ocorrencia 14 - Vencimento Alterado
+        begin: 143
+        end: 154
+        type: numerico
+      -
+        description: Quantidade dos Registros - Ocorrencia 12 - Abatimento Concedido
+        begin: 155 
+        end: 159
+        type: numerico
+      -
+        description: Valor dos Registros - Ocorrencia 12 - Abatimento Concedido
+        begin: 160
+        end: 171
+        type: numerico
+      -
+        description: Quantidade dos Registros - Ocorrencia 19 - Confirmacao da Instrucao de Protesto
+        begin: 172
+        end: 176
+        type: numerico
+      -
+        description: Valor dos Registros - Ocorrencia 19 - Confirmacao da Instrucao de Protesto
+        begin: 177
+        end: 188
+        type: numerico
+      -
+        description: Brancos
+        begin: 189
+        end: 362
+        type: alfanumerico
+      -
+        description: Valor Total dos Rateios Efetuados
+        begin: 363
+        end: 377
+        type: numerico
+      -
+        description: Quantidade Total dos Rateios Efetuados
+        begin: 378
+        end: 385
+        type: numerico
+      -
+        description: Brancos
+        begin: 386
+        end: 394
+        type: alfanumerico
+      -
+        description: Numero Sequencial do Registro
+        begin: 395
+        end: 400
+        type: numerico

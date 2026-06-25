@@ -1,0 +1,951 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+       -
+         begin-column: 109
+         end-column: 110
+key-map:
+  0: header
+  1: register-transaction
+  169: register-transaction-optional
+  4: register-transaction-optional2
+  9: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identificacao do Registro header
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Identificacao do arquivo retorno
+        begin: 2
+        end: 2
+        type: numerico
+      -
+        description: Identificacao por extenso do tipo de movimento
+        begin: 3
+        end: 9
+        type: alfanumerico
+      -
+        description: Identificacao do tipo de servico
+        begin: 10
+        end: 11
+        type: numerico
+      -
+        description: Identificacao por extenso do tipo de servico
+        begin: 12
+        end: 26
+        type: alfanumerico
+      -
+        description: Agencia mantenedora da conta
+        begin: 27
+        end: 30
+        type: numerico
+      -
+        description: Complemento de registro
+        begin: 31
+        end: 32
+        type: numerico
+      -
+        description: Numero da conta corrente da empresa
+        begin: 33
+        end: 37
+        type: numerico
+      -
+        description: Digito de auto conferencia ag/conta empresa
+        begin: 38
+        end: 38
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 39
+        end: 46
+        type: alfanumerico
+      -
+        description: Nome por extenso da "empresa mae"
+        begin: 47
+        end: 76
+        type: alfanumerico
+      -
+        description: Numero do banco na camara de compensacao
+        begin: 77
+        end: 79
+        type: numerico
+      -
+        description: Nome por extenso do banco cobrador
+        begin: 80
+        end: 94
+        type: alfanumerico
+      -
+        description: Data de geracao do arquivo
+        begin: 95
+        end: 100
+        type: numerico
+        format: DDMMYY
+      -
+        description: Unidade da densidade
+        begin: 101
+        end: 105
+        type: numerico
+      -
+        description: Densidade de gravacao do arquivo
+        begin: 106
+        end: 108
+        type: alfanumerico
+      -
+        description: Numero sequencial do arquivo retorno
+        begin: 109
+        end: 113
+        type: numerico
+      -
+        description: Data de credito dos lancamentos
+        begin: 114
+        end: 119
+        type: numerico
+        format: DDMMYY
+      -
+        description: Complemento do registro
+        begin: 120
+        end: 394
+        type: alfanumerico
+      -
+        description: Numero sequencial do registro no arquivo
+        begin: 395
+        end: 400
+        type: numerico
+  register-transaction:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identificacao do Registro transacao
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Identificacao do Tipo de Inscricao/Empresa
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: Numero de inscricao da empresa (cpf/cnpj)
+        begin: 4
+        end: 17
+        type: alfanumerico
+      -
+        description: Agencia mantenedora da conta
+        begin: 18
+        end: 21
+        type: numerico
+      -
+        description: Complemento de registro
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Numero da conta corrente da empresa
+        begin: 24
+        end: 28
+        type: numerico
+      -
+        description: Digito de auto conferencia ag/conta empresa
+        begin: 29
+        end: 29
+        type: numerico
+      -
+        description: Complemento de registro
+        begin: 30
+        end: 37
+        type: alfanumerico
+      -
+        description: Identificacao do titulo na empresa
+        begin: 38
+        end: 62
+        type: alfanumerico
+      -
+        description: Identificacao do titulo no banco
+        begin: 63
+        end: 70
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 71
+        end: 82
+        type: alfanumerico
+      -
+        description: Numero da carteira
+        begin: 83
+        end: 85
+        type: numerico
+      -
+        description: Identificacao do titulo no banco
+        begin: 86
+        end: 93
+        type: numerico
+      -
+        description: DAC do nosso numero
+        begin: 94
+        end: 94
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 95
+        end: 107
+        type: alfanumerico
+      -
+        description: Codigo da carteira
+        begin: 108
+        end: 108
+        type: alfanumerico
+      -
+        description: Identificacao da ocorrencia
+        begin: 109
+        end: 110
+        type: numerico
+      -
+        description: Data de ocorrencia no banco
+        begin: 111
+        end: 116
+        type: numerico
+        format: DDMMYY
+      -
+        description: Numero do documento de cobranca (DUPL, NP ETC)
+        begin: 117
+        end: 126
+        type: alfanumerico
+      -
+        description: Confirmacao do numero do titulo no banco
+        begin: 127
+        end: 134
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 135
+        end: 146
+        type: alfanumerico
+      -
+        description: Data de vencimento do titulo
+        begin: 147
+        end: 152
+        type: numerico
+        format: DDMMYY
+      -
+        description: Valor nominal do titulo
+        begin: 153
+        end: 165
+        type: numerico
+      -
+        description: Numero do banco na camara de compensacao
+        begin: 166
+        end: 168
+        type: numerico
+      -
+        description: Ag. Cobradora, Ag. de liquidacao ou baixa
+        begin: 169
+        end: 172
+        type: numerico
+      -
+        description: DAC da agencia cobradora
+        begin: 173
+        end: 173
+        type: numerico
+      -
+        description: Especie do titulo
+        begin: 174
+        end: 175
+        type: numerico
+      -
+        description: Valor da despesa de cobranca
+        begin: 176
+        end: 188
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 189
+        end: 214
+        type: alfanumerico
+      -
+        description: Valor do IOF a ser recolhido (notas seguro)
+        begin: 215
+        end: 227
+        type: numerico
+      -
+        description: Valor do Abatimento concedido
+        begin: 228
+        end: 240
+        type: numerico
+      -
+        description: Valor do desconto concedido
+        begin: 241
+        end: 253
+        type: numerico
+      -
+        description: Valor lancado em conta corrente
+        begin: 254
+        end: 266
+        type: numerico
+      -
+        description: Valor de mora e multa pagos pelo sacado
+        begin: 267
+        end: 279
+        type: numerico
+      -
+        description: Valor de outros creditos
+        begin: 280
+        end: 292
+        type: numerico
+      -
+        description: Indicador de boleto DDA
+        begin: 293
+        end: 293
+        type: alfanumerico
+      -
+        description: Complemento do registro
+        begin: 294
+        end: 295
+        type: alfanumerico
+      -
+        description: Data de credito desta liquidacao
+        begin: 296
+        end: 301
+        type: numerico
+        format: DDMMYY
+      -
+        description: Codigo da instrucao cancelada
+        begin: 302
+        end: 305
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 306
+        end: 311
+        type: alfanumerico
+      -
+        description: Complemento de registro
+        begin: 312
+        end: 324
+        type: numerico
+      -
+        description: Nome do sacado
+        begin: 325
+        end: 354
+        type: alfanumerico
+      -
+        description: Complemento do registro
+        begin: 355
+        end: 377
+        type: alfanumerico
+      -
+        description: Registros rejeitados ou alegacao do sacado
+        begin: 378
+        end: 385
+        type: alfanumerico
+      -
+        description: Complemento do registro
+        begin: 386
+        end: 392
+        type: alfanumerico
+      -
+        description: Meio pelo qual o titulo foi liquidado
+        begin: 393
+        end: 394
+        type: alfanumerico
+      -
+        description: Numero sequencial do registro no arquivo
+        begin: 395
+        end: 400
+        type: numerico
+  register-transaction-optional:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identificacao do Registro transacao
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Identificacao do Tipo de Inscricao/empresa
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: Numero de inscricao da empresa (cpf/cnpj)
+        begin: 4
+        end: 17
+        type: alfanumerico
+      -
+        description: Agencia mantenedora da conta
+        begin: 18
+        end: 21
+        type: numerico
+      -
+        description: Complemento de registro
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Numero da conta corrente da empresa
+        begin: 24
+        end: 28
+        type: numerico
+      -
+        description: Digito de auto conferencia ag/conta empresa
+        begin: 29
+        end: 29
+        type: numerico
+      -
+        description: Complemento de registro
+        begin: 30
+        end: 37
+        type: alfanumerico
+      -
+        description: Identificacao do titulo na empresa
+        begin: 38
+        end: 62
+        type: alfanumerico
+      -
+        description: Identificacao do titulo no banco
+        begin: 63
+        end: 70
+        type: numerico
+      -
+        description: Agencia conta e dac de debito do cheque
+        begin: 71
+        end: 82
+        type: alfanumerico
+      -
+        description: Numero da carteira
+        begin: 83
+        end: 85
+        type: numerico
+      -
+        description: Identificacao do titulo no banco
+        begin: 86
+        end: 93
+        type: numerico
+      -
+        description: DAC do nosso numero
+        begin: 94
+        end: 94
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 95
+        end: 107
+        type: alfanumerico
+      -
+        description: Codigo da carteira
+        begin: 108
+        end: 108
+        type: alfanumerico
+      -
+        description: Identificacao da ocorrencia
+        begin: 109
+        end: 110
+        type: numerico
+      -
+        description: Data de ocorrencia no banco
+        begin: 111
+        end: 116
+        type: numerico
+      -
+        description: Numero do documento de cobranca (DUPL, NP ETC)
+        begin: 117
+        end: 126
+        type: alfanumerico
+      -
+        description: Confirmacao do numero do titulo no banco
+        begin: 127
+        end: 134
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 135
+        end: 146
+        type: alfanumerico
+      -
+        description: Complemento do registro
+        begin: 147
+        end: 152
+        type: numerico
+      -
+        description: Valor nominal do titulo
+        begin: 153
+        end: 165
+        type: numerico
+      -
+        description: Numero do banco na camara de compensacao
+        begin: 166
+        end: 168
+        type: numerico
+      -
+        description: Ag. Cobradora, Ag de liquidacao ou baixa
+        begin: 169
+        end: 172
+        type: numerico
+      -
+        description: DAC da agencia cobradora
+        begin: 173
+        end: 173
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 174
+        end: 175
+        type: alfanumerico
+      -
+        description: Complemento do registro
+        begin: 176
+        end: 253
+        type: numerico
+      -
+        description: Valor do cheque
+        begin: 254
+        end: 266
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 267
+        end: 292
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 293
+        end: 301
+        type: alfanumerico
+      -
+        description: Complemento do registro
+        begin: 302
+        end: 324
+        type: numerico
+      -
+        description: Banda magnetica do cheque (CMC-7)
+        begin: 325
+        end: 354
+        type: alfanumerico
+      -
+        description: Complemento do registro
+        begin: 355
+        end: 377
+        type: alfanumerico
+      -
+        description: Motivo de devolucao do cheque
+        begin: 378
+        end: 379
+        type: alfanumerico
+      -
+        description: Complemento do registro
+        begin: 380
+        end: 394
+        type: alfanumerico
+      -
+        description: Numero sequencial do registro no arquivo
+        begin: 395
+        end: 400
+        type: numerico
+  register-transaction-optional2:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identificacao do Registro transacao
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Identificacao do Tipo de Inscricao/empresa
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: Numero de inscricao da empresa (cpf/cnpj)
+        begin: 4
+        end: 17
+        type: alfanumerico
+      -
+        description: Agencia mantenedora da conta
+        begin: 18
+        end: 21
+        type: numerico
+      -
+        description: Complemento de registro
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Numero da conta corrente da empresa
+        begin: 24
+        end: 28
+        type: numerico
+      -
+        description: Digito de auto conferencia ag/conta empresa
+        begin: 29
+        end: 29
+        type: numerico
+      -
+        description: Complemento de registro
+        begin: 30
+        end: 37
+        type: alfanumerico
+      -
+        description: Identificacao do titulo na empresa
+        begin: 38
+        end: 62
+        type: alfanumerico
+      -
+        description: Identificacao do titulo no banco
+        begin: 63
+        end: 70
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 71
+        end: 82
+        type: alfanumerico
+      -
+        description: Numero da carteira
+        begin: 83
+        end: 85
+        type: numerico
+      -
+        description: Identificacao do titulo no banco
+        begin: 86
+        end: 93
+        type: numerico
+      -
+        description: DAC do nosso numero
+        begin: 94
+        end: 94
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 95
+        end: 107
+        type: alfanumerico
+      -
+        description: Codigo da carteira
+        begin: 108
+        end: 108
+        type: alfanumerico
+      -
+        description: Identificacao da ocorrencia
+        begin: 109
+        end: 110
+        type: numerico
+      -
+        description: Numero sequencial dos registros tipo 4 do titulo
+        begin: 111
+        end: 112
+        type: numerico
+      -
+        description: Valor total recebido liquido
+        begin: 113
+        end: 125
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 126
+        end: 129
+        type: numerico
+      -
+        description: Numero da conta de credito
+        begin: 130
+        end: 136
+        type: numerico
+      -
+        description: DAC da agencia/conta de credito
+        begin: 137
+        end: 137
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 138
+        end: 150
+        type: numerico
+      -
+        description: Valor encargos do rateado
+        begin: 151
+        end: 160
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 161
+        end: 164
+        type: numerico
+      -
+        description: Numero da conta de credito
+        begin: 165
+        end: 171
+        type: numerico
+      -
+        description: DAC da agencia/conta de credito
+        begin: 172
+        end: 172
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 173
+        end: 185
+        type: numerico
+      -
+        description: Valor encargos do rateado
+        begin: 186
+        end: 195
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 196
+        end: 199
+        type: numerico
+      -
+        description: Numero da conta de credito
+        begin: 200
+        end: 206
+        type: numerico
+      -
+        description: DAC da agencia/conta de credito
+        begin: 207
+        end: 207
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 208
+        end: 220
+        type: numerico
+      -
+        description: Valor encargos do rateado
+        begin: 221
+        end: 230
+        type: alfanumerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 231
+        end: 234
+        type: numerico
+      -
+        description: Numero da conta de credito
+        begin: 235
+        end: 241
+        type: numerico
+      -
+        description: DAC da agencia/conta de credito
+        begin: 242
+        end: 242
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 243
+        end: 255
+        type: numerico
+      -
+        description: Valor encargos do rateado
+        begin: 256
+        end: 265
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 266
+        end: 269
+        type: numerico
+      -
+        description: Numero da conta de credito
+        begin: 270
+        end: 276
+        type: numerico
+      -
+        description: DAC da agencia/conta de credito
+        begin: 277
+        end: 277
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 278
+        end: 290
+        type: numerico
+      -
+        description: Valor encargos do rateado
+        begin: 291
+        end: 300
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 301
+        end: 304
+        type: numerico
+      -
+        description: Numero da conta de credito
+        begin: 305
+        end: 311
+        type: numerico
+      -
+        description: DAC da agencia/conta de credito
+        begin: 312
+        end: 312
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 313
+        end: 315
+        type: numerico
+      -
+        description: Valor encargos do rateado
+        begin: 326
+        end: 335
+        type: numerico
+      -
+        description: Numero da agencia da conta de credito
+        begin: 336
+        end: 339
+        type: numerico
+      -
+        description: Numero da conta de credito
+        begin: 340
+        end: 346
+        type: numerico
+      -
+        description: DAC da agencia/conta de credito
+        begin: 347
+        end: 347
+        type: numerico
+      -
+        description: Valor de credito
+        begin: 348
+        end: 360
+        type: numerico
+      -
+        description: Valor encargos do rateado
+        begin: 361
+        end: 370
+        type: numerico
+      -
+        description: Complemento de registro
+        begin: 371
+        end: 393
+        type: alfanumerico
+      -
+        description: Tipo de valor de rateio enviado
+        begin: 394
+        end: 394
+        type: alfanumerico
+      -
+        description: Numero sequencial do registro no arquivo
+        begin: 395
+        end: 400
+        type: numerico
+  trailer:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Identificacao do registro trailer
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Identificacao de arquivo retorno
+        begin: 2
+        end: 2
+        type: numerico
+      -
+        description: Identificacao do tipo de servico
+        begin: 3
+        end: 4
+        type: numerico
+      -
+        description: Identificacao do banco na compensacao
+        begin: 5
+        end: 7
+        type: numerico
+      -
+        description: Complemento de registro
+        begin: 8
+        end: 17
+        type: alfanumerico
+      -
+        description: Qtde. de titulos em cobr. simples
+        begin: 18
+        end: 25
+        type: numerico
+      -
+        description: VR Total dos titulos em cobrança simples
+        begin: 26
+        end: 39
+        type: numerico
+      -
+        description: Referencia do aviso bancario
+        begin: 40
+        end: 47
+        type: alfanumerico
+      -
+        description: Complemento do registro
+        begin: 48
+        end: 57
+        type: alfanumerico
+      -
+        description: Qtde de titulos em cobranca/vinculada
+        begin: 58
+        end: 65
+        type: numerico
+      -
+        description: VR total dos titulos em cobranca/vinculada
+        begin: 66
+        end: 79
+        type: numerico
+      -
+        description: Referencia do aviso bancario
+        begin: 80
+        end: 87
+        type: alfanumerico
+      -
+        description: Complemento do registro
+        begin: 88
+        end: 177
+        type: alfanumerico
+      -
+        description: Qtde. de titulos em cobr. direita/escritural
+        begin: 178
+        end: 185
+        type: numerico
+      -
+        description: VR total dos titulos em cobr. direta/escrit.
+        begin: 186
+        end: 199
+        type: numerico
+      -
+        description: Referencia do aviso bancario
+        begin: 200
+        end: 207
+        type: alfanumerico
+      -
+        description: Numero sequencial do arquivo retorno
+        begin: 208
+        end: 212
+        type: numerico
+      -
+        description: Quantidade de registros de transacao
+        begin: 213
+        end: 220
+        type: numerico
+      -
+        description: Valor dos titulos informados no arquivo
+        begin: 221
+        end: 234
+        type: numerico
+      -
+        description: Complemento do registro
+        begin: 235
+        end: 394
+        type: alfanumerico
+      -
+        description: Numero sequencial do registro no arquivo
+        begin: 395
+        end: 400
+        type: numerico

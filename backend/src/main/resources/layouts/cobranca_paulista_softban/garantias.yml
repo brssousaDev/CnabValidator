@@ -1,0 +1,361 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 2
+key-map:
+  70: header
+  71: detail-contrato
+  72: detail-garantia-exigida
+  74: detail-garantia-existente
+  79: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 2
+        type: numerico
+      -
+        description: Vago
+        begin: 3
+        end: 3
+        type: alfanumerico
+      -
+        description: Data base
+        begin: 4
+        end: 11
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Vago
+        begin: 12
+        end: 12
+        type: alfanumerico
+      -
+        description: Data do arquivo
+        begin: 13
+        end: 20
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Vago
+        begin: 21
+        end: 21
+        type: alfanumerico
+      -
+        description: Hora do arquivo
+        begin: 22
+        end: 27
+        type: numerico
+      -
+        description: Vago
+        begin: 28
+        end: 214
+        type: alfanumerico
+      -
+        description: Sequencia de registros
+        begin: 215
+        end: 220
+        type: numerico
+  detail-contrato:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 2
+        type: numerico
+      -
+        description: Vago
+        begin: 3
+        end: 3
+        type: alfanumerico
+      -
+        description: Agencia do cliente garantido
+        begin: 4
+        end: 8
+        type: numerico
+      -
+        description: Vago
+        begin: 9
+        end: 9
+        type: alfanumerico
+      -
+        description: Numero do cliente garantido
+        begin: 10
+        end: 23
+        type: numerico
+      -
+        description: Vago
+        begin: 24
+        end: 24
+        type: alfanumerico
+      -
+        description: Numero do contrato garantido
+        begin: 25
+        end: 38
+        type: numerico
+      -
+        description: Vago
+        begin: 39
+        end: 39
+        type: alfanumerico
+      -
+        description: Codigo do sistema do contrato garantido
+        begin: 40
+        end: 41
+        type: numerico
+      -
+        description: Vago
+        begin: 42
+        end: 42
+        type: alfanumerico
+      -
+        description: Data da avaliacao da garantia
+        begin: 43
+        end: 50
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Vago
+        begin: 51
+        end: 214
+        type: alfanumerico
+      -
+        description: sequencia
+        begin: 215
+        end: 220
+        type: numerico
+  detail-garantia-exigida:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 2
+        type: numerico
+      -
+        description: Vago
+        begin: 3
+        end: 3
+        type: alfanumerico
+      -
+        description: Agencia do cliente garantido
+        begin: 4
+        end: 8
+        type: numerico
+      -
+        description: Vago
+        begin: 9
+        end: 9
+        type: alfanumerico
+      -
+        description: Numero do cliente garantido
+        begin: 10
+        end: 23
+        type: numerico
+      -
+        description: Vago
+        begin: 24
+        end: 24
+        type: alfanumerico
+      -
+        description: Numero do contrato garantido
+        begin: 25
+        end: 38
+        type: numerico
+      -
+        description: Vago
+        begin: 39
+        end: 39
+        type: alfanumerico
+      -
+        description: Codigo do sistema do contrato garantido
+        begin: 40
+        end: 41
+        type: numerico
+      -
+        description: Vago
+        begin: 42
+        end: 42
+        type: alfanumerico
+      -
+        description: Codigo da garantia
+        begin: 43
+        end: 44
+        type: alfanumerico
+      -
+        description: Vago
+        begin: 45
+        end: 45
+        type: alfanumerico
+      -
+        description: Percentual exigido como garantia sobre o saldo devedor
+        begin: 46
+        end: 50
+        type: numerico
+      -
+        description: Vago
+        begin: 51
+        end: 51
+        type: alfanumerico
+      -
+        description: Valor fixo da garantia exigida
+        begin: 52
+        end: 68
+        type: numerico
+      -
+        description: Vago
+        begin: 69
+        end: 214
+        type: alfanumerico
+      -
+        description: Sequencia
+        begin: 215
+        end: 220
+        type: numerico
+  detail-garantia-existente:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 2
+        type: numerico
+      -
+        description: Vago
+        begin: 3
+        end: 3
+        type: alfanumerico
+      -
+        description: Agencia do cliente garantido
+        begin: 4
+        end: 8
+        type: numerico
+      -
+        description: Vago
+        begin: 9
+        end: 9
+        type: alfanumerico
+      -
+        description: Numero do cliente garantido
+        begin: 10
+        end: 23
+        type: numerico
+      -
+        description: Vago
+        begin: 24
+        end: 24
+        type: alfanumerico
+      -
+        description: Numero do contrato garantido
+        begin: 25
+        end: 38
+        type: numerico
+      -
+        description: Vago
+        begin: 39
+        end: 39
+        type: alfanumerico
+      -
+        description: Codigo do sistema do contrato garantido
+        begin: 40
+        end: 41
+        type: numerico
+      -
+        description: Vago
+        begin: 42
+        end: 42
+        type: alfanumerico
+      -
+        description: Codigo da garantia
+        begin: 43
+        end: 44
+        type: alfanumerico
+      -
+        description: Vago
+        begin: 45
+        end: 45
+        type: alfanumerico
+      -
+        description: Situacao da garantia
+        begin: 46
+        end: 46
+        type: alfanumerico
+      -
+        description: Vago
+        begin: 47
+        end: 47
+        type: alfanumerico
+      -
+        description: Tipo da garantia
+        begin: 48
+        end: 48
+        type: alfanumerico
+      -
+        description: Vago
+        begin: 49
+        end: 49
+        type: alfanumerico
+      -
+        description: Quantidade de documentos
+        begin: 50
+        end: 58
+        type: numerico
+      -
+        description: Vago
+        begin: 59
+        end: 59
+        type: alfanumerico
+      -
+        description: Valor da garantia
+        begin: 60
+        end: 76
+        type: numerico
+      -
+        description: Vago
+        begin: 77
+        end: 214
+        type: alfanumerico
+      -
+        description: Sequencia
+        begin: 215
+        end: 220
+        type: numerico
+  trailer:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 2
+        type: numerico
+      -
+        description: Vago
+        begin: 3
+        end: 3
+        type: alfanumerico
+      -
+        description: Quantidade de registros 71,72 e 74
+        begin: 4
+        end: 18
+        type: numerico
+      -
+        description: Vago
+        begin: 19
+        end: 214
+        type: alfanumerico
+      -
+        description: Sequencial
+        begin: 215
+        end: 220
+        type: numerico

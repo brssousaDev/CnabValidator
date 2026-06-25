@@ -1,0 +1,59 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 101
+         end-column: 101
+key-map:
+  2: transaction-register-type-1
+layout-definition:
+    transaction-register-type-1:
+    - metadata:
+        occurrence : 1
+    - fields:
+      -
+        description: Chave Identificadora da Opera��o
+        begin: 1
+        end: 20
+        type: alfanumerico
+      -
+        description: Indicador CNPJ/CPF
+        begin: 21
+        end: 21
+        type: alfanumerico
+      -
+        description: CNPJ/CPF
+        begin: 22
+        end: 35
+        type: alfanumerico
+      -
+        description: Nome do Cliente
+        begin: 36
+        end: 65
+        type: alfanumerico
+      -
+        description: Valor da Liquida��o
+        begin: 66  
+        end: 82
+        type: numerico
+      -
+        description: Numero de Contrato
+        begin: 83
+        end: 92
+        type: alfanumerico
+      -
+        description: Data da Liquida��o
+        begin: 93
+        end: 100
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Identifica��o da Liquida��o
+        begin: 101
+        end: 101
+        type: alfanumerico
+      -
+        description: C�digo do Cliente
+        begin: 102
+        end: 116
+        type: alfanumerico

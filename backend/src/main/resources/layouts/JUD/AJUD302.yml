@@ -1,0 +1,421 @@
+rules:
+  column:
+     key-length:
+       -
+        begin-column: 2
+        end-column: 2
+key-map:
+  0: header-label-00
+  1: rodape-register-01
+  2: bloqueio-total-register-type-2
+  3: bloqueio-valor-register-type-3
+  4: desbloqueio-total-register-type-4
+  5: desbloqueio-valor-register-type-5
+  6: transferencia-total-register-type-6
+  7: transferencia-valor-register-type-7
+layout-definition:
+  header-label-00:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Identificador PSTA do Arquivo de Remessa
+        begin: 3
+        end: 6
+        type: numerico
+      -
+        description: Institui��o financeira respons�vel
+        begin: 7
+        end: 14
+        type: alfanumerico
+      -
+        description: Data de Movimento
+        begin: 15
+        end: 22
+        type: numerico
+        format: 'DDMMYYYY'
+      -
+        description: Vers�o do Layout
+        begin: 23
+        end: 24
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 25
+        end: 106
+        type: alfanumerico
+  rodape-register-01:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Numero de Registros
+        begin: 3
+        end: 12
+        type: numerico
+      -
+        description: Filler
+        begin: 13
+        end: 106
+        type: alfanumerico
+  bloqueio-total-register-type-2:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Protocolo
+        begin: 3
+        end: 16
+        type: numerico
+      -
+        description: Sequencial Bloqueio
+        begin: 17
+        end: 21
+        type: numerico
+      -
+        description: Reitera��o Bloqueio
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Codigo da Resposta
+        begin: 24
+        end: 25
+        type: alfanumerico
+      -
+        description: Sinal valor
+        begin: 26
+        end: 26
+        type: numerico
+      -
+        description: Valor
+        begin: 27
+        end: 45
+        type: numerico
+        exception-values:
+          -
+           "                   "
+      -
+        description: Data Hora execu��o
+        begin: 46
+        end: 65
+        type: numerico
+      -
+        description: Raiz do CNPJ IF BLOQUEIO
+        begin: 66
+        end: 73
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 74
+        end: 106
+        type: alfanumerico
+  bloqueio-valor-register-type-3:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Protocolo
+        begin: 3
+        end: 16
+        type: numerico
+      -
+        description: Sequencial Bloqueio
+        begin: 17
+        end: 21
+        type: numerico
+      -
+        description: Reitera��o Bloqueio
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Codigo da Resposta
+        begin: 24
+        end: 25
+        type: alfanumerico
+      -
+        description: Valor
+        begin: 26
+        end: 44
+        type: numerico
+        exception-values:
+          -
+           "                   "
+      -
+        description: Data Hora execu��o
+        begin: 45
+        end: 64
+        type: numerico
+      -
+        description: Raiz do CNPJ IF BLOQUEIO
+        begin: 65
+        end: 72
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 73
+        end: 106
+        type: alfanumerico
+  desbloqueio-total-register-type-4:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Protocolo
+        begin: 3
+        end: 16
+        type: numerico
+      -
+        description: Sequencial Bloqueio
+        begin: 17
+        end: 21
+        type: numerico
+      -
+        description: Reitera��o Bloqueio
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Reitera��o Desbloqueio
+        begin: 24
+        end: 25
+        type: numerico
+      -
+        description: Codigo da Resposta
+        begin: 26
+        end: 27
+        type: alfanumerico
+      -
+        description: Data Hora execu��o
+        begin: 28
+        end: 47
+        type: numerico
+      -
+        description: Raiz do CNPJ IF BLOQUEIO
+        begin: 48
+        end: 55
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 56
+        end: 106
+        type: alfanumerico
+  desbloqueio-valor-register-type-5:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Protocolo
+        begin: 3
+        end: 16
+        type: numerico
+      -
+        description: Sequencial Bloqueio
+        begin: 17
+        end: 21
+        type: numerico
+      -
+        description: Reitera��o Bloqueio
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Sequencial Desbloqueio
+        begin: 24
+        end: 28
+        type: numerico
+      -
+        description: Reitera��o Desbloqueio
+        begin: 29
+        end: 30
+        type: numerico
+      -
+        description: Codigo da Resposta
+        begin: 31
+        end: 32
+        type: alfanumerico
+      -
+        description: Valor
+        begin: 33
+        end: 51
+        type: numerico
+        exception-values:
+          -
+           "                   "
+      -
+        description: Data Hora execu��o
+        begin: 52
+        end: 71
+        type: numerico
+      -
+        description: Saldo Remanescente Bloqueado
+        begin: 72
+        end: 90
+        type: numerico
+        exception-values:
+          -
+           "                   "
+      -
+        description: Raiz do CNPJ IF BLOQUEIO
+        begin: 91
+        end: 98
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 99
+        end: 106
+        type: alfanumerico
+  transferencia-total-register-type-6:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Protocolo
+        begin: 3
+        end: 16
+        type: numerico
+      -
+        description: Sequencial Bloqueio
+        begin: 17
+        end: 21
+        type: numerico
+      -
+        description: Reitera��o Bloqueio
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Sequencial Transfer�ncia
+        begin: 24
+        end: 28
+        type: numerico
+      -
+        description: Reitera��o Transfer�ncia
+        begin: 29
+        end: 30
+        type: numerico
+      -
+        description: Codigo da Resposta
+        begin: 31
+        end: 32
+        type: alfanumerico
+      -
+        description: Valor
+        begin: 33
+        end: 51
+        type: numerico
+        exception-values:
+          -
+           "                   "
+      -
+        description: Data Hora execu��o
+        begin: 52
+        end: 71
+        type: numerico
+      -
+        description: Data Limite Transfer�ncia
+        begin: 72
+        end: 79
+        type: numerico
+        format: 'DDMMYYYY'
+      -
+        description: Raiz do CNPJ IF BLOQUEIO
+        begin: 80
+        end: 87
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 88
+        end: 106
+        type: alfanumerico
+  transferencia-valor-register-type-7:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Protocolo
+        begin: 3
+        end: 16
+        type: numerico
+      -
+        description: Sequencial Bloqueio
+        begin: 17
+        end: 21
+        type: numerico
+      -
+        description: Reitera��o Bloqueio
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Sequencial Transfer�ncia
+        begin: 24
+        end: 28
+        type: numerico
+      -
+        description: Reitera��o Transfer�ncia
+        begin: 29
+        end: 30
+        type: numerico
+      -
+        description: Codigo da Resposta
+        begin: 31
+        end: 32
+        type: alfanumerico
+      -
+        description: Valor
+        begin: 33
+        end: 51
+        type: numerico
+        exception-values:
+          -
+           "                   "
+      -
+        description: Data Hora execu��o
+        begin: 52
+        end: 71
+        type: numerico
+      -
+        description: Data Limite Transfer�ncia
+        begin: 72
+        end: 79
+        type: numerico
+        format: 'DDMMYYYY'
+      -
+        description: Saldo Bloqueado Remanescente
+        begin: 80
+        end: 98
+        type: numerico
+        exception-values:
+          -
+           "                   "
+      -
+        description: Raiz do CNPJ IF BLOQUEIO
+        begin: 99
+        end: 106
+        type: alfanumerico

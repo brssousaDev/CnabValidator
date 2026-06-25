@@ -1,0 +1,137 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  H: header
+  D: detail-register
+  T: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Record Type
+        begin: 1
+        end: 1
+        type: alfanumerico
+      -
+        description: File Creation Date
+        begin: 2
+        end: 9
+        type: alfanumerico
+        format: CCYYMMDD
+      -
+        description: File Creation Time
+        begin: 10
+        end: 15
+        type: numerico
+        format: HHMMSS
+      -
+        description: Total Loan Count
+        begin: 16
+        end: 25
+        type: numerico
+      -
+        description: Total Loan amount
+        begin: 26
+        end: 41
+        type: numerico
+      -
+        description: Total Interest amount
+        begin: 42
+        end: 57
+        type: numerico
+  detail-register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Record Type
+        begin: 1
+        end: 1
+        type: alfanumerico
+      -
+        description: Source System Identifer
+        begin: 2
+        end: 6
+        type: alfanumerico
+      -
+        description: Loan Reference Number
+        begin: 7
+        end: 56
+        type: alfanumerico
+      -
+        description: Loan Currency Code
+        begin: 57
+        end: 59
+        type: alfanumerico
+      -
+        description: Loan Principal Amount
+        begin: 60
+        end: 75
+        type: numerico
+      -
+        description: Loan Effective Date
+        begin: 76
+        end: 83
+        type: alfanumerico
+        format: CCYYMMDD
+      -
+        description: Loan Maturity Date
+        begin: 84
+        end: 91
+        type: alfanumerico
+        format: CCYYMMDD
+      -
+        description: Base Rate
+        begin: 92
+        end: 100
+        type: numerico
+      -
+        description: Interest Rate
+        begin: 101
+        end: 109
+        type: numerico
+      -
+        description: Contract Rate
+        begin: 110
+        end: 118
+        type: numerico
+      -
+        description: IOF overdue Amount
+        begin: 119
+        end: 134
+        type: numerico
+      -
+        description: Interest Amount
+        begin: 135
+        end: 150
+        type: numerico
+      -
+        description: Proc Unit (PU)
+        begin: 151
+        end: 153
+        type: alfanumerico
+      -
+        description: Destination System Identifier
+        begin: 154
+        end: 157
+        type: alfanumerico
+  trailer:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Record Type
+        begin: 1
+        end: 1
+        type: alfanumerico
+      -
+        description: Record Count
+        begin: 2
+        end: 8
+        type: numerico

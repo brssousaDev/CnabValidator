@@ -1,0 +1,180 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  1: header
+  2: register
+  3: regiter_optional
+  4: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: DATA DE GERACAO
+        begin: 2
+        end: 15
+        type: numerico
+        format: DDMMYYYY
+  register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: TIPO DE REGISTRO
+        begin: 2
+        end: 2
+        type: numerico
+      -
+        description: IDENTIFICADOR DO SACADO OU EMITENTE
+        begin: 3
+        end: 16
+        type: numerico
+      -
+        description: TIPO DE PESSOA
+        begin: 17
+        end: 17
+        type: alfanumerico
+      -
+        description: NOME
+        begin: 18
+        end: 57
+        type: alfanumerico
+      -
+        description: SACADO OU EMITENTE
+        begin: 58
+        end: 58
+        type: alfanumerico
+      -
+        description: BLOQUEADO
+        begin: 59
+        end: 59
+        type: alfanumerico
+      -
+        description: DATA SERASA
+        begin: 60
+        end: 67
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: NEGATIVADO
+        begin: 68
+        end: 68
+        type: alfanumerico
+  regiter_optional:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -		
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: TIPO DE REGISTRO
+        begin: 2
+        end: 2
+        type: numerico
+      -
+        description: NUMERO IDENTIFICADOR DO ENDERECO NO SISTEMA LEGADO
+        begin: 3
+        end: 14
+        type: numerico
+      -
+        description: IDENTIFICADOR DO SACADO OU EMITENTE
+        begin: 15
+        end: 28
+        type: numerico
+      -
+        description: ENDERECO PADRAO
+        begin: 29
+        end: 29
+        type: alfanumerico
+      -
+        description: ENDERECO
+        begin: 30
+        end: 129
+        type: alfanumerico
+      -
+        description: BAIRRO/COMPLEMENTO
+        begin: 130
+        end: 194
+        type: alfanumerico
+      -
+        description: CIDADE
+        begin: 195
+        end: 254
+        type: alfanumerico
+      -
+        description: UF
+        begin: 255
+        end: 256
+        type: alfanumerico
+      -
+        description: CEP
+        begin: 257
+        end: 264
+        type: numerico
+      -
+        description: DDD TELEFONE 1
+        begin: 265
+        end: 268
+        type: alfanumerico
+      -
+        description: TELEFONE 1
+        begin: 269
+        end: 278
+        type: alfanumerico
+      -
+        description: CONTATO TELEFONE 1
+        begin: 279
+        end: 298
+        type: alfanumerico
+      -
+        description: DDD TELEFONE 2
+        begin: 299
+        end: 302
+        type: alfanumerico
+      -
+        description: TELEFONE 2
+        begin: 303
+        end: 312
+        type: alfanumerico
+      -
+        description: CONTATO TELEFONE 2
+        begin: 313
+        end: 332
+        type: alfanumerico
+      -
+        description: DDD FAX
+        begin: 333
+        end: 336
+        type: alfanumerico
+  trailer:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: TIPO DE LINHA
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: QUANTIDADE DE REGISTRO DO ARQUIVO
+        begin: 2
+        end: 7
+        type: alfanumerico

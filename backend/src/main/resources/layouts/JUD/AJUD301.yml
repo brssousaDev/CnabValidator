@@ -1,0 +1,548 @@
+rules:
+  column:
+     key-length:
+       -
+        begin-column: 2
+        end-column: 2
+key-map:
+  0: header-label-00
+  1: rodape-register-01
+  2: bloqueio-total-register-type-2
+  3: bloqueio-valor-register-type-3
+  4: desbloqueio-total-register-type-4
+  5: desbloqueio-valor-register-type-5
+  6: transferencia-total-register-type-6
+  7: transferencia-valor-register-type-7
+layout-definition:
+  header-label-00:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Identificador PSTA do Arquivo de Remessa
+        begin: 3
+        end: 6
+        type: numerico
+      -
+        description: Institui��o financeira respons�vel
+        begin: 7
+        end: 14
+        type: alfanumerico
+      -
+        description: Data de Movimento
+        begin: 15
+        end: 22
+        type: numerico
+        format: 'DDMMYYYY'
+      -
+        description: Vers�o do Layout
+        begin: 23
+        end: 24
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 25
+        end: 410
+        type: alfanumerico
+  rodape-register-01:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Numero de Registros
+        begin: 3
+        end: 12
+        type: numerico
+      -
+        description: Filler
+        begin: 13
+        end: 410
+        type: alfanumerico
+  bloqueio-total-register-type-2:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Protocolo
+        begin: 3
+        end: 16
+        type: numerico
+      -
+        description: Sequencial Bloqueio
+        begin: 17
+        end: 21
+        type: numerico
+      -
+        description: Reitera��o Bloqueio
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Juiz Solicitante
+        begin: 24
+        end: 138
+        type: alfanumerico
+      -
+        description: Data Hora Protocolamento
+        begin: 139
+        end: 158
+        type: numerico
+      -
+        description: CPF ou CNPJ do R�u
+        begin: 159
+        end: 172
+        type: alfanumerico
+      -
+        description: Indicador CPF ou CNPJ
+        begin: 173
+        end: 173
+        type: alfanumerico
+      -
+        description: N�mero do processo judicial
+        begin: 174
+        end: 203
+        type: alfanumerico
+      -
+        description: C�digo da Vara ou Ju�zo
+        begin: 204
+        end: 208
+        type: numerico
+      -
+        description: Indicador de Cancelamento ou Reitera��o
+        begin: 209
+        end: 209
+        type: alfanumerico
+      -
+        description: Nome do autor/exeq�ente da a��o
+        begin: 210
+        end: 324
+        type: alfanumerico
+      -
+        description: Indicador do Tipo/Natureza da a��o
+        begin: 325
+        end: 326
+        type: numerico
+      -
+        description: Filler
+        begin: 327
+        end: 410
+        type: alfanumerico
+  bloqueio-valor-register-type-3:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Protocolo
+        begin: 3
+        end: 16
+        type: numerico
+      -
+        description: Sequencial Bloqueio
+        begin: 17
+        end: 21
+        type: numerico
+      -
+        description: Reitera��o Bloqueio
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Juiz Solicitante
+        begin: 24
+        end: 138
+        type: alfanumerico
+      -
+        description: Data Hora Protocolamento
+        begin: 139
+        end: 158
+        type: numerico
+      -
+        description: CPF ou CNPJ do R�u
+        begin: 159
+        end: 172
+        type: alfanumerico
+      -
+        description: Indicador CPF ou CNPJ
+        begin: 173
+        end: 173
+        type: alfanumerico
+      -
+        description: N�mero do processo judicial
+        begin: 174
+        end: 203
+        type: alfanumerico
+      -
+        description: C�digo da Vara ou Ju�zo
+        begin: 204
+        end: 208
+        type: numerico
+      -
+        description: Agencia
+        begin: 209
+        end: 214
+        type: alfanumerico
+      -
+        description: Conta
+        begin: 215
+        end: 229
+        type: alfanumerico
+      -
+        description: Valor
+        begin: 230
+        end: 248
+        type: numerico
+      -
+        description: Indicador de Cancelamento ou Reitera��o
+        begin: 249
+        end: 249
+        type: alfanumerico
+      -
+        description: Nome do autor/exeq�ente da a��o
+        begin: 250
+        end: 364
+        type: alfanumerico
+      -
+        description: Indicador do Tipo/Natureza da a��o.
+        begin: 365
+        end: 366
+        type: numerico
+      -
+        description: CNPJ IF
+        begin: 367
+        end: 374
+        type: alfanumerico
+      -
+        description: Indicador Conta Unica
+        begin: 375
+        end: 375
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 376
+        end: 410
+        type: alfanumerico
+  desbloqueio-total-register-type-4:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Protocolo
+        begin: 3
+        end: 16
+        type: numerico
+      -
+        description: Sequencial Bloqueio
+        begin: 17
+        end: 21
+        type: numerico
+      -
+        description: Reitera��o Bloqueio
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Reitera��o Desbloqueio
+        begin: 24
+        end: 25
+        type: numerico
+      -
+        description: Nome do Juiz que est� solicitando a ordem de desbloqueio total
+        begin: 26
+        end: 140
+        type: alfanumerico
+      -
+        description: Data Hora Protocolamento
+        begin: 141
+        end: 160
+        type: numerico
+      -
+        description: CNPJ IF
+        begin: 161
+        end: 168
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 169
+        end: 410
+        type: alfanumerico
+  desbloqueio-valor-register-type-5:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Protocolo
+        begin: 3
+        end: 16
+        type: numerico
+      -
+        description: Sequencial Bloqueio
+        begin: 17
+        end: 21
+        type: numerico
+      -
+        description: Reitera��o Bloqueio
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Sequencial Desbloqueio
+        begin: 24
+        end: 28
+        type: numerico
+      -
+        description: Reitera��o Desbloqueio
+        begin: 29
+        end: 30
+        type: numerico
+      -
+        description: Nome do Juiz que est� solicitando a ordem de desbloqueio total
+        begin: 31
+        end: 145
+        type: alfanumerico
+      -
+        description: Data Hora Protocolamento
+        begin: 146
+        end: 165
+        type: numerico
+      -
+        description: Valor
+        begin: 166
+        end: 184
+        type: numerico
+      -
+        description: CNPJ IF
+        begin: 185
+        end: 192
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 193
+        end: 410
+        type: alfanumerico
+  transferencia-total-register-type-6:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Protocolo
+        begin: 3
+        end: 16
+        type: numerico
+      -
+        description: Sequencial Bloqueio
+        begin: 17
+        end: 21
+        type: numerico
+      -
+        description: Reitera��o Bloqueio
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Sequencial Transfer�ncia
+        begin: 14
+        end: 28
+        type: numerico
+      -
+        description: Reitera��o Transfer�ncia
+        begin: 29
+        end: 30
+        type: numerico
+      -
+        description: Nome do juiz que est� solicitando a ordem de transfer�ncia total
+        begin: 31
+        end: 145
+        type: alfanumerico
+      -
+        description: Data Hora Protocolamento
+        begin: 146
+        end: 165
+        type: numerico
+      -
+        description: Raiz de 8 d�gitos do CNPJ da IF de destino
+        begin: 166
+        end: 173
+        type: alfanumerico
+      -
+        description: Agencia Destino
+        begin: 174
+        end: 179
+        type: alfanumerico
+      -
+        description: Nome do favorecido
+        begin: 180
+        end: 294
+        type: alfanumerico
+      -
+        description: CPF ou CNPJ do favorecido
+        begin: 295
+        end: 308
+        type: alfanumerico
+      -
+        description: Indicador CPF ou CNPJ do favorecido
+        begin: 309
+        end: 309
+        type: alfanumerico
+      -
+        description: Indicador se o bloqueio total deve ser encerrado
+        begin: 310
+        end: 310
+        type: alfanumerico
+      -
+        description: Id da Transfer�ncia
+        begin: 311
+        end: 328
+        type: numerico
+      -
+        description: Tipo de dep�sito judicial
+        begin: 329
+        end: 329
+        type: alfanumerico
+      -
+        description: C�digo do dep�sito judicial ou da receita
+        begin: 330
+        end: 333
+        type: alfanumerico
+      -
+        description: N�mero de refer�ncia relativo � inscri��o da d�vida ativa
+        begin: 334
+        end: 346
+        type: alfanumerico
+      -
+        description: CNPJ IF
+        begin: 347
+        end: 354
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 355
+        end: 410
+        type: alfanumerico
+  transferencia-valor-register-type-7:
+    - fields:
+      -
+        description: Tipo do Registro
+        begin: 1
+        end: 2
+        type: alfanumerico
+      -
+        description: Protocolo
+        begin: 3
+        end: 16
+        type: numerico
+      -
+        description: Sequencial Bloqueio
+        begin: 17
+        end: 21
+        type: numerico
+      -
+        description: Reitera��o Bloqueio
+        begin: 22
+        end: 23
+        type: numerico
+      -
+        description: Sequencial Transfer�ncia
+        begin: 14
+        end: 28
+        type: numerico
+      -
+        description: Reitera��o Transfer�ncia
+        begin: 29
+        end: 30
+        type: numerico
+      -
+        description: Nome do juiz que est� solicitando a ordem de transfer�ncia total
+        begin: 31
+        end: 145
+        type: alfanumerico
+      -
+        description: Data Hora Protocolamento
+        begin: 146
+        end: 165
+        type: numerico
+      -
+        description: Raiz de 8 d�gitos do CNPJ da IF de destino
+        begin: 166
+        end: 173
+        type: alfaalfanumerico
+      -
+        description: Agencia Destino
+        begin: 174
+        end: 179
+        type: alfanumerico
+      -
+        description: Nome do favorecido
+        begin: 180
+        end: 294
+        type: alfanumerico
+      -
+        description: CPF ou CNPJ do favorecido
+        begin: 295
+        end: 308
+        type: alfanumerico
+      -
+        description: Indicador CPF ou CNPJ do favorecido
+        begin: 309
+        end: 309
+        type: alfanumerico
+      -
+        description: Indicador se o bloqueio total deve ser encerrado
+        begin: 310
+        end: 310
+        type: alfanumerico
+      -
+        description: Valor
+        begin: 311
+        end: 329
+        type: numerico
+      -
+        description: Id da Transfer�ncia
+        begin: 330
+        end: 347
+        type: numerico
+      -
+        description: Tipo de dep�sito judicial
+        begin: 348
+        end: 348
+        type: alfanumerico
+      -
+        description: C�digo do dep�sito judicial ou da receita
+        begin: 349
+        end: 352
+        type: alfanumerico
+      -
+        description: N�mero de refer�ncia relativo � inscri��o da d�vida ativa
+        begin: 353
+        end: 365
+        type: alfanumerico
+      -
+        description: CNPJ IF
+        begin: 366
+        end: 373
+        type: alfanumerico
+      -
+        description: Filler
+        begin: 374
+        end: 410
+        type: alfanumerico

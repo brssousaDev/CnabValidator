@@ -1,0 +1,278 @@
+rules:
+  column:
+    key-length:
+      -
+       begin-column: 1
+       end-column: 1
+
+key-map:
+ 0: header
+ 2: detalhe
+ 9: trailer
+layout-definition:
+ header:
+  - metadata:
+      occurrence: 1
+  - fields:
+    -
+     description: Código do Registro 
+     begin: 1
+     end: 1
+     type: numerico
+    -
+      description: Código de Remessa 
+      begin: 2
+      end: 2
+      type: numerico
+    -
+      description: Literal do Serviço 
+      begin: 3
+      end: 9
+      type: alfanumerico
+    -
+      description: Código do Serviço 
+      begin: 10
+      end: 11
+      type: numerico
+    -
+      description: Literal do Serviço         
+      begin: 12
+      end: 26
+      type: alfanumerico
+    -
+      description: Agência da CIELO 
+      begin: 27
+      end: 31
+      type: alfanumerico
+    -
+      description: Cta Corrente CIELO 
+      begin: 32
+      end: 45
+      type: alfanumerico
+    -
+      description: Nome do Conveniado 
+      begin: 46
+      end: 75
+      type: alfanumerico
+    -
+      description: Número do Banco 
+      begin: 76
+      end: 78
+      type: numerico
+    -
+      description: Nome do Banco 
+      begin: 79
+      end: 98
+      type: alfanumerico
+    -
+      description: Data Pagamento Inicial
+      begin: 99
+      end: 106
+      type: numerico
+      format: YYYYMMDD
+    -
+      description: Data Pagamento Final 
+      begin: 107
+      end: 114
+      type: numerico
+      format: YYYYMMDD
+    -
+      description: Data Movimento 
+      begin: 115
+      end: 122
+      type: numerico
+      format: YYYYMMDD
+    -
+      description: Data Processamento      
+      begin: 123
+      end: 130
+      type: numerico
+      format: YYYYMMDD
+    -
+      description: Hora Processamento 
+      begin: 131
+      end: 136
+      type: numerico
+      format: HHMMSS
+    -
+      description: Nro Geração Movimento 
+      begin: 137
+      end: 142
+      type: numerico
+    -
+      description: Filler   
+      begin: 143
+      end: 194
+      type: alfanumerico
+    -
+      description: Nro de Seqüência do Reg. 
+      begin: 195
+      end: 200
+      type: numerico
+      
+ detalhe:
+  - metadata:
+      occurrence: *
+  - fields:
+    -
+      description: Código do Registro 
+      begin: 1
+      end: 1
+      type: numerico
+    -
+      description: Tipo de Operação 
+      begin: 2
+      end: 2
+      type: alfanumerico
+    -
+      description: Agência da CIELO 
+      begin: 3
+      end: 7
+      type: alfanumerico
+    -
+      description: Cta Corrente CIELO 
+      begin: 8
+      end: 21
+      type: alfanumerico
+    -
+      description: Data de Pagamento 
+      begin: 22
+      end: 29
+      type: numerico
+      format: YYYYMMDD
+    -
+      description: Valor do Pagamento               
+      begin: 30
+      end: 44
+      type: numerico
+    -
+      description: Cod Agencia - Estabelec. 
+      begin: 45
+      end: 49
+      type: alfanumerico
+    -
+      description: Nro Conta Estabelecimento 
+      begin: 50
+      end: 63
+      type: alfanumerico
+    -
+      description: Nome do Estabelec 
+      begin: 64
+      end: 103
+      type: alfanumerico
+    -
+      description: Nro do Estabelecimento 
+      begin: 104
+      end: 113
+      type: numerico
+    -
+      description: Tipo Pessoa Estabelec.    
+      begin: 114
+      end: 115
+      type: numerico
+    -
+      description: Cod. Pessoa Estabelecimento 
+      begin: 116
+      end: 129
+      type: alfanumerico
+    -
+      description: Cod. Forma de Pagamento 
+      begin: 130
+      end: 130
+      type: numerico
+    -
+      description: Cod da Moeda 
+      begin: 131
+      end: 133
+      type: numerico
+    -
+      description: Valor da Moeda 
+      begin: 134
+      end: 143
+      type: numerico
+    -
+      description: Cod. Controle Cielo 
+      begin: 144
+      end: 154
+      type: alfanumerico
+    -
+      description: Data do Movimento      
+      begin: 155
+      end: 162
+      type: numerico
+      format: YYYYMMDD
+    -
+      description: Nro Geração do Movimento 
+      begin: 163
+      end: 168
+      type: numerico
+    -
+      description: Nro Identificação Trans. Bco 
+      begin: 169
+      end: 178
+      type: numerico
+    -
+      description: Cod. Erro 1 
+      begin: 179
+      end: 181
+      type: numerico
+    -
+      description: Cod. Erro 2 
+      begin: 182
+      end: 184
+      type: numerico
+    -
+      description: Forma de liquidação 
+      begin: 185
+      end: 185
+      type: alfanumerico
+    -
+      description: Código do banco   
+      begin: 186
+      end: 189
+      type: numerico
+    -
+      description: Filler   
+      begin: 190
+      end: 193
+      type: alfanumerico
+    -
+      description: Código da Bandeira 
+      begin: 194
+      end: 194
+      type: alfanumerico
+    -
+      description: Nro de Seqüência do Reg.      
+      begin: 195
+      end: 200
+      type: numerico
+ trailer:
+  - metadata:
+      occurrence: 1
+  - fields:
+    -
+      description: Código do Registro 
+      begin: 1
+      end: 1
+      type: numerico
+    -
+      description: Somatório de Valores         
+      begin: 2
+      end: 16
+      type: numerico
+    -
+      description: Nro Geração do Movimento 
+      begin: 17
+      end: 22
+      type: numerico
+    -
+      description: Filler       
+      begin: 23
+      end: 194
+      type: alfanumerico
+    -
+      description: Nro de Sequência 
+      begin: 195
+      end: 200
+      type: numerico
+

@@ -1,0 +1,531 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 2
+key-map:
+  70: header-agencia
+  71: detail-cliente
+  75: detail-disponibilidades
+  76: detail-emprestimos
+  78: detail-cobranca
+  79: trailer
+layout-definition:
+  header-agencia:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 2
+        type: numerico
+      -
+        description: Vago
+        begin: 3
+        end: 3
+        type: alfanumerico
+      -
+        description: Numero da agencia
+        begin: 4
+        end: 8
+        type: numerico
+      -
+        description: Vago
+        begin: 9
+        end: 9
+        type: alfanumerico
+      -
+        description: Numero do cliente
+        begin: 10
+        end: 23
+        type: numerico
+      -
+        description: Vago
+        begin: 24
+        end: 24
+        type: alfanumerico
+      -
+        description: Data base
+        begin: 25
+        end: 32
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Vago
+        begin: 33
+        end: 33
+        type: alfanumerico
+      -
+        description: Codigo do sistema
+        begin: 34
+        end: 35
+        type: numerico
+      -
+        description: Vago
+        begin: 36
+        end: 36
+        type: alfanumerico
+      -
+        description: Sigla do sistema
+        begin: 37
+        end: 38
+        type: alfanumerico
+      -
+        description: Vago
+        begin: 39
+        end: 244
+        type: alfanumerico
+      -
+        description: Numero sequencial
+        begin: 245
+        end: 250
+        type: numerico
+  detail-cliente:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 2
+        type: numerico
+      -
+        description: Vago
+        begin: 3
+        end: 3
+        type: alfanumerico
+      -
+        description: numero da agencia
+        begin: 4
+        end: 8
+        type: numerico
+      -
+        description: Vago
+        begin: 9
+        end: 9
+        type: alfanumerico
+      -
+        description: Numero do cliente
+        begin: 10
+        end: 23
+        type: numerico
+      -
+        description: Vago
+        begin: 24
+        end: 24
+        type: alfanumerico
+      -
+        description: Nome correntista
+        begin: 25
+        end: 64
+        type: alfanumerico
+      -
+        description: Vago
+        begin: 65
+        end: 244
+        type: alfanumerico
+      -
+        description: sequencia
+        begin: 245
+        end: 250
+        type: numerico
+  detail-disponibilidades:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 2
+        type: numerico
+      -
+        description: Vago
+        begin: 3
+        end: 3
+        type: alfanumerico
+      -
+        description: numero da agencia
+        begin: 4
+        end: 8
+        type: numerico
+      -
+        description: Vago
+        begin: 9
+        end: 9
+        type: alfanumerico
+      -
+        description: Numero do cliente
+        begin: 10
+        end: 23
+        type: numerico
+      -
+        description: Vago
+        begin: 24
+        end: 24
+        type: alfanumerico
+      -
+        description: Codigo do produto
+        begin: 25
+        end: 27
+        type: numerico
+      -
+        description: Vago
+        begin: 28
+        end: 28
+        type: alfanumerico
+      -
+        description: Valor aplicado
+        begin: 29
+        end: 45
+        type: numerico
+      -
+        description: Vago
+        begin: 46
+        end: 46
+        type: alfanumerico
+      -
+        description: Valor disponivel
+        begin: 47
+        end: 63
+        type: numerico
+      -
+        description: Vago
+        begin: 64
+        end: 64
+        type: alfanumerico
+      -
+        description: Valor a realizar
+        begin: 65
+        end: 81
+        type: numerico
+      -
+        description: Vago
+        begin: 82
+        end: 244
+        type: alfanumerico
+      -
+        description: Sequencia
+        begin: 245
+        end: 250
+        type: numerico
+  detail-emprestimos:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 2
+        type: numerico
+      -
+        description: Vago
+        begin: 3
+        end: 3
+        type: alfanumerico
+      -
+        description: numero da agencia
+        begin: 4
+        end: 8
+        type: numerico
+      -
+        description: Vago
+        begin: 9
+        end: 9
+        type: alfanumerico
+      -
+        description: Numero do cliente
+        begin: 10
+        end: 23
+        type: numerico
+      -
+        description: Vago
+        begin: 24
+        end: 24
+        type: alfanumerico
+      -
+        description: Codigo do produto
+        begin: 25
+        end: 27
+        type: numerico
+      -
+        description: Vago
+        begin: 28
+        end: 28
+        type: alfanumerico
+      -
+        description: Valor total
+        begin: 29
+        end: 45
+        type: numerico
+      -
+        description: Vago
+        begin: 46
+        end: 46
+        type: alfanumerico
+      -
+        description: Data próximo vencimento
+        begin: 47
+        end: 54
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Vago
+        begin: 55
+        end: 55
+        type: alfanumerico
+      -
+        description: Data vencimento final
+        begin: 56
+        end: 63
+        type: numerico
+        format: DDMMYYYY
+      -
+        description: Vago
+        begin: 64
+        end: 244
+        type: alfanumerico
+      -
+        description: Sequencia
+        begin: 245
+        end: 250
+        type: numerico
+  detail-cobranca:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 2
+        type: numerico
+      -
+        description: Vago
+        begin: 3
+        end: 3
+        type: alfanumerico
+      -
+        description: numero da agencia
+        begin: 4
+        end: 8
+        type: numerico
+      -
+        description: Vago
+        begin: 9
+        end: 9
+        type: alfanumerico
+      -
+        description: Numero do cliente
+        begin: 10
+        end: 23
+        type: numerico
+      -
+        description: Vago
+        begin: 24
+        end: 24
+        type: alfanumerico
+      -
+        description: Codigo do produto
+        begin: 25
+        end: 27
+        type: numerico
+      -
+        description: Vago
+        begin: 28
+        end: 28
+        type: alfanumerico
+      -
+        description: Quantidade salto anterior
+        begin: 29
+        end: 32
+        type: numerico
+      -
+        description: Vago
+        begin: 33
+        end: 33
+        type: alfanumerico
+      -
+        description: Saldo anterior
+        begin: 34
+        end: 50
+        type: numerico
+      -
+        description: Vago
+        begin: 51
+        end: 51
+        type: alfanumerico
+      -
+        description: Quantidade entradas no mes
+        begin: 52
+        end: 55
+        type: numerico
+      -
+        description: Vago
+        begin: 56
+        end: 56
+        type: alfanumerico
+      -     
+        description: Total entradas no mes
+        begin: 57
+        end: 73
+        type: numerico 
+      -
+        description: Vago
+        begin: 74
+        end: 74
+        type: alfanumerico
+      -
+        description: Quantidade baixas no mes
+        begin: 75
+        end: 78
+        type: numerico
+      -
+        description: Vago
+        begin: 79
+        end: 79
+        type: alfanumerico
+      -
+        description: Total baixas no mes
+        begin: 80
+        end: 96
+        type: numerico
+      -
+        description: Vago
+        begin: 97
+        end: 97
+        type: alfanumerico
+      -
+        description: Quantidade saldo atual
+        begin: 98
+        end: 101
+        type: numerico
+      -
+        description: Vago
+        begin: 102
+        end: 102
+        type: alfanumerico
+      -
+        description: Saldo atual
+        begin: 103
+        end: 119
+        type: numerico
+      -
+        description: Vago
+        begin: 120
+        end: 120
+        type: alfanumerico
+      -
+        description: Quantidade vencidos
+        begin: 121
+        end: 124
+        type: numerico
+      -
+        description: Vago
+        begin: 125
+        end: 125
+        type: alfanumerico
+      -
+        description: Total vencidos
+        begin: 126
+        end: 142
+        type: numerico
+      -
+        description: Vago
+        begin: 143
+        end: 143
+        type: alfanumerico
+      -
+        description: Quantidade vencer ate 15 dias
+        begin: 144
+        end: 147
+        type: numerico
+      -
+        description: Vago
+        begin: 148
+        end: 148
+        type: alfanumerico
+      -
+        description: Total vencer ate 15 dias
+        begin: 149
+        end: 165
+        type: numerico
+      -
+        description: Vago
+        begin: 166
+        end: 166
+        type: alfanumerico
+      -
+        description: Quantidade vencer ate 30 dias
+        begin: 167
+        end: 170
+        type: numerico
+      -
+        description: Vago
+        begin: 171
+        end: 171
+        type: alfanumerico
+      -
+        description: Total vencer ate 30 dias
+        begin: 172
+        end: 188
+        type: numerico
+      -
+        description: Vago
+        begin: 189
+        end: 189
+        type: alfanumerico
+      -
+        description: Quantidade vencer apos 30 dias
+        begin: 190
+        end: 193
+        type: numerico
+      -
+        description: Vago
+        begin: 194
+        end: 194
+        type: alfanumerico
+      -
+        description: Total vencer apos 30 dias
+        begin: 195
+        end: 211
+        type: numerico
+      -
+        description: Vago
+        begin: 212
+        end: 244
+        type: alfanumerico
+      -
+        description: Sequencia
+        begin: 245
+        end: 250
+        type: numerico
+  trailer:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Codigo do registro
+        begin: 1
+        end: 2
+        type: numerico
+      -
+        description: Vago
+        begin: 3
+        end: 3
+        type: alfanumerico
+      -
+        description: Quantidade de registros 70 a 78
+        begin: 4
+        end: 18
+        type: numerico
+      -
+        description: Vago
+        begin: 19
+        end: 244
+        type: alfanumerico
+      -
+        description: Sequencial
+        begin: 245
+        end: 250
+        type: numerico

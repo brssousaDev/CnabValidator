@@ -1,0 +1,429 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+key-map:
+  0: header
+  1: detail-register
+  2: detail-register-optional
+  9: trailer
+layout-definition:
+  header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Tipo de registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Codigo remessa
+        begin: 2
+        end: 2
+        type: numerico
+      -
+        description: Literal remessa
+        begin: 3
+        end: 9
+        type: alfanumerico
+      -
+        description: Codigo servico
+        begin: 10
+        end: 11
+        type: numerico
+      -
+        description: Literal servico
+        begin: 12
+        end: 19
+        type: alfanumerico
+      -
+        description: Uso do banco
+        begin: 20
+        end: 26
+        type: alfanumerico
+      -
+        description: Codigo da empresa
+        begin: 27
+        end: 38
+        type: numerico
+      -
+        description: Uso do banco
+        begin: 39
+        end: 46
+        type: alfanumerico
+      -
+        description: Nome da empresa
+        begin: 47
+        end: 76
+        type: alfanumerico
+      -
+        description: Codigo do banco
+        begin: 77
+        end: 79
+        type: numerico
+      -
+        description: Uso do banco
+        begin: 80
+        end: 94
+        type: alfanumerico
+      -
+        description: Data de gravacao
+        begin: 95
+        end: 100
+        type: numerico
+        format: DDMMYY
+      -
+        description: Uso do banco
+        begin: 101
+        end: 108
+        type: alfanumerico
+      -
+        description: Conta cobranca Direita
+        begin: 109
+        end: 120
+        type: numerico
+      -
+        description: Uso do banco
+        begin: 121
+        end: 386
+        type: alfanumerico
+      -
+        description: Numero sequencial do arquivo
+        begin: 387
+        end: 394
+        type: numerico
+      -
+        description: Sequencial
+        begin: 395
+        end: 400
+        type: numerico
+  detail-register:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Tipo de registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Tipo de Inscricao da empresa
+        begin: 2
+        end: 3
+        type: numerico
+      -
+        description: CNPJ da empresa
+        begin: 4
+        end: 17
+        type: alfanumerico
+      -
+        description: Conta corrente cedente
+        begin: 18
+        end: 29
+        type: alfanumerico
+      -
+        description: Uso do banco
+        begin: 30
+        end: 37
+        type: alfanumerico
+      -
+        description: Uso da empresa
+        begin: 38
+        end: 62
+        type: alfanumerico
+      -
+        description: Nosso numero
+        begin: 63
+        end: 74
+        type: alfanumerico
+      -
+        description: Uso do banco
+        begin: 75
+        end: 82
+        type: alfanumerico
+      -
+        description: Banco Cobranca Direta
+        begin: 83
+        end: 85
+        type: numerico
+      -
+        description: Uso do banco
+        begin: 86
+        end: 106
+        type: alfanumerico
+      -
+        description: Codigo da Carteira
+        begin: 107
+        end: 108
+        type: numerico
+      -
+        description: Codigo Ocorrencia Remessa
+        begin: 109
+        end: 110
+        type: numerico
+      -
+        description: Seu numero
+        begin: 111
+        end: 120
+        type: alfanumerico
+      -
+        description: Data vencimento
+        begin: 121
+        end: 126
+        type: numerico
+        format: DDMMYY
+      -
+        description: Valor Titulo
+        begin: 127
+        end: 139
+        type: numerico
+      -
+        description: Uso do Banco
+        begin: 140
+        end: 147
+        type: alfanumerico
+      -
+        description: Especie do titulo
+        begin: 148
+        end: 149
+        type: numerico
+      -
+        description: Aceite
+        begin: 150
+        end: 150
+        type: alfanumerico
+      -
+        description: Data Emissao Titulo
+        begin: 151
+        end: 156
+        type: numerico
+        format: DDMMYY
+      -
+        description: Instrucao 1
+        begin: 157
+        end: 158
+        type: numerico
+      -
+        description: Instrucao 2
+        begin: 159
+        end: 160
+        type: numerico
+      -
+        description: Juros ao Dia
+        begin: 161
+        end: 173
+        type: numerico
+      -
+        description: Data desconto
+        begin: 174
+        end: 179
+        type: numerico
+        format: DDMMYY
+      -
+        description: Valor desconto
+        begin: 180
+        end: 192
+        type: numerico
+      -
+        description: Uso do banco
+        begin: 193
+        end: 205
+        type: alfanumerico
+      -
+        description: Valor abatimento
+        begin: 206
+        end: 218
+        type: numerico
+      -
+        description: Tipo sacado
+        begin: 219
+        end: 220
+        type: numerico
+      -
+        description: CNPJ/CPF Sacado
+        begin: 221
+        end: 234
+        type: alfanumerico
+      -
+        description: Nome do sacado
+        begin: 235
+        end: 264
+        type: alfanumerico
+      -
+        description: Uso do banco
+        begin: 265
+        end: 274
+        type: alfanumerico
+      -
+        description: Endereco Sacado
+        begin: 275
+        end: 314
+        type: alfanumerico
+      -
+        description: Bairro sacado
+        begin: 315
+        end: 326
+        type: alfanumerico
+      -
+        description: CEP Sacado
+        begin: 327
+        end: 334
+        type: numerico
+      -
+        description: Cidade Sacado
+        begin: 335
+        end: 349
+        type: alfanumerico
+      -
+        description: UF Sacado
+        begin: 350
+        end: 351
+        type: alfanumerico
+      -
+        description: Sacador / Mensagem / Codigo CMC7
+        begin: 352
+        end: 381
+        type: alfanumerico
+      -
+        description: Uso do Banco
+        begin: 382
+        end: 385
+        type: alfanumerico
+      -
+        description: Data Juros Mora
+        begin: 386
+        end: 391
+        type: numerico
+        format: DDMMYY
+      -
+        description: Prazo cartorio
+        begin: 392
+        end: 393
+        type: numerico
+      -
+        description: Uso do banco
+        begin: 394
+        end: 394
+        type: alfanumerico
+      -
+        description: Sequencial
+        begin: 395
+        end: 400
+        type: numerico
+      -
+        description: Tipo Emitente
+        begin: 401
+        end: 402
+        type: numerico
+      -
+        description: CNPJ Emitente
+        begin: 403
+        end: 416
+        type: alfanumerico
+      -
+        description: Nome emitente
+        begin: 417
+        end: 456
+        type: alfanumerico
+      -
+        description: Endereco emitente
+        begin: 457
+        end: 496
+        type: alfanumerico
+      -
+        description: Cidade emitente
+        begin: 497
+        end: 511
+        type: alfanumerico
+      -
+        description: UF Emitente
+        begin: 512
+        end: 513
+        type: alfanumerico
+      -
+        description: Cep Emitente
+        begin: 514
+        end: 521
+        type: numerico
+      -
+        description: Email
+        begin: 522
+        end: 641
+        type: alfanumerico
+  detail-register-optional:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Tipo de registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Mensagem 1
+        begin: 2
+        end: 81
+        type: alfanumerico
+      -
+        description: Mensagem 2
+        begin: 82
+        end: 161
+        type: alfanumerico
+      -
+        description: Mensagem 3
+        begin: 161
+        end: 241
+        type: alfanumerico
+      -
+        description: Mensagem 4
+        begin: 242
+        end: 321
+        type: alfanumerico
+      -
+        description: Uso do banco
+        begin: 322
+        end: 365
+        type: alfanumerico
+      -
+        description: Seu numero
+        begin: 366
+        end: 375
+        type: alfanumerico
+      -
+        description: Data Vencimento
+        begin: 376
+        end: 381
+        type: numerico
+        format: DDMMYY
+      -
+        description: Valor titulo
+        begin: 382
+        end: 394
+        type: numerico
+      -
+        description: Sequencial
+        begin: 395
+        end: 400
+        type: numerico
+  trailer:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+        description: Tipo de registro
+        begin: 1
+        end: 1
+        type: numerico
+      -
+        description: Uso do banco
+        begin: 2
+        end: 394
+        type: alfanumerico
+      -
+        description: Sequencial
+        begin: 395
+        end: 400
+        type: numerico

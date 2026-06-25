@@ -1,0 +1,1746 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 8
+         end-column: 8
+       -
+         begin-column: 14
+         end-column: 14
+       -
+         begin-column: 133
+         end-column: 134
+
+key-map:
+  0: header
+  1: header_lote
+  3A: segmento_a
+  3B: segmento_b
+  3C: segmento_c
+  3J: segmento_j
+  3O: segmento_o
+  3N17: segmento_n1
+  3N16: segmento_n2
+  3N18: segmento_n3
+  3N22: segmento_n4_icms
+  3N23: segmento_n4_dr
+  3W: segmento_w
+  3Z: segmento_z
+  5: trailer_lote
+  9: trailer
+
+layout-definition:
+
+  header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+         description: G001 - Código do Banco na Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Tipo de Registro
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN / CNAB
+         begin: 9
+         end: 17
+         type: alfanumerico
+      -
+         description: G005 - Tipo de Inscrição da Empresa
+         begin: 18
+         end: 18
+         type: numerico
+      -
+         description: G006 - Número de Inscrição da Empresa
+         begin: 19
+         end: 32
+         type: numerico
+      -
+         description: G007 - Código do Convênio no Banco
+         begin: 33
+         end: 52
+         type: alfanumerico
+      -
+         description: G008 - Agência Mantenedora da Conta
+         begin: 53
+         end: 57
+         type: numerico
+      -
+         description: G009 - Dígito Verificador da Agência
+         begin: 58
+         end: 58
+         type: alfanumerico
+      -
+         description: G010 - Número da Conta Corrente
+         begin: 59
+         end: 70
+         type: numerico
+      -
+         description: G011 - Dígito Verificador da Conta
+         begin: 71
+         end: 71
+         type: alfanumerico
+      -
+         description: G012 - Dígito Verificador da Ag/Conta
+         begin: 72
+         end: 72
+         type: alfanumerico
+      -
+         description: G013 - Nome da Empresa
+         begin: 73
+         end: 102
+         type: alfanumerico
+      -
+         description: G014 - Nome do Banco
+         begin: 103
+         end: 132
+         type: alfanumerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN / CNAB
+         begin: 133
+         end: 142
+         type: alfanumerico
+      -
+         description: G015 - Código Remessa / Retorno
+         begin: 143
+         end: 143
+         type: numerico
+      -
+         description: G016 - Data de Geração do Arquivo
+         begin: 144
+         end: 151
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: G017 - Hora de Geração do Arquivo
+         begin: 152
+         end: 157
+         type: numerico
+      -
+         description: G018 - Número Seqüencial do Arquivo
+         begin: 158
+         end: 163
+         type: numerico
+      -
+         description: G019 - No da Versão do Layout do Arquivo
+         begin: 164
+         end: 166
+         type: numerico
+      -
+         description: G020 - Densidade de Gravação do Arquivo
+         begin: 167
+         end: 171
+         type: numerico
+      -
+         description: G021 - Para Uso Reservado do Banco
+         begin: 172
+         end: 191
+         type: alfanumerico
+      -
+         description: G022 - Para Uso Reservado da Empresa
+         begin: 192
+         end: 211
+         type: alfanumerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN / CNAB
+         begin: 212
+         end: 240
+         type: alfanumerico
+
+  header_lote:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: G001 - Código do Banco na Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Tipo de Registro
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G028 - Tipo da Operação
+         begin: 9
+         end: 9
+         type: alfanumerico
+      -
+         description: G025 - Tipo do Serviço
+         begin: 10
+         end: 11
+         type: numerico
+      -
+         description: G029 - Forma de Lançamento
+         begin: 12
+         end: 13
+         type: numerico
+      -
+         description: G030 - Nº da Versão do Layout do Lote
+         begin: 14
+         end: 16
+         type: numerico
+      -
+         description: G004 - Uso Exclusivo da FEBRABAN/CNAB
+         begin: 17
+         end: 17
+         type: alfanumerico
+      -
+         description: G005 - Tipo de Inscrição da Empresa
+         begin: 18
+         end: 18
+         type: numerico
+      -
+         description: G006 - Número de Inscrição da Empresa
+         begin: 19
+         end: 32
+         type: numerico
+      -
+         description: G007 - Código do Convênio no Banco
+         begin: 33
+         end: 52
+         type: alfanumerico
+      -
+         description: G008 - Agência Cônvênio
+         begin: 53
+         end: 57
+         type: numerico
+      -
+         description: G009 - Dígito Verificador Agência Convênio
+         begin: 58
+         end: 58
+         type: alfanumerico
+      -
+         description: G010 - Número da Conta Corrente Convênio
+         begin: 59
+         end: 70
+         type: numerico
+      -
+         description: G011 - Dígito Verificador da Conta Convênio
+         begin: 71
+         end: 71
+         type: alfanumerico
+      -
+         description: G012 - Dígito Verificador Ag/Conta Convênio
+         begin: 72
+         end: 72
+         type: alfanumerico
+      -
+         description: G013 - Nome da Empresa
+         begin: 73
+         end: 102
+         type: alfanumerico
+      -
+         description: G031 - Mensagem
+         begin: 103
+         end: 142
+         type: alfanumerico
+      -
+         description: G032 - Nome da Rua, Av, Pça, Etc
+         begin: 143
+         end: 172
+         type: alfanumerico
+      -
+         description: G032 - Número do Local
+         begin: 173
+         end: 177
+         type: numerico
+      -
+         description: G032 - Casa, Apto, Sala, Etc
+         begin: 178
+         end: 192
+         type: alfanumerico
+      -
+         description: G033 - Cidade
+         begin: 193
+         end: 212
+         type: alfanumerico
+      -
+         description: G034 - CEP
+         begin: 213
+         end: 217
+         type: numerico
+      -
+         description: G035 - Complemento do CEP
+         begin: 218
+         end: 220
+         type: alfanumerico
+      -
+         description: G036 - Sigla do Estado
+         begin: 221
+         end: 222
+         type: alfanumerico
+      -
+         description: P014 - Indicativo de Forma de Pagamento do Compromisso
+         begin: 223
+         end: 224
+         type: numerico
+      -
+         description: G004 - Uso Exclusivo da FEBRABAN/CNAB
+         begin: 225
+         end: 230
+         type: alfanumerico
+      -
+         description: G059 - Código das Ocorrências p/ Retorno
+         begin: 231
+         end: 240
+         type: alfanumerico
+
+
+  segmento_a:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: G001 - Código do Banco na Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Tipo de Registro
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G038 - Nº Seqüencial do Registro no Lote
+         begin: 9
+         end: 13
+         type: numerico
+      -
+         description: G039 - Código de Segmento do Reg. Detalhe
+         begin: 14
+         end: 14
+         type: alfanumerico
+      -
+         description: G060 - Tipo de Movimento
+         begin: 15
+         end: 15
+         type: numerico
+      -
+         description: G061 - Código da Instrução p/ Movimento
+         begin: 16
+         end: 17
+         type: numerico
+      -
+         description: P001 - Código da Câmara Centralizadora
+         begin: 18
+         end: 20
+         type: numerico
+      -
+         description: P002 - Código do Banco do Favorecido
+         begin: 21
+         end: 23
+         type: numerico
+      -
+         description: G008 - Ag. Mantenedora da Cta do Favor.
+         begin: 24
+         end: 28
+         type: numerico
+      -
+         description: G009 - Dígito Verificador da Agência
+         begin: 29
+         end: 29
+         type: alfanumerico
+      -
+         description: G010 - Número da Conta Corrente
+         begin: 30
+         end: 41
+         type: numerico
+      -
+         description: G011 - Dígito Verificador da Conta
+         begin: 42
+         end: 42
+         type: alfanumerico
+      -
+         description: G012 - Dígito Verificador da AG/Conta
+         begin: 43
+         end: 43
+         type: alfanumerico
+      -
+         description: G013 - Nome do Favorecido
+         begin: 44
+         end: 73
+         type: alfanumerico
+      -
+         description: G064 - Nº do Docum. Atribuído p/ Empresa
+         begin: 74
+         end: 93
+         type: alfanumerico
+      -
+         description: P009 - Data do Pagamento
+         begin: 94
+         end: 101
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: G040 - Tipo da Moeda
+         begin: 102
+         end: 104
+         type: alfanumerico
+      -
+         description: G041 - Quantidade da Moeda
+         begin: 105
+         end: 119
+         type: numerico
+      -
+         description: P010 - Valor do Pagamento
+         begin: 120
+         end: 134
+         type: numerico
+      -
+         description: G043 - Nº do Docum. Atribuído pelo Banco
+         begin: 135
+         end: 154
+         type: alfanumerico
+      -
+         description: P003 - Data Real da Efetivação Pagto
+         begin: 155
+         end: 162
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: P004 - Valor Real da Efetivação do Pagto
+         begin: 163
+         end: 177
+         type: numerico
+      -
+         description: G031 - Outras Informações – Vide formatação em G031 para identificação de Deposito Judicial e Pgto.Salários de servidores pelo SIAPE
+         begin: 178
+         end: 217
+         type: alfanumerico
+      -
+         description: P005 - Compl. Tipo Serviço
+         begin: 218
+         end: 219
+         type: alfanumerico
+      -
+         description: P011 - Codigo finalidade da TED
+         begin: 220
+         end: 224
+         type: alfanumerico
+      -
+         description: P013 - Complemento de finalidade pagto.
+         begin: 225
+         end: 226
+         type: alfanumerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 227
+         end: 229
+         type: alfanumerico
+      -
+         description: P006 - Aviso ao Favorecido
+         begin: 230
+         end: 230
+         type: numerico
+      -
+         description: G059 - Códigos das Ocorrências p/ Retorno
+         begin: 231
+         end: 240
+         type: alfanumerico
+
+  segmento_b:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: G001 - Código do Banco na Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Tipo do Registro
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G038 - Nº Seqüencial do Registro no Lote
+         begin: 9
+         end: 13
+         type: numerico
+      -
+         description: G039 - Código de Segmento do Reg. Detalhe
+         begin: 14
+         end: 14
+         type: alfanumerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 15
+         end: 17
+         type: alfanumerico
+      -
+         description: G005 - Tipo de Inscrição do Favorecido
+         begin: 18
+         end: 18
+         type: numerico
+      -
+         description: G006 - Nº de Inscrição do Favorecido
+         begin: 19
+         end: 32
+         type: numerico
+      -
+         description: G032 - Nome da Rua, Av, Pça, Etc
+         begin: 33
+         end: 62
+         type: alfanumerico
+      -
+         description: G032 - Nº do Local
+         begin: 63
+         end: 67
+         type: numerico
+      -
+         description: G032 - Casa, Apto, Etc
+         begin: 68
+         end: 82
+         type: alfanumerico
+      -
+         description: G032 - Bairro
+         begin: 83
+         end: 97
+         type: alfanumerico
+      -
+         description: G033 - Nome da Cidade
+         begin: 98
+         end: 117
+         type: alfanumerico
+      -
+         description: G034 - CEP
+         begin: 118
+         end: 122
+         type: numerico
+      -
+         description: G035 - Complemento do CEP
+         begin: 123
+         end: 125
+         type: alfanumerico
+      -
+         description: G036 - Sigla do Estado
+         begin: 126
+         end: 127
+         type: alfanumerico
+      -
+         description: G044 - Data do Vencimento (Nominal)
+         begin: 128
+         end: 135
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: G042 - Valor do Documento (Nominal)
+         begin: 136
+         end: 150
+         type: numerico
+      -
+         description: G045 - Valor do Abatimento
+         begin: 151
+         end: 165
+         type: numerico
+      -
+         description: G046 - Valor do Desconto
+         begin: 166
+         end: 180
+         type: numerico
+      -
+         description: G047 - Valor da Mora
+         begin: 181
+         end: 195
+         type: numerico
+      -
+         description: G048 - Valor da Multa
+         begin: 196
+         end: 210
+         type: numerico
+      -
+         description: P008 - Código/Documento do Favorecido
+         begin: 211
+         end: 225
+         type: alfanumerico
+      -
+         description: P006 - Aviso ao Favorecido
+         begin: 226
+         end: 226
+         type: numerico
+      -
+         description: P012 - Uso Exclusivo para o SIAPE
+         begin: 227
+         end: 232
+         type: numerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 233
+         end: 240
+         type: alfanumerico
+
+  segmento_c:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: G001 - Código do Banco na Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Tipo de Registro
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G038 - Nº Seqüencial do Registro no Lote
+         begin: 9
+         end: 13
+         type: numerico
+      -
+         description: G039 - Código de Segmento do Reg. Detalhe
+         begin: 14
+         end: 14
+         type: alfanumerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 15
+         end: 17
+         type: alfanumerico
+      -
+         description: G050 - Valor do IR
+         begin: 18
+         end: 32
+         type: numerico
+      -
+         description: G051 - Valor do ISS
+         begin: 33
+         end: 47
+         type: numerico
+      -
+         description: G052 - Valor do IOF
+         begin: 48
+         end: 62
+         type: numerico
+      -
+         description: G053 - Valor Outras Deduções
+         begin: 63
+         end: 77
+         type: numerico
+      -
+         description: G054 - Valor Outros Acréscimos
+         begin: 78
+         end: 92
+         type: numerico
+      -
+         description: G008 - Agência do Favorecido
+         begin: 93
+         end: 97
+         type: numerico
+      -
+         description: G009 - Dígito Verificador da Agência
+         begin: 98
+         end: 98
+         type: alfanumerico
+      -
+         description: G010 - Número Conta Corrente
+         begin: 99
+         end: 110
+         type: numerico
+      -
+         description: G011 - Dígito Verificador da Conta
+         begin: 111
+         end: 111
+         type: alfanumerico
+      -
+         description: G012 - Dígito Verificador Agência/Conta
+         begin: 112
+         end: 112
+         type: alfanumerico
+      -
+         description: G055 - Valor do INSS
+         begin: 113
+         end: 127
+         type: numerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 128
+         end: 240
+         type: alfanumerico
+
+  segmento_j:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: G001 - Código no Banco da Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Tipo de Registro
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G038 - Nº Seqüencial do Registro no Lote
+         begin: 9
+         end: 13
+         type: numerico
+      -
+         description: G039 - Código de Segmento no Reg. Detalhe
+         begin: 14
+         end: 14
+         type: alfanumerico
+      -
+         description: G060 - Tipo de Movimento
+         begin: 15
+         end: 15
+         type: numerico
+      -
+         description: G061 - Código da Instrução p/ Movimento
+         begin: 16
+         end: 17
+         type: numerico
+      -
+         description: G063 - Código de Barras
+         begin: 18
+         end: 61
+         type: numerico
+      -
+         description: G013 - Nome do Cedente 
+         begin: 62
+         end: 91
+         type: alfanumerico
+      -
+         description: G044 - Data do Vencimento (Nominal)
+         begin: 92
+         end: 99
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: G042 - Valor do Título (Nominal)
+         begin: 100
+         end: 114
+         type: numerico
+      -
+         description: L002 - Valor do Desconto + Abatimento
+         begin: 115
+         end: 129
+         type: numerico
+      -
+         description: L003 - Valor da Mora + Multa
+         begin: 130
+         end: 144
+         type: numerico
+      -
+         description: P009 - Data do Pagamento
+         begin: 145
+         end: 152
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: P010 - Valor do Pagamento
+         begin: 153
+         end: 167
+         type: numerico
+      -
+         description: G041 - Quantidade da Moeda
+         begin: 168
+         end: 182
+         type: numerico
+      -
+         description: G064 - Nº do Docto Atribuído pela Empresa
+         begin: 183
+         end: 202
+         type: alfanumerico
+      -
+         description: G043 - Nº do Docto Atribuído pelo Banco
+         begin: 203
+         end: 222
+         type: alfanumerico
+      -
+         description: G065 - Código de Moeda
+         begin: 223
+         end: 224
+         type: numerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 225
+         end: 230
+         type: alfanumerico
+      -
+         description: G059 - Códigos das Ocorrências p/ Retorno
+         begin: 231
+         end: 240
+         type: alfanumerico
+
+  segmento_o:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: G001 - Código no Banco da Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Registro Detalhe de Lote
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G038 - Nº Seqüencial do Registro no Lote
+         begin: 9
+         end: 13
+         type: numerico
+      -
+         description: G039 - Código de Segmento no Reg. Detalhe
+         begin: 14
+         end: 14
+         type: alfanumerico
+      -
+         description: G060 - Tipo de Movimento
+         begin: 15
+         end: 15
+         type: numerico
+      -
+         description: G061 - Código da Instrução de Movimento
+         begin: 16
+         end: 17
+         type: numerico
+      -
+         description: N001 - Código de Barras
+         begin: 18
+         end: 61
+         type: alfanumerico
+      -
+         description: G013 - Nome da Concessionária / Órgão Público
+         begin: 62
+         end: 91
+         type: alfanumerico
+      -
+         description: G044 - Data do Vencimento (Nominal)
+         begin: 92
+         end: 99
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: P009 - Data do Pagamento
+         begin: 100
+         end: 107
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: P004 - Valor do Pagamento
+         begin: 108
+         end: 122
+         type: numerico
+      -
+         description: G064 - Nº do Docto Atribuído pela Empresa
+         begin: 123
+         end: 142
+         type: alfanumerico
+      -
+         description: G043 - Nº do Docto Atribuído pelo Banco
+         begin: 143
+         end: 162
+         type: alfanumerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 163
+         end: 230
+         type: alfanumerico
+      -
+         description: G059 - Códigos das Ocorrências p/ Retorno
+         begin: 231
+         end: 240
+         type: alfanumerico
+
+  segmento_n1:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: G001 - Código no Banco da Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Registro Detalhe de Lote
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G038 - Nº Seqüencial do Registro no Lote
+         begin: 9
+         end: 13
+         type: numerico
+      -
+         description: G039 - Código de Segmento no Reg. Detalhe
+         begin: 14
+         end: 14
+         type: alfanumerico
+      -
+         description: G060 - Tipo de Movimento
+         begin: 15
+         end: 15
+         type: numerico
+      -
+         description: G061 - Código da Instrução de Movimento
+         begin: 16
+         end: 17
+         type: numerico
+      -
+         description: G064 - Nº do Docto Atribuído pela Empresa
+         begin: 18
+         end: 37
+         type: alfanumerico
+      -
+         description: G043 - Nº do Docto Atribuído pelo Banco
+         begin: 38
+         end: 57
+         type: alfanumerico
+      -
+         description: G013 - Nome do Contribuinte
+         begin: 58
+         end: 87
+         type: alfanumerico
+      -
+         description: P009 - Data do Pagamento
+         begin: 88
+         end: 95
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: P010 - Valor do Total do Pagamento
+         begin: 96
+         end: 110
+         type: numerico
+      -
+         description: N002 - Código da Receita do Tributo
+         begin: 111
+         end: 116
+         type: alfanumerico
+      -
+         description: N003 - Tipo de Identificação do Contribuinte
+         begin: 117
+         end: 118
+         type: numerico
+      -
+         description: N004 - Identificação do Contribuinte
+         begin: 119
+         end: 132
+         type: numerico
+      -
+         description: N005 - Código de Identificação do Tributo
+         begin: 133
+         end: 134
+         type: alfanumerico
+      -
+         description: N006 - Mês e ano de competência
+         begin: 135
+         end: 140
+         type: numerico
+      -
+         description: G055 - Valor previsto do pagamento do INSS
+         begin: 141
+         end: 155
+         type: numerico
+      -
+         description: G054 - Valor de Outras Entidades
+         begin: 156
+         end: 170
+         type: numerico
+      -
+         description: N007 - Atualização Monetária
+         begin: 171
+         end: 185
+         type: numerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 186
+         end: 230
+         type: alfanumerico
+      -
+         description: G059 - Códigos das Ocorrências p/ Retorno
+         begin: 231
+         end: 240
+         type: alfanumerico
+
+  segmento_n2:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: G001 - Código no Banco da Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Registro Detalhe de Lote
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G038 - Nº Seqüencial do Registro no Lote
+         begin: 9
+         end: 13
+         type: numerico
+      -
+         description: G039 - Código de Segmento no Reg. Detalhe
+         begin: 14
+         end: 14
+         type: alfanumerico
+      -
+         description: G060 - Tipo de Movimento
+         begin: 15
+         end: 15
+         type: numerico
+      -
+         description: G061 - Código da Instrução de Movimento
+         begin: 16
+         end: 17
+         type: numerico
+      -
+         description: G064 - Nº do Docto Atribuído pela Empresa
+         begin: 18
+         end: 37
+         type: alfanumerico
+      -
+         description: G043 - Nº do Docto Atribuído pelo Banco
+         begin: 38
+         end: 57
+         type: alfanumerico
+      -
+         description: G013 - Nome do Contribuinte
+         begin: 58
+         end: 87
+         type: alfanumerico
+      -
+         description: P009 - Data do Pagamento
+         begin: 88
+         end: 95
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: P010 - Valor do Total do Pagamento
+         begin: 96
+         end: 110
+         type: numerico
+      -
+         description: N002 - Código da Receita do Tributo
+         begin: 111
+         end: 116
+         type: alfanumerico
+      -
+         description: N003 - Tipo de Identificação do Contribuinte
+         begin: 117
+         end: 118
+         type: numerico
+      -
+         description: N004 - Identificação do Contribuinte
+         begin: 119
+         end: 132
+         type: numerico
+      -
+         description: N005 - Código de Identificação do Tributo
+         begin: 133
+         end: 134
+         type: alfanumerico
+      -
+         description: N008 - Período de Apuração
+         begin: 135
+         end: 142
+         type: numerico
+      -
+         description: N009 - Número de Referência
+         begin: 143
+         end: 159
+         type: numerico
+      -
+         description: G042 - Valor Principal
+         begin: 160
+         end: 174
+         type: numerico
+      -
+         description: G048 - Valor da Multa
+         begin: 175
+         end: 189
+         type: numerico
+      -
+         description: G047 - Valor dos Juros / Encargos
+         begin: 190
+         end: 204
+         type: numerico
+      -
+         description: G044 - Data de Vencimento
+         begin: 205
+         end: 212
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 213
+         end: 230
+         type: alfanumerico
+      -
+         description: G059 - Códigos das Ocorrências p/ Retorno
+         begin: 231
+         end: 240
+         type: alfanumerico
+
+  segmento_n3:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: G001 - Código no Banco da Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Registro Detalhe de Lote
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G038 - Nº Seqüencial do Registro no Lote
+         begin: 9
+         end: 13
+         type: numerico
+      -
+         description: G039 - Código de Segmento no Reg. Detalhe
+         begin: 14
+         end: 14
+         type: alfanumerico
+      -
+         description: G060 - Tipo de Movimento
+         begin: 15
+         end: 15
+         type: numerico
+      -
+         description: G061 - Código da Instrução de Movimento
+         begin: 16
+         end: 17
+         type: numerico
+      -
+         description: G064 - Nº do Docto Atribuído pela Empresa
+         begin: 18
+         end: 37
+         type: alfanumerico
+      -
+         description: G043 - Nº do Docto Atribuído pelo Banco
+         begin: 38
+         end: 57
+         type: alfanumerico
+      -
+         description: G013 - Nome do Contribuinte
+         begin: 58
+         end: 87
+         type: alfanumerico
+      -
+         description: P009 - Data do Pagamento
+         begin: 88
+         end: 95
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: P010 - Valor do Total do Pagamento
+         begin: 96
+         end: 110
+         type: numerico
+      -
+         description: N002 - Código da Receita do Tributo
+         begin: 111
+         end: 116
+         type: alfanumerico
+      -
+         description: N003 - Tipo de Identificação do Contribuinte
+         begin: 117
+         end: 118
+         type: numerico
+      -
+         description: N004 - Identificação do Contribuinte
+         begin: 119
+         end: 132
+         type: numerico
+      -
+         description: N005 - Código de Identificação do Tributo
+         begin: 133
+         end: 134
+         type: alfanumerico
+      -
+         description: N006 - Período de Apuração
+         begin: 135
+         end: 142
+         type: numerico
+      -
+         description: N010 - Valor da Receita Bruta Acumulada
+         begin: 143
+         end: 157
+         type: numerico
+      -
+         description: N011 - Percentual sobre a Receita Bruta Acumulada
+         begin: 158
+         end: 164
+         type: numerico
+      -
+         description: G042 - Valor Principal
+         begin: 165
+         end: 179
+         type: numerico
+      -
+         description: G048 - Valor da Multa
+         begin: 180
+         end: 194
+         type: numerico
+      -
+         description: G047 - Valor dos Juros / Encargos
+         begin: 195
+         end: 209
+         type: numerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 210
+         end: 230
+         type: alfanumerico
+      -
+         description: G059 - Códigos das Ocorrências p/ Retorno
+         begin: 231
+         end: 240
+         type: alfanumerico
+      
+  segmento_n4_icms:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: G001 - Código no Banco da Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Registro Detalhe de Lote
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G038 - Nº Seqüencial do Registro no Lote
+         begin: 9
+         end: 13
+         type: numerico
+      -
+         description: G039 - Código de Segmento no Reg. Detalhe
+         begin: 14
+         end: 14
+         type: alfanumerico
+      -
+         description: G060 - Tipo de Movimento
+         begin: 15
+         end: 15
+         type: numerico
+      -
+         description: G061 - Código da Instrução de Movimento
+         begin: 16
+         end: 17
+         type: numerico
+      -
+         description: G064 - Nº do Docto Atribuído pela Empresa
+         begin: 18
+         end: 37
+         type: alfanumerico
+      -
+         description: G043 - Nº do Docto Atribuído pelo Banco
+         begin: 38
+         end: 57
+         type: alfanumerico
+      -
+         description: G013 - Nome do Contribuinte
+         begin: 58
+         end: 87
+         type: alfanumerico
+      -
+         description: P009 - Data do Pagamento
+         begin: 88
+         end: 95
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: P010 - Valor do Total do Pagamento
+         begin: 96
+         end: 110
+         type: numerico
+      -
+         description: N002 - Código da Receita do Tributo
+         begin: 111
+         end: 116
+         type: alfanumerico
+      -
+         description: N003 - Tipo de Identificação do Contribuinte
+         begin: 117
+         end: 118
+         type: numerico
+      -
+         description: N004 - Identificação do Contribuinte
+         begin: 119
+         end: 132
+         type: numerico
+      -
+         description: N005 - Código de Identificação do Tributo
+         begin: 133
+         end: 134
+         type: alfanumerico
+      -
+         description: G044 - Data de Vencimento
+         begin: 135
+         end: 142
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: N012 - Inscrição Estadual / Código do Município / Número Declaração
+         begin: 143
+         end: 154
+         type: numerico
+      -
+         description: N013 - Dívida Ativa / N. Etiqueta
+         begin: 155
+         end: 167
+         type: numerico
+      -
+         description: N006 - Período de Referência
+         begin: 168
+         end: 173
+         type: numerico
+      -
+         description: N014 - Número da Parcela / Notificação
+         begin: 174
+         end: 186
+         type: numerico
+      -
+         description: G042 - Valor da Receita
+         begin: 187
+         end: 201
+         type: numerico
+      -
+         description: G047 - Valor dos Juros / Encargos
+         begin: 202
+         end: 215
+         type: numerico
+      -
+         description: G048 - Valor da Multa
+         begin: 216
+         end: 229
+         type: numerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 230
+         end: 230
+         type: alfanumerico
+      -
+         description: G059 - Códigos das Ocorrências p/ Retorno
+         begin: 231
+         end: 240
+         type: alfanumerico
+
+  segmento_n4_dr:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: G001 - Código no Banco da Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Registro Detalhe de Lote
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G038 - Nº Seqüencial do Registro no Lote
+         begin: 9
+         end: 13
+         type: numerico
+      -
+         description: G039 - Código de Segmento no Reg. Detalhe
+         begin: 14
+         end: 14
+         type: alfanumerico
+      -
+         description: G060 - Tipo de Movimento
+         begin: 15
+         end: 15
+         type: numerico
+      -
+         description: G061 - Código da Instrução de Movimento
+         begin: 16
+         end: 17
+         type: numerico
+      -
+         description: G064 - Nº do Docto Atribuído pela Empresa
+         begin: 18
+         end: 37
+         type: alfanumerico
+      -
+         description: G043 - Nº do Docto Atribuído pelo Banco
+         begin: 38
+         end: 57
+         type: alfanumerico
+      -
+         description: G013 - Nome do Contribuinte
+         begin: 58
+         end: 87
+         type: alfanumerico
+      -
+         description: P009 - Data do Pagamento
+         begin: 88
+         end: 95
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: P010 - Valor do Total do Pagamento
+         begin: 96
+         end: 110
+         type: numerico
+      -
+         description: N002 - Código da Receita do Tributo
+         begin: 111
+         end: 116
+         type: alfanumerico
+      -
+         description: N003 - Tipo de Identificação do Contribuinte
+         begin: 117
+         end: 118
+         type: numerico
+      -
+         description: N004 - Identificação do Contribuinte
+         begin: 119
+         end: 132
+         type: numerico
+      -
+         description: N005 - Código de Identificação do Tributo
+         begin: 133
+         end: 134
+         type: alfanumerico
+      -
+         description: G044 - Data de Vencimento
+         begin: 135
+         end: 142
+         type: numerico
+         format: DDMMYYYY
+      -
+         description: N012 - Inscrição Estadual / Código do Município / Número Declaração
+         begin: 143
+         end: 154
+         type: numerico
+      -
+         description: N013 - Dívida Ativa / N. Etiqueta
+         begin: 155
+         end: 167
+         type: numerico
+      -
+         description: N006 - Período de Referência
+         begin: 168
+         end: 173
+         type: numerico
+      -
+         description: N014 - Número da Parcela / Notificação
+         begin: 174
+         end: 186
+         type: numerico
+      -
+         description: G042 - Valor da Receita
+         begin: 187
+         end: 201
+         type: numerico
+      -
+         description: G047 - Valor dos Juros / Encargos
+         begin: 202
+         end: 215
+         type: numerico
+      -
+         description: G048 - Valor da Multa
+         begin: 216
+         end: 229
+         type: numerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 230
+         end: 230
+         type: alfanumerico
+      -
+         description: G059 - Códigos das Ocorrências p/ Retorno
+         begin: 231
+         end: 240
+         type: alfanumerico
+
+  segmento_w:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: Código no Banco da Compensação
+         begin: 1
+         end: 3
+         type: alfanumerico
+      -
+         description:   Lote de Serviço
+         begin: 4
+         end: 7
+         type: alfanumerico
+      -
+         description: ‘3’ - Registro Detalhe de Lote
+         begin: 8
+         end: 8
+         type: alfanumerico
+      -
+         description:  Nº Seqüencial do Registro no Lote
+         begin: 9
+         end: 13
+         type: alfanumerico
+      -
+         description: ‘W’ - Código de Segmento no Reg. Detalhe
+         begin: 14
+         end: 14
+         type: alfanumerico
+      -
+         description:   Número Seq. Registro Complementar
+         begin: 15
+         end: 15
+         type: alfanumerico
+      -
+         description:   Identifica o Uso das informações 1 e 2
+         begin: 16
+         end: 16
+         type: alfanumerico
+      -
+         description:   Informação Complementar 1
+         begin: 17
+         end: 96
+         type: alfanumerico
+      -
+         description:   Informação Complementar 2
+         begin: 97
+         end: 176
+         type: alfanumerico
+      -
+         description:   Identificador de Tributo
+         begin: 177
+         end: 178
+         type: alfanumerico
+      -
+         description:   Informação Complementar Tributo
+         begin: 179
+         end: 228
+         type: alfanumerico
+      -
+         description:   Uso CNAB/FEBRABAN
+         begin: 229
+         end: 230
+         type: alfanumerico
+      -
+         description: G059 - Códigos das Ocorrências p/ Retorno
+         begin: 231
+         end: 240
+         type: alfanumerico
+
+  segmento_z:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: G001 - Código no Banco da Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Registro Detalhe de Lote
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G038 - Nº Seqüencial do Registro no Lote
+         begin: 9
+         end: 13
+         type: numerico
+      -
+         description: G039 - Código de Segmento no Reg. Detalhe
+         begin: 14
+         end: 14
+         type: alfanumerico
+      -
+         description: Z001 - Autenticação para atender Legislação
+         begin: 15
+         end: 78
+         type: alfanumerico
+      -
+         description: Z002 - Autenticação Bancária / Protocolo
+         begin: 79
+         end: 103
+         type: alfanumerico
+      -
+         description: G004 - Uso CNAB/FEBRABEN
+         begin: 104
+         end: 230
+         type: alfanumerico
+      -
+         description: G059 - Códigos das Ocorrências p/ Retorno
+         begin: 231
+         end: 240
+         type: alfanumerico
+
+  trailer_lote:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: G001 - Código do Banco na Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Tipo de Registro
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 9
+         end: 17
+         type: alfanumerico
+      -
+         description: G057 - Quantidade de Registros do Lote
+         begin: 18
+         end: 23
+         type: numerico
+      -
+         description: B002 - Somatória dos Valores do Pgtos
+         begin: 24
+         end: 41
+         type: numerico
+      -
+         description: B003 - Complemento de registro
+         begin: 42
+         end: 230
+         type: alfanumerico
+      -
+         description: G059 - Códigos das Ocorrências para Retorno
+         begin: 231
+         end: 240
+         type: alfanumerico
+
+  trailer:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+         description: G001 - Código do Banco na Compensação
+         begin: 1
+         end: 3
+         type: numerico
+      -
+         description: G002 - Lote de Serviço
+         begin: 4
+         end: 7
+         type: numerico
+      -
+         description: G003 - Tipo de Registro
+         begin: 8
+         end: 8
+         type: numerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 9
+         end: 17
+         type: alfanumerico
+      -
+         description: G049 - Quantidade de Lotes do Arquivo
+         begin: 18
+         end: 23
+         type: numerico
+      -
+         description: G056 - Quantidade de Registros do Arquivo
+         begin: 24
+         end: 29
+         type: numerico
+      -
+         description: G037 - Qtde de Contas p/ Conc. (Lotes)
+         begin: 30
+         end: 35
+         type: numerico
+      -
+         description: G004 - Uso Exclusivo FEBRABAN/CNAB
+         begin: 36
+         end: 240
+         type: alfanumerico
+
+      

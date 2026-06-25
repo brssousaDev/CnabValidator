@@ -1,0 +1,1278 @@
+rules:
+  column:
+     key-length:
+       -
+         begin-column: 1
+         end-column: 1
+       -
+         begin-column: 38
+         end-column: 40
+
+key-map:
+  0: header
+  1001: DARF
+  1002: GARE
+  1005: GPS
+  1006: codigo_barras
+  9: trailler
+
+layout-definition:
+
+  header:
+    - metadata:
+       occurrence : 1
+    - fields:
+      -
+         description: IDENTIFICADOR DO TIPO DE REGISTRO
+         begin: 1
+         end: 1
+         type: numerico
+      -
+         description: C�DIGO DE COMUNICA��O
+         begin: 2
+         end: 9
+         type: numerico
+      -
+         description: CNPJ/CPF BASE DA EMPRESA ADMINISTRADORA
+         begin: 10
+         end: 18
+         type: alfanumerico
+      -
+         description: CNPJ/CPF FILIAL DA EMPRESA ADMINISTRADORA
+         begin: 19
+         end: 22
+         type: alfanumerico
+      -
+         description: CNPJ/CPF CONTROLE
+         begin: 23
+         end: 24
+         type: alfanumerico
+      -
+         description: N�MERO DO LOTE
+         begin: 25
+         end: 29
+         type: numerico
+      -
+         description: DATA DA GRAVA��O DO ARQUIVO
+         begin: 30
+         end: 37
+         type: numerico
+         format: YYYYMMDD
+      -
+         description: TIPO DE INSCRI��O DA EMPRESA ADMINISTRADORA
+         begin: 38
+         end: 38
+         type: numerico
+      -
+         description: NOME DA EMPRESA ADMINISTRADORA
+         begin: 39
+         end: 78
+         type: alfanumerico
+      -
+         description: IDENTIFICADOR DO TIPO DE ARQUIVO
+         begin: 79
+         end: 79
+         type: numerico
+      -
+         description: HORA DA GRAVA��O DO ARQUIVO
+         begin: 80
+         end: 85
+         type: numerico
+      -
+         description: INDICADOR CONSIST�NCIA ARQUIVO
+         begin: 86
+         end: 87
+         type: numerico
+      -
+         description: RESERVA 1
+         begin: 88
+         end: 837
+         type: alfanumerico
+      -
+         description: VERS�O DO SOFTWARE FORNECIDO PELO BANCO.
+         begin: 838
+         end: 843
+         type: alfanumerico
+      -
+         description: VERS�O DO SOFTWARE CONTROLE DO BANCO
+         begin: 844
+         end: 849
+         type: alfanumerico
+      -
+         description: RESERVA 2
+         begin: 850
+         end: 899
+         type: alfanumerico
+      -
+         description: INDICADOR CONSIST�NCIA
+         begin: 900
+         end: 909
+         type: alfanumerico
+      -
+         description: RESERVA
+         begin: 910
+         end: 994
+         type: alfanumerico
+      -
+         description: N�MERO SEQUENCIAL DO REGISTRO
+         begin: 995
+         end: 1000
+         type: numerico
+
+  DARF:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: IDENTIFICADOR DO TIPO DE REGISTRO
+         begin: 1
+         end: 1
+         type: numerico
+      -
+         description: C�DIGO DE COMUNICA��O
+         begin: 2
+         end: 9
+         type: numerico
+      -
+         description: CNPJ/CPF BASE DA EMPRESA ADMINISTRADORA
+         begin: 10
+         end: 18
+         type: alfanumerico
+      -
+         description: CNPJ/CPF FILIAL DA EMPRESA ADMINISTRADORA
+         begin: 19
+         end: 22
+         type: alfanumerico
+      -
+         description: CNPJ/CPF CONTROLE
+         begin: 23
+         end: 24
+         type: alfanumerico
+      -
+         description: N�MERO DO LOTE
+         begin: 25
+         end: 29
+         type: numerico
+      -
+         description: DATA DE GRAVA��O DO ARQUIVO
+         begin: 30
+         end: 37
+         type: numerico
+         format: YYYYMMDD
+      -
+         description: IDENTIFICADOR DO TRIBUTO
+         begin: 38
+         end: 40
+         type: numerico
+      -
+         description: IDENTIFICADOR DO DOCUMENTO
+         begin: 41
+         end: 66
+         type: numerico
+      -
+         description: INDICADOR DO TIPO DE MOVIMENTO
+         begin: 67
+         end: 67
+         type: alfanumerico
+      -
+         description: TIPO DE INSCRI��O DO CONTRIBUINTE
+         begin: 68
+         end: 68
+         type: numerico
+      -
+         description: CNPJ/CPF BASE DO CONTRIBUINTE
+         begin: 69
+         end: 77
+         type: alfanumerico
+      -
+         description: CNPJ/CPF FILIAL DO CONTRIBUINTE
+         begin: 78
+         end: 81
+         type: alfanumerico
+      -
+         description: CNPJ/CPF CONTROLE
+         begin: 82
+         end: 83
+         type: alfanumerico
+      -
+         description: NOME DO CONTRIBUINTE
+         begin: 84
+         end: 123
+         type: alfanumerico
+      -
+         description: ENDERE�O DO CONTRIBUINTE
+         begin: 124
+         end: 163
+         type: alfanumerico
+      -
+         description: CEP DO CONTRIBUINTE
+         begin: 164
+         end: 168
+         type: numerico
+      -
+         description: CEP COMPLEMENTO DO CONTRIBUINTE
+         begin: 169
+         end: 171
+         type: numerico
+      -
+         description: AG�NCIA DA EMPRESA ADMINISTRADORA
+         begin: 172
+         end: 175
+         type: numerico
+      -
+         description: D�GITO DA AG�NCIA
+         begin: 176
+         end: 176
+         type: numerico
+      -
+         description: RAZ�O DA CONTA DA EMPRESA ADMINISTRADORA
+         begin: 177
+         end: 180
+         type: numerico
+      -
+         description: CONTA DA EMPRESA ADMINISTRADORA
+         begin: 181
+         end: 187
+         type: numerico
+      -
+         description: D�GITO DA CONTA
+         begin: 188
+         end: 188
+         type: numerico
+      -
+         description: DATA PARA EFETIVA��O DO D�BITO
+         begin: 189
+         end: 196
+         type: numerico
+         format: YYYYMMDD
+      -
+         description: INDICADOR PARA AUTORIZA��O DE D�BITO
+         begin: 197
+         end: 197
+         type: alfanumerico
+      -
+         description: VALOR PRINCIPAL
+         begin: 198
+         end: 212
+         type: numerico
+      -
+         description: VALOR DOS JUROS/ENCARGOS
+         begin: 213
+         end: 227
+         type: numerico
+      -
+         description: VALOR DA MULTA
+         begin: 228
+         end: 242
+         type: numerico
+      -
+         description: VALOR TOTAL
+         begin: 243
+         end: 257
+         type: numerico
+      -
+         description: RESERVA 1
+         begin: 258
+         end: 329
+         type: alfanumerico
+      -
+         description: QUOTA
+         begin: 330
+         end: 331
+         type: alfanumerico
+      -
+         description: ANO EXERC�CIO
+         begin: 332
+         end: 335
+         type: alfanumerico
+      -
+         description: DATA DE VENCIMENTO
+         begin: 336
+         end: 343
+         type: numerico
+         format: YYYYMMDD
+      -
+         description: CODIGO DA RECEITA
+         begin: 344
+         end: 347
+         type: numerico
+      -
+         description: TIPO DE DARF
+         begin: 348
+         end: 348
+         type: numerico
+      -
+         description: PER�ODO DE APURA��O
+         begin: 349
+         end: 356
+         type: numerico
+         format: YYYYMMDD
+      -
+         description: PERCENTUAL
+         begin: 357
+         end: 360
+         type: numerico
+      -
+         description: REFER�NCIA
+         begin: 361
+         end: 377
+         type: numerico
+      -
+         description: VALOR DA RECEITA BRUTA
+         begin: 378
+         end: 392
+         type: numerico
+      -
+         description: RESERVA 2
+         begin: 393
+         end: 394
+         type: alfanumerico
+      -
+         description: MODALIDADE
+         begin: 395
+         end: 395
+         type: alfanumerico
+      -
+         description: RESERVA 3
+         begin: 396
+         end: 773
+         type: alfanumerico
+      -
+         description: AUTENTICA��O DIGITAL
+         begin: 774
+         end: 837
+         type: alfanumerico
+      -
+         description: VERS�O DO SOFTWARE FORNECIDO PELO BRADESCO.
+         begin: 838
+         end: 843
+         type: alfanumerico
+      -
+         description: VERS�O DO SOFTWARE (CONTROLE DO BANCO)
+         begin: 844
+         end: 849
+         type: alfanumerico
+      -
+         description: MENSAGEM 1
+         begin: 850
+         end: 889
+         type: alfanumerico
+      -
+         description: QUANTIDADE DE VIAS
+         begin: 890
+         end: 891
+         type: alfanumerico
+      -
+         description: MENSAGEM 2
+         begin: 892
+         end: 899
+         type: alfanumerico
+      -
+         description: INDICADOR DE CONSIST�NCIAS
+         begin: 900
+         end: 909
+         type: alfanumerico
+      -
+         description: RESERVA 4
+         begin: 910
+         end: 951
+         type: alfanumerico
+      -
+         description: N�MERO SEQUENCIAL DO TRIBUTO
+         begin: 952
+         end: 967
+         type: alfanumerico
+      -
+         description: N�MERO DA AUTENTICA��O
+         begin: 968
+         end: 994
+         type: alfanumerico
+      -
+         description: N�MERO SEQUENCIAL DO REGISTRO
+         begin: 995
+         end: 1000
+         type: numerico
+
+  GARE:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: IDENTIFICADOR DO TIPO DE REGISTRO
+         begin: 1
+         end: 1
+         type: numerico
+      -
+         description: C�DIGO DE COMUNICA��O
+         begin: 2
+         end: 9
+         type: numerico
+      -
+         description: CNPJ/CPF BASE DA EMPRESA ADMINISTRADORA
+         begin: 10
+         end: 18
+         type: alfanumerico
+      -
+         description: CNPJ/CPF FILIAL DA EMPRESA ADMINISTRADORA
+         begin: 19
+         end: 22
+         type: alfanumerico
+      -
+         description: CNPJ/CPF CONTROLE
+         begin: 23
+         end: 24
+         type: alfanumerico
+      -
+         description: N�MERO DO LOTE/REMESSA
+         begin: 25
+         end: 29
+         type: numerico
+      -
+         description: DATA DA GRAVA��O DO ARQUIVO
+         begin: 30
+         end: 37
+         type: numerico
+         format: YYYYMMDD
+      -
+         description: IDENTIFICADOR DO TRIBUTO
+         begin: 38
+         end: 40
+         type: numerico
+      -
+         description: IDENTIFICADOR DO DOCUMENTO
+         begin: 41
+         end: 66
+         type: numerico
+      -
+         description: INDICADOR DO TIPO DE MOVIMENTO
+         begin: 67
+         end: 67
+         type: alfanumerico
+      -
+         description: TIPO DE INSCRI��O
+         begin: 68
+         end: 68
+         type: numerico
+      -
+         description: CNPJ/CPF BASE DO CONTRIBUINTE
+         begin: 69
+         end: 77
+         type: alfanumerico
+      -
+         description: CNPJ/CPF FILIAL DO CONTRIBUINTE
+         begin: 78
+         end: 81
+         type: alfanumerico
+      -
+         description: CNPJ/CPF CONTROLE
+         begin: 82
+         end: 83
+         type: alfanumerico
+      -
+         description: NOME DO CONTRIBUINTE
+         begin: 84
+         end: 123
+         type: alfanumerico
+      -
+         description: ENDERE�O DO CONTRIBUINTE
+         begin: 124
+         end: 163
+         type: alfanumerico
+      -
+         description: CEP DO CONTRIBUINTE
+         begin: 164
+         end: 168
+         type: numerico
+      -
+         description: COMPLEMENTO CEP
+         begin: 169
+         end: 171
+         type: numerico
+      -
+         description: AG�NCIA
+         begin: 172
+         end: 175
+         type: numerico
+      -
+         description: D�GITO DA AG�NCIA
+         begin: 176
+         end: 176
+         type: numerico
+      -
+         description: RAZ�O DA CONTA
+         begin: 177
+         end: 180
+         type: numerico
+      -
+         description: CONTA
+         begin: 181
+         end: 187
+         type: numerico
+      -
+         description: D�GITO DA CONTA
+         begin: 188
+         end: 188
+         type: numerico
+      -
+         description: DATA PARA EFETIVA��O DO D�BITO
+         begin: 189
+         end: 196
+         type: numerico
+         format: YYYYMMDD
+      -
+         description: INDICADOR PARA AUTORIZA��O DE D�BITO (S=Sim e N=N�o)
+         begin: 197
+         end: 197
+         type: alfanumerico
+      -
+         description: VALOR DA RECEITA
+         begin: 198
+         end: 212
+         type: numerico
+      -
+         description: VALOR DOS JUROS DE MORA
+         begin: 213
+         end: 227
+         type: numerico
+      -
+         description: VALOR DA MULTA
+         begin: 228
+         end: 242
+         type: numerico
+      -
+         description: VALOR ACR�SCIMO FINANCEIRO
+         begin: 243
+         end: 257
+         type: numerico
+      -
+         description: VALOR DE HONOR�RIOS ADVOCAT�CIOS
+         begin: 258
+         end: 272
+         type: numerico
+      -
+         description: VALOR TOTAL
+         begin: 273
+         end: 287
+         type: numerico
+      -
+         description: UF (UNIDADE FEDERATIVA)
+         begin: 288
+         end: 289
+         type: alfanumerico
+      -
+         description: RESERVA 1
+         begin: 290
+         end: 335
+         type: alfanumerico
+      -
+         description: DATA DE VENCIMENTO
+         begin: 336
+         end: 343
+         type: numerico
+         format: YYYYMMDD
+      -
+         description: C�DIGO DE RECEITA
+         begin: 344
+         end: 347
+         type: numerico
+      -
+         description: GRUPO DE RECEITA
+         begin: 348
+         end: 348
+         type: alfanumerico
+      -
+         description: TIPO DE RECEITA
+         begin: 349
+         end: 350
+         type: alfanumerico
+      -
+         description: REFER�NCIA
+         begin: 351
+         end: 356
+         type: numerico
+      -
+         description: INSCRI��O ESTADUAL OU C�DIGO DO MUNIC�PIO
+         begin: 357
+         end: 368
+         type: numerico
+      -
+         description: INSCRI��O NA D�VIDA ATIVA OU N�MERO DA ETIQUETA
+         begin: 369
+         end: 381
+         type: numerico
+      -
+         description: N�MERO PARCELAMENTO/AIIM/ OEICM
+         begin: 382
+         end: 394
+         type: numerico
+      -
+         description: RESERVA 2
+         begin: 395
+         end: 773
+         type: alfanumerico
+      -
+         description: AUTENTICA��O DIGITAL
+         begin: 774
+         end: 837
+         type: alfanumerico
+      -
+         description: VERS�O DO SOFTWARE FORNECIDO PELO BANCO
+         begin: 838
+         end: 843
+         type: alfanumerico
+      -
+         description: VERS�O DO SOFTWARE (CONTROLE DO BRADESCO)
+         begin: 844
+         end: 849
+         type: alfanumerico
+      -
+         description: RESERVA 3
+         begin: 850
+         end: 889
+         type: alfanumerico
+      -
+         description: QUANTIDADE DE VIAS (USO DO BRADESCO)
+         begin: 890
+         end: 891
+         type: alfanumerico
+      -
+         description: MENSAGEM 2 (USO DO BRADESCO)
+         begin: 892
+         end: 899
+         type: alfanumerico
+      -
+         description: C�DIGO RETORNO
+         begin: 900
+         end: 909
+         type: alfanumerico
+      -
+         description: RESERVA 4
+         begin: 910
+         end: 951
+         type: alfanumerico
+      -
+         description: CONTROLE DA EMPRESA
+         begin: 952
+         end: 967
+         type: alfanumerico
+      -
+         description: N�MERO DA AUTENTICA��O
+         begin: 968
+         end: 994
+         type: alfanumerico
+      -
+         description: N�MERO SEQUENCIAL DO REGISTRO
+         begin: 995
+         end: 1000
+         type: numerico
+
+  GPS:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: IDENTIFICADOR DO TIPO DE REGISTRO
+         begin: 1
+         end: 1
+         type: numerico
+      -
+         description: C�DIGO DE COMUNICA��O
+         begin: 2
+         end: 9
+         type: numerico
+      -
+         description: CNPJ/CPF BASE DA EMPRESA ADMINISTRADORA
+         begin: 10
+         end: 18
+         type: alfanumerico
+      -
+         description: CNPJ/CPF FILIAL DA EMPRESA ADMINISTRADORA
+         begin: 19
+         end: 22
+         type: alfanumerico
+      -
+         description: CNPJ/CPF CONTROLE
+         begin: 23
+         end: 24
+         type: alfanumerico
+      -
+         description: N�MERO DO LOTE
+         begin: 25
+         end: 29
+         type: numerico
+      -
+         description: DATA DA GRAVA��O DO ARQUIVO
+         begin: 30
+         end: 37
+         type: numerico
+         format: YYYYMMDD
+      -
+         description: IDENTIFICADOR DO TRIBUTO
+         begin: 38
+         end: 40
+         type: numerico
+      -
+         description: IDENTIFICADOR DO DOCUMENTO
+         begin: 41
+         end: 66
+         type: numerico
+      -
+         description: IDENTIFICADOR DO TIPO DE MOVIMENTO
+         begin: 67
+         end: 67
+         type: alfanumerico
+      -
+         description: NOME DO CONTRIBUINTE
+         begin: 68
+         end: 107
+         type: alfanumerico
+      -
+         description: ENDERE�O DO CONTRIBUINTE
+         begin: 108
+         end: 147
+         type: alfanumerico
+      -
+         description: CEP DO CONTRIBUINTE
+         begin: 148
+         end: 152
+         type: numerico
+      -
+         description: COMPLEMENTO CEP
+         begin: 153
+         end: 155
+         type: numerico
+      -
+         description: RESERVA 1
+         begin: 156
+         end: 170
+         type: alfanumerico
+      -
+         description: AG�NCIA
+         begin: 171
+         end: 174
+         type: numerico
+      -
+         description: D�GITO DA AG�NCIA
+         begin: 175
+         end: 175
+         type: numerico
+      -
+         description: RAZ�O DA CONTA
+         begin: 176
+         end: 179
+         type: numerico
+      -
+         description: CONTA
+         begin: 180
+         end: 186
+         type: numerico
+      -
+         description: D�GITO DA CONTA
+         begin: 187
+         end: 187
+         type: alfanumerico
+      -
+         description: DATA PARA EFETIVA��O DO D�BITO
+         begin: 188
+         end: 195
+         type: numerico
+         format: YYYYMMDD
+      -
+         description: INDICADOR PARA AUTORIZA��O DE D�BITO (S= Sim e N=N�o)
+         begin: 196
+         end: 196
+         type: alfanumerico
+      -
+         description: VALOR INSS
+         begin: 197
+         end: 211
+         type: numerico
+      -
+         description: VALOR ATUALIZA��O MONET�RIA/JUROS/MORA
+         begin: 212
+         end: 226
+         type: numerico
+      -
+         description: VALOR OUTRAS ENTIDADES
+         begin: 227
+         end: 241
+         type: numerico
+      -
+         description: VALOR TOTAL
+         begin: 242
+         end: 256
+         type: numerico
+      -
+         description: C�DIGO PAGAMENTO
+         begin: 257
+         end: 260
+         type: numerico
+      -
+         description: TIPO IDENTIFICADOR CONTRIBUINTE
+         begin: 261
+         end: 263
+         type: alfanumerico
+      -
+         description: IDENTIFICADOR DO CLIENTE
+         begin: 264
+         end: 277
+         type: numerico
+      -
+         description: RESERVA 2
+         begin: 278
+         end: 335
+         type: alfanumerico
+      -
+         description: DATA VENCIMENTO
+         begin: 336
+         end: 343
+         type: numerico
+         format: YYYYMMDD
+      -
+         description: RESERVA 3
+         begin: 344
+         end: 346
+         type: alfanumerico
+      -
+         description: COMPET�NCIA
+         begin: 347
+         end: 352
+         type: numerico
+      -
+         description: RESERVA 4
+         begin: 353
+         end: 394
+         type: alfanumerico
+      -
+         description: MODALIDADE
+         begin: 395
+         end: 395
+         type: numerico
+      -
+         description: RESERVA 5
+         begin: 396
+         end: 773
+         type: alfanumerico
+      -
+         description: AUTENTICA��O DIGITAL
+         begin: 774
+         end: 837
+         type: alfanumerico
+      -
+         description: VERS�O DO SOFTWARE OBB UTILIZADA NA MONTAGEM DO ARQUIVO
+         begin: 838
+         end: 843
+         type: alfanumerico
+      -
+         description: VERS�O DO SOFTWARE CONTROLE DO BANCO
+         begin: 844
+         end: 849
+         type: alfanumerico
+      -
+         description: MENSAGEM
+         begin: 850
+         end: 889
+         type: alfanumerico
+      -
+         description: QUANTIDADE DE VIAS
+         begin: 890
+         end: 891
+         type: alfanumerico
+      -
+         description: MENSAGEM 2
+         begin: 892
+         end: 899
+         type: numerico
+      -
+         description: C�DIGO RETORNO
+         begin: 900
+         end: 909
+         type: alfanumerico
+      -
+         description: RESERVA 6
+         begin: 910
+         end: 951
+         type: alfanumerico
+      -
+         description: CONTROLE DA EMPRESA
+         begin: 952
+         end: 967
+         type: alfanumerico
+      -
+         description: N�MERO DA AUTENTICA��O
+         begin: 968
+         end: 994
+         type: alfanumerico
+      -
+         description: N�MERO SEQUENCIAL DO REGISTRO
+         begin: 995
+         end: 1000
+         type: numerico
+
+  codigo_barras:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: IDENTIFICADOR DO TIPO DE REGISTRO
+         begin: 1
+         end: 1
+         type: numerico
+      -
+         description: C�DIGO DE COMUNICA��O
+         begin: 2
+         end: 9
+         type: numerico
+      -
+         description: CNPJ/CPF BASE DA EMPRESA ADMINISTRADORA
+         begin: 10
+         end: 18
+         type: alfanumerico
+      -
+         description: CNPJ/CPF FILIAL DA EMPRESA ADMINISTRADORA
+         begin: 19
+         end: 22
+         type: alfanumerico
+      -
+         description: CNPJ/CPF CONTROLE
+         begin: 23
+         end: 24
+         type: alfanumerico
+      -
+         description: N�MERO DO LOTE
+         begin: 25
+         end: 29
+         type: numerico
+      -
+         description: DATA GRAVACAO
+         begin: 30
+         end: 37
+         type: numerico
+         format: YYYYMMDD
+      -
+         description: IDENTIFICADOR DO TRIBUTO
+         begin: 38
+         end: 40
+         type: numerico
+      -
+         description: IDENTIFICADOR DO PAGAMENTO
+         begin: 41
+         end: 66
+         type: alfanumerico
+      -
+         description: TIPO DO MOVIMENTO
+         begin: 67
+         end: 67
+         type: alfanumerico
+      -
+         description: C�DIGO DE BARRA
+         begin: 68
+         end: 111
+         type: alfanumerico
+      -
+         description: DATA EFETIVA��O DO D�BITO
+         begin: 112
+         end: 119
+         type: alfanumerico
+         format: YYYYMMDD
+      -
+         description: VALOR DO DOCUMENTO
+         begin: 120
+         end: 134
+         type: numerico
+      -
+         description: AG�NCIA CLIENTE
+         begin: 135
+         end: 138
+         type: numerico
+      -
+         description: D�GITO AG�NCIA
+         begin: 139
+         end: 139
+         type: numerico
+      -
+         description: RAZ�O
+         begin: 140
+         end: 143
+         type: numerico
+      -
+         description: CONTA CLIENTE
+         begin: 144
+         end: 150
+         type: numerico
+      -
+         description: D�GITO CONTA
+         begin: 151
+         end: 151
+         type: alfanumerico
+      -
+         description: INDICADOR PARA AUTORIZA��O DE D�BITO (S=SIM / N= N�O)
+         begin: 152
+         end: 152
+         type: alfanumerico
+      -
+         description: C�DIGO RETORNO DE D�BITO (USO DO BRADESCO)
+         begin: 153
+         end: 155
+         type: numerico
+      -
+         description: MENSAGEM RETORNO
+         begin: 156
+         end: 235
+         type: alfanumerico
+      -
+         description: C�DIGO DE IDENTIFICA��O DE COMPROVANTES)
+         begin: 236
+         end: 236
+         type: numerico
+      -
+         description: C�DIGO DA AG�NCIA
+         begin: 237
+         end: 241
+         type: numerico
+      -
+         description: NOME DA AGENCIA
+         begin: 242
+         end: 281
+         type: alfanumerico
+      -
+         description: DATA DE VENCIMENTO
+         begin: 282
+         end: 289
+         type: numerico
+      -
+         description: VALOR DO TRIBUTO
+         begin: 290
+         end: 304
+         type: numerico
+      -
+         description: VALOR PAGO
+         begin: 305
+         end: 319
+         type: numerico
+      -
+         description: VALOR DA MULTA
+         begin: 320
+         end: 334
+         type: numerico
+      -
+         description: VALOR JUROS
+         begin: 335
+         end: 349
+         type: numerico
+      -
+         description: VALOR DESCONTO
+         begin: 350
+         end: 364
+         type: numerico
+      -
+         description: C�DIGO TRIBUTO
+         begin: 365
+         end: 368
+         type: numerico
+      -
+         description: IDENTIFICA��O DO PAGAMENTO
+         begin: 369
+         end: 408
+         type: alfanumerico
+      -
+         description: IDENTIFICA��O DO DOCUMENTO
+         begin: 409
+         end: 431
+         type: alfanumerico
+      -
+         description: N�MERO IDENTIFICA��O
+         begin: 432
+         end: 446
+         type: alfanumerico
+      -
+         description: AUTENTICA��O ESPEC�FICA PARA DOCUMENTOS COM C�DIGO DE BARRAS
+         begin: 447
+         end: 455
+         type: alfanumerico
+      -
+         description: ANO EXERC�CIO (SOMENTE PARA DOCUMENTO DA PREFEITURA DO MUNIC�PIO DE S�O PAULO)
+         begin: 456
+         end: 459
+         type: numerico
+      -
+         description: N�MERO DA PARCELA
+         begin: 460
+         end: 461
+         type: numerico
+      -
+         description: N�MERO NOTIFICA��O (SOMENTE PARA DOCUMENTO DA PREFEITURA DE S�O PAULO)
+         begin: 462
+         end: 463
+         type: numerico
+      -
+         description: MODALIDADE DE PROCESSAMENTO (USO DO BRADESCO)
+         begin: 464
+         end: 464
+         type: alfanumerico
+      -
+         description: (RESERVA)
+         begin: 465
+         end: 579
+         type: alfanumerico
+      -
+         description: LACRE CONECTIVIDADE (USO DO BRADESCO)
+         begin: 580
+         end: 594
+         type: numerico
+      -
+         description: IDENTIFICADOR
+         begin: 595
+         end: 614
+         type: alfanumerico
+      -
+         description: C�DIGO DE RECEITA
+         begin: 615
+         end: 620
+         type: numerico
+      -
+         description: UNIDADE DA FEDERA��O
+         begin: 621
+         end: 622
+         type: alfanumerico
+      -
+         description: DI-DSI-AIIM
+         begin: 623
+         end: 631
+         type: numerico
+      -
+         description: MUNIC�PIO
+         begin: 632
+         end: 634
+         type: numerico
+      -
+         description: RESERVA 1
+         begin: 635
+         end: 773
+         type: alfanumerico
+      -
+         description: AUTENTICA��O DIGITAL (USO DO BRADESCO)
+         begin: 774
+         end: 837
+         type: alfanumerico
+      -
+         description: VERS�O DO SOFTWARE FORNECIDO PELO BANCO.
+         begin: 838
+         end: 843
+         type: alfanumerico
+      -
+         description: VERS�O DO SOFTWARE - CONTROLE DO BRADESCO)
+         begin: 844
+         end: 849
+         type: alfanumerico
+      -
+         description: MENSAGEM 1 (USO DO BRADESCO)
+         begin: 850
+         end: 889
+         type: alfanumerico
+      -
+         description: QUANTIDADE DE VIAS (RESERVA)
+         begin: 890
+         end: 891
+         type: alfanumerico
+      -
+         description: MENSAGEM 2 (USO DO BRADESCO)
+         begin: 892
+         end: 899
+         type: alfanumerico
+      -
+         description: C�DIGO DE RETORNO (USO DO BRADESCO)
+         begin: 900
+         end: 909
+         type: alfanumerico
+      -
+         description: RESERVA 2
+         begin: 910
+         end: 951
+         type: alfanumerico
+      -
+         description: SEQUENCIA DO TRIBUTO
+         begin: 952
+         end: 967
+         type: alfanumerico
+      -
+         description: N�MERO DA AUTENTICA��O
+         begin: 968
+         end: 994
+         type: alfanumerico
+      -
+         description: N�MERO SEQUENCIAL DO REGISTRO
+         begin: 995
+         end: 1000
+         type: numerico
+
+  trailler:
+    - metadata:
+       occurrence : *
+    - fields:
+      -
+         description: IDENTIFICADOR DO TIPO DE REGISTRO
+         begin: 1
+         end: 1
+         type: numerico
+      -
+         description: C�DIGO DE COMUNICA��O
+         begin: 2
+         end: 9
+         type: numerico
+      -
+         description: CNPJ/CPF BASE DA EMPRESA ADMINISTRADORA
+         begin: 10
+         end: 18
+         type: alfanumerico
+      -
+         description: CNPJ/CPF FILIAL DA EMPRESA ADMINISTRADORA
+         begin: 19
+         end: 22
+         type: alfanumerico
+      -
+         description: CNPJ/CPF CONTROLE
+         begin: 23
+         end: 24
+         type: alfanumerico
+      -
+         description: N�MERO DO LOTE
+         begin: 25
+         end: 29
+         type: numerico
+      -
+         description: DATA DA GRAVA��O DO ARQUIVO
+         begin: 30
+         end: 37
+         type: numerico
+         format: YYYYMMDD
+      -
+         description: QUANTIDADE DE REGISTROS
+         begin: 38
+         end: 43
+         type: numerico
+      -
+         description: TOTAL DOS VALORES
+         begin: 44
+         end: 60
+         type: numerico
+      -
+         description: RESERVA
+         begin: 61
+         end: 899
+         type: alfanumerico
+      -
+         description: C�DIGO DE RETORNO
+         begin: 900
+         end: 909
+         type: alfanumerico
+      -
+         description: RESERVA
+         begin: 910
+         end: 994
+         type: alfanumerico
+      -
+         description: N�MERO SEQUENCIAL DO REGISTRO
+         begin: 995
+         end: 1000
+         type: numerico
