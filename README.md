@@ -1,8 +1,8 @@
-# CNAB Validador — v1.0.0
+# CNAB Validador — v2.0.0
 
 🎯 **Solução completa para validação, visualização e edição de arquivos CNAB bancários brasileiros**
 
-Aplicação full-stack com backend Quarkus (Java) e frontend Flutter Web, suportando 20 categorias de layout e 7 regras de validação.
+Aplicação full-stack com backend Spring Boot (Java) e frontend Flutter Web, suportando 20 categorias de layout e 7 regras de validação.
 
 ---
 
@@ -26,16 +26,16 @@ docker-compose up
 
 ### 🔹 Opção 2: Execução Standalone
 
-#### Backend (Quarkus)
+#### Backend (Spring Boot)
 
 ```bash
 cd backend
 
-# Compilar (IMPORTANTE: usar uber-jar)
-mvn clean package -DskipTests -Dquarkus.package.type=uber-jar
+# Compilar
+mvn clean package -DskipTests
 
 # Executar
-java -jar target/backend-runner.jar
+java -jar target/backend.jar
 
 # Backend disponível em: http://localhost:9084
 ```
@@ -88,7 +88,7 @@ flutter run -d web --web-port=9085
                    │
                    ↓
 ┌──────────────────────────────────────────────┐
-│   Backend (Quarkus) — Porta 9084             │
+│   Backend (Spring Boot) — Porta 9084         │
 │   ├─ Parsing de CNAB (arquivo → registros)   │
 │   ├─ Carregamento de layouts YAML            │
 │   ├─ Validação com 7 regras                  │
@@ -113,9 +113,9 @@ cnab-validador/
 │   ├── src/main/resources/
 │   │   ├── layouts/        # 22 arquivos YAML em 20 categorias
 │   │   └── application.properties
-│   ├── pom.xml             # Maven (Quarkus 3.7.0)
+│   ├── pom.xml             # Maven (Spring Boot 3.x)
 │   ├── Dockerfile          # Build: Maven → OpenJDK
-│   └── target/backend-runner.jar (gerado após mvn package)
+│   └── target/backend.jar (gerado após mvn package)
 │
 ├── frontend/
 │   ├── lib/
@@ -145,25 +145,28 @@ cnab-validador/
 
 ```bash
 cd backend
-mvn clean package -DskipTests -Dquarkus.package.type=uber-jar
+mvn clean package -DskipTests
 ```
 
-✅ **Saída esperada:** `target/backend-runner.jar` (~19 MB)
+✅ **Saída esperada:** `target/backend.jar` (~40 MB)
 
 ### 2️⃣ Iniciar Backend
 
 ```bash
-java -jar target/backend-runner.jar
+java -jar target/backend.jar
 ```
 
 ✅ **Você deve ver:**
 ```
-__  ____  __  _____   ___  __ ____  ______ 
- --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
- -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
---\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
-2026-03-23 14:08:07 INFO [io.quarkus] (main) cnab-validador 1.0.0 on JVM started
-2026-03-23 14:08:07 INFO [io.quarkus] (main) Listening on: http://0.0.0.0:9084
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::             (v3.x.x)
+
+2026-03-23 14:08:07 INFO --- Started BackendApplication in 3.2 seconds
 ```
 
 ### 3️⃣ Verificar Backend
@@ -341,7 +344,7 @@ Status: INVALID
 
 ```bash
 # 1. Iniciar backend
-java -jar backend/target/backend-runner.jar &
+java -jar backend/target/backend.jar &
 
 # 2. Aguardar ~3 segundos
 sleep 3
@@ -380,19 +383,22 @@ curl -X POST http://localhost:9084/api/validate \
 
 ```properties
 # Porta do servidor
-quarkus.http.port=9084
+server.port=9084
 
 # CORS para Flutter Web
-quarkus.http.cors=true
+spring.web.cors.enabled=true
 
 # Encoding ISO-8859-1 (CNAB padrão)
-quarkus.default.charset=ISO-8859-1
+server.servlet.encoding.charset=ISO-8859-1
+server.servlet.encoding.enabled=true
+server.servlet.encoding.force=true
 
 # Limite de upload
-quarkus.http.limits.max-form-attribute-size=50M
+spring.servlet.multipart.max-file-size=50MB
+spring.servlet.multipart.max-request-size=50MB
 
 # Swagger UI (documentação interativa)
-quarkus.swagger-ui.enable=true
+springdoc.swagger-ui.enabled=true
 ```
 
 ### Frontend (pubspec.yaml)
@@ -450,7 +456,7 @@ lsof -i :9084
 kill -9 <PID>
 
 # Ou trocar porta em application.properties
-quarkus.http.port=9085
+server.port=9085
 ```
 
 ### Layouts não carregam (GET /api/layouts retorna array vazio)
@@ -459,8 +465,8 @@ quarkus.http.port=9085
 
 **Verificar:**
 ```bash
-# Confirmar JAR foi compilado com uber-jar
-jar tf backend/target/backend-runner.jar | grep layouts/ | head -5
+# Confirmar JAR foi gerado corretamente
+jar tf backend/target/backend.jar | grep layouts/ | head -5
 
 # Saída esperada:
 # layouts/
@@ -472,7 +478,7 @@ jar tf backend/target/backend-runner.jar | grep layouts/ | head -5
 **Se vazio, recompile:**
 ```bash
 cd backend
-mvn clean package -DskipTests -Dquarkus.package.type=uber-jar
+mvn clean package -DskipTests
 ```
 
 ### Validação retorna "records": []
@@ -539,11 +545,11 @@ curl -H "Origin: http://localhost:9085" http://localhost:9084/api/health
 
 | Operação | Tempo |
 |----------|-------|
-| Backend startup | ~2.1 segundos |
+| Backend startup | ~3-4 segundos |
 | Health check | < 1ms |
 | List layouts | < 5ms |
 | Validate CNAB (8 linhas) | < 100ms |
-| Memory JVM | ~140 MB |
+| Memory JVM | ~256 MB |
 
 ---
 
@@ -647,14 +653,14 @@ curl http://localhost:9084/api/layouts | jq '.'
 ### Como mudar a porta padrão?
 Editar `backend/src/main/resources/application.properties`:
 ```properties
-quarkus.http.port=9999
+server.port=9999
 ```
 
 ### Frontend funciona sem backend?
 Não, frontend requer backend rodando em http://localhost:9084
 
 ### Posso rodar em produção?
-Sim! JAR está otimizado com `-Dquarkus.package.type=uber-jar`
+Sim! O Spring Boot gera um fat JAR executável automaticamente com `mvn clean package`.
 
 ---
 
@@ -665,7 +671,7 @@ Sim! JAR está otimizado com `-Dquarkus.package.type=uber-jar`
 | **Versão** | 1.0.0 |
 | **Status** | ✅ Completo e testado |
 | **Data** | 2026-03-23 |
-| **Backend** | Quarkus 3.7.0 (Java 17) |
+| **Backend** | Spring Boot 3.x (Java 17) |
 | **Frontend** | Flutter Web (Dart) |
 | **Layouts** | 20 categorias, 22 YAMLs |
 | **Validação** | 7 regras |
@@ -677,16 +683,16 @@ Sim! JAR está otimizado com `-Dquarkus.package.type=uber-jar`
 
 ## 🎓 Notas Técnicas
 
-### Por que usar `-Dquarkus.package.type=uber-jar`?
+### Sobre o Spring Boot JAR
 
-O Quarkus por padrão cria um JAR sem bibliotecas. Para um JAR executável com todas as dependências:
+O Spring Boot utiliza o plugin `spring-boot-maven-plugin` para criar um **fat JAR** (executable JAR) que já inclui todas as dependências embutidas, diferentemente do Quarkus que exigia a flag `-Dquarkus.package.type=uber-jar`:
 
 ```bash
-# ✅ Correto (JAR com 19MB, tudo embutido)
-mvn clean package -Dquarkus.package.type=uber-jar
+# ✅ Correto — Spring Boot gera fat JAR automaticamente (~40MB)
+mvn clean package -DskipTests
 
-# ❌ Incorreto (JAR com ~150KB, faltam libs)
-mvn clean package
+# O JAR gerado já é executável:
+java -jar target/backend.jar
 ```
 
 ### Por que ISO-8859-1 para CNAB?
